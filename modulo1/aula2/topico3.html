@@ -1,358 +1,263 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<meta name="keywords" content="Fiocruz Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 1 | Aula 2</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="keywords" content="Fiocruz Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
-	<meta property="og:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:image" content="" />
-	<meta property="og:image:width" content="1080" />
-	<meta property="og:image:height" content="1080" />
-	<meta property="og:type" content="website" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:description" content="" />
-	<meta name="twitter:image:src" content="" />
-
-	<!-- Favicons and Touch Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-
-	<link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-
-	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-TileImage" content="../../media/icons/ms-icon-144x144.png" />
-	<!-- <meta name="theme-color" content="#003066" /> -->
-	<meta name="theme-color" content="#001833" />
-
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 1 | Aula 2</title>
-
-	<!-- Bootstrap CSS 5.1.3 -->
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-
-	<!-- Project CSS -->
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button">
-				<span class="icon material-symbols-rounded">read_more</span>
-			</a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png"
-				alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title">
-			<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-		</div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span
-									class="icon material-symbols-rounded">read_more</span></a>
-						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="sidebar__title">
-							<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item">
-								<a href="../../index.html" class="nav-link" tabindex="0"><span
-										class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal"
-									data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded"
-										aria-hidden="true"> format_list_bulleted</span>Créditos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle"
-								data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
-								data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
-								<span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span
-											class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span
-											class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link"
-										href="../../modulo1/aula1/topico1.html"><strong>Módulo
-											1</strong><br />Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<!--<span class="dropdown-menu__item-link"><strong>Módulo 3</strong><br />Modelos estatísticos <strong class="em-breve">(em breve)</strong></span>-->
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text module">Módulo <br class="d-none d-lg-block" /><span>1</span></span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown"
-								aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
-								<span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span
-											class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span
-											class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Módulo 1</span>
-									<span class="title">Introdução à Informação em Saúde no SUS</span>
-								</li>
-
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>A Política Nacional de Informação e Informática em Saúde (PNIIS)</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text class">Aula 2</span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown"
-								aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">
-									format_list_bulleted</span>
-								<span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span
-											class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span
-											class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Aula 2</span>
-									<span class="title">A Política Nacional de Informação e Informática em Saúde (PNIIS)</span>
-								</li>
-								<li class="dropdown-menu__item">
-									<nav class="topic-list">
-											<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"> <span class="material-symbols-rounded"></span>Sobre esta aula</a>
-
-											<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"> <span class="material-symbols-rounded"></span>Introdução</a>
-
-											<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>A primeira versão da PNIIS</a>
-
-											<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>A institucionalização da PNIIS</a>
-
-											<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>A PNIIS 2021</a>
-
-											<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Princípios e diretrizes da PNIIS</a>
-
-											<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"> <span class="material-symbols-rounded"></span>Atividade formativa</a>
-										
-							<a href="topico8.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
 			</div>
-		</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-		<div class="content">
-			<div id="page-title">
-				<div class="container">
-					<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
-						<div class="col-12 col-md-10 col-lg-11">
-							<h2 class="title">
-								<span class="label">Módulo 1 | Aula 2</span>
-								<br />
-								A Política Nacional de Informação e Informática em Saúde (PNIIS)
-							</h2>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>1</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 1</span>
+										<span class="title">Estatística</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Análise exploratória e descritiva</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Estatística básica</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Estatística avançada</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 2</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 2</span>
+										<span class="title">Estatística Básica</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Medidas de tendência central</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Medidas de dispersão ou de variabilidade</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-												<div id="page-content" class="">
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 1 | Aula 2</span>
+									<br />
+									Estatística Básica
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 3</span><h3 class="heading__title">Medidas de tendência central</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h5 class="heading__title">Média</h5></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Leva em conta todos os n elementos da amostra. Para seu cálculo somamos todos os valores e dividimos pelo total de observações na amostra.</p><p>Estatisticamente, podemos representar o cálculo da média como:</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><figure class="text-center my-3 formula-figure"><img class="img-fluid img-formula" src="../../media/modulo1/aula2/formula-media.png" alt="Fórmula da média" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Vejamos um exemplo com a variável salário. Somamos todas as 36 observações e dividimos por 36. Temos que a média é igual a</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><figure class="text-center my-3 formula-figure"><img class="img-fluid img-formula img-formula--wide" src="../../media/modulo1/aula2/formula-media-salario.png" alt="Cálculo da média de salário" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Significa que a média de salário dessa empresa é de 11,12 salários-mínimos.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h5 class="heading__title">Mediana</h5></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>É o valor que divide a distribuição ao meio. Então, 50% das observações estão abaixo desse valor e 50% estão acima. A mediana é uma medida robusta, pois é menos sensível a valores atípicos.</p><p>Para o cálculo da mediana é preciso ordenar do menor para o maior valor os dados da variável.</p><p>A posição da mediana é dada pelo elemento de ordem:</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><figure class="text-center my-3 formula-figure"><img class="img-fluid img-formula" src="../../media/modulo1/aula2/formula-mediana-impar.png" alt="Posição da mediana para n ímpar" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>se o tamanho da amostra (n) for um número ímpar e, pelo elemento de ordem</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><figure class="text-center my-3 formula-figure"><img class="img-fluid img-formula" src="../../media/modulo1/aula2/formula-mediana-par.png" alt="Posição da mediana para n par" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>quando o tamanho da amostra for um número par.</p><p>Assim, considerando a nossa variável salário (com 36 observações – número par), a mediana é dada por</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><figure class="text-center my-3 formula-figure"><img class="img-fluid img-formula" src="../../media/modulo1/aula2/formula-mediana-par.png" alt="Posição da mediana para n par" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>que é igual a:</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><figure class="text-center my-3 formula-figure"><img class="img-fluid img-formula" src="../../media/modulo1/aula2/formula-mediana-exemplo-posicao.png" alt="Cálculo da posição da mediana" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Com a ordenação dos valores, temos que a mediana é igual a média das posições 18 e 19. Assim,</p><p>Posição 18 = 9,80;</p><p>Posição 19 = 10,53</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><figure class="text-center my-3 formula-figure"><img class="img-fluid img-formula" src="../../media/modulo1/aula2/formula-mediana-exemplo-valor.png" alt="Cálculo do valor da mediana" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Logo, podemos dizer que 50% dos valores estão abaixo de 10,16 e 50% estão acima desse valor.</p><p>Importante ressaltar que quando estamos em face de um conjunto de dados devemos, sempre, calcular a média, a mediana e outras medidas que ainda vamos aprender aqui. Porém, é fato que é mais comum usarmos a média em detrimento da mediana. Por quê? Talvez porque seja mais simples de calcular a média do que a mediana.</p><p>Outro ponto que merece atenção é que quando temos distribuições simétricas tanto faz usarmos uma ou outra (pois serão aproximadamente iguais), mas se a distribuição por assimétrica (à direita ou à esquerda) é recomendado que se use a mediana, por ser uma medida mais robusta.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h5 class="heading__title">Moda</h5></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>É o valor mais frequente da variável. Pode ser que uma variável tenha mais de uma moda ou, até mesmo, não ter moda (amodal).</p><p class="mb-0">A variável salário, por exemplo, é amodal.</p></div></div>
+						</div>
+					</section>
+				</div>
+
 				<section>
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-10 col-lg-8 mb-5">
-								<div class="heading__block">
-									<span class="small">Tópico 3</span>
-									<h3 class="heading__title">A primeira versão da PNIIS</h3>
-								</div>
-								<p>A partir de 2003 começou a ser idealizada a Política Nacional de Informática e Informação em Saúde (PNIIS), com contribuições de diferentes instituições acadêmicas, do Conselho Nacional de Secretários de Saúde (CONASS) e do Conselho Nacional de Secretários Municipais de Saúde (CONASEMS), e da realização de consulta pública.</p>
-							</div>
-						</div>
-
-						<div class="row justify-content-center">
-							<div class="col-12 col-md-10 col-lg-8 mb-5">
-								<p>A Política Nacional de Informação e Informática em Saúde (PNIIS) resultou de um extenso processo participativo, culminando na <a href="https://bvsms.saude.gov.br/bvs/publicacoes/PoliticaInformacaoSaude29_03_2004.pdf" target="_blank" rel="noopener noreferrer"><strong>Versão 2.0</strong></a>, que incorporou ativamente as diretrizes aprovadas durante a 12ª Conferência Nacional de Saúde, ocorrida em dezembro de 2003. A política foi considerada essencial para superar a fragmentação histórica dos sistemas de informação e a baixa qualidade de dados. Nesse contexto, a PNIIS propôs a criação de um <strong>Sistema Nacional de Informação em Saúde (SNIS)</strong> integrado, focado no uso de Registros Eletrônicos de Saúde e na implementação de padrões unívocos de identificação de usuários e serviços. As responsabilidades institucionais para as esferas federal, estadual e municipal foram detalhadas, visando garantir o financiamento e a implantação do sistema de forma tripartite. O desenvolvimento da política também se baseou em uma revisão da literatura e nas experiências de países com sistemas de Saúde Pública, como a Inglaterra, Canadá e Austrália.</p>
-								<p>O processo de diálogo desenvolveu-se a partir da elaboração sucessiva de versões do documento base, submetidas a diferentes fóruns de debate ao longo de 2003 e 2004. A 12ª Conferência Nacional de Saúde foi um marco decisivo nesse processo, pois a Informação e a Comunicação em Saúde figuraram como um eixo temático específico. As discussões geraram cerca de cem proposições nos grupos de trabalho, cuja relevância influenciou a revisão dos itens sobre estratégia, usos da informação e responsabilidades institucionais da política. Em 29 de março de 2004 foi publicada uma versão da Política conforme as deliberações da 12ª Conferência Nacional de Saúde.</p>
-								<p><strong>A despeito desse intenso processo participativo, a versão final da PNIIS 2004 não chegou a ser institucionalizada como parte do arcabouço normativo do SUS.</strong> Ainda assim, tornou-se um importante documento de referência, que consolidou princípios e diretrizes relevantes.</p>
-							</div>
-						</div>
-
-						<div class="row justify-content-center">
-							<div class="col-12 col-md-10 col-lg-8 mb-5">
-								<div class="box" data-box="Saiba Mais">
-									<div class="card">
-										<div class="card-header">
-											<span class="icone material-symbols-rounded" aria-hidden="true"></span>
-											<span class="label">Saiba Mais</span>
-										</div>
-										<div class="card-body">
-											<p>Para saber mais sobre o histórico de construção da PNIIS, leia o artigo <a href="https://www.scielo.br/j/csp/a/P3hvqjy9qxJ9H7QshNxjxdB/?lang=pt" target="_blank" rel="noopener noreferrer"><em>Panorama de definição e implementação da Política Nacional de Informação e Informática em Saúde.</em></a></p>
-										</div>
-									</div>
-								</div>
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico2.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico4.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
 							</div>
 						</div>
 					</div>
 				</section>
-			</div>
 
-			<!-- Navegação da aula -->
-			<section>
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-12 col-md-10 col-lg-8">
-							<div class="page-nav d-flex justify-content-evenly">
-								<a class="fio-button fio-button-primary" href="topico2.html" rel="prev"><span
-										class="material-symbols-rounded">west</span> Tópico anterior</a>
-								<a class="fio-button fio-button-primary" href="topico4.html" rel="next">Próximo tópico
-									<span class="material-symbols-rounded" aria-hidden="true">east</span></a>
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</footer>
+			</div>
 		</div>
 
-		<footer>
-			<div class="container-fluid">
-				<div class="row justify-content-center align-items-center linha-de-marcas">
-					<div class="col-12 text-center py-3">
-						<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar('.sidebar', {
+				topSpacing: 0,
+				bottomSpacing: 0,
+				containerSelector: '.main',
+				innerWrapperSelector: '.sidebar__inner',
+				minWidth: 991,
+			});
 
-	<!--  Bootstrap JS and Popper -->
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+			function refreshSidebarSticky() {
+				if (sidebar && typeof sidebar.updateSticky === 'function') {
+					sidebar.updateSticky();
+				}
+			}
 
-	<!-- Sticky Sidebar -->
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-
-	<script type="text/javascript">
-		var sidebar = new StickySidebar('.sidebar', {
-			topSpacing: 0,
-			bottomSpacing: 0,
-			containerSelector: '.main',
-			innerWrapperSelector: '.sidebar__inner',
-			minWidth: 991,
-		});
-	</script>
-
-	<!-- Swiper -->
-	<script src="../../assets/js/swiper-bundle.min.js"></script>
-	<script src="../../assets/js/swiper-init.js"></script>
-
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-
-	<!-- Timeline horizontal -->
-	<script src="../../assets/js/timeline-horizontal/util.js"></script>
-	<!-- util functions included in the CodyHouse framework -->
-	<script src="../../assets/js/timeline-horizontal/swipe-content.js"></script>
-	<!-- A Vanilla JavaScript plugin to detect touch interactions -->
-	<script src="../../assets/js/timeline-horizontal/main.js"></script>
-	<!-- Start the Timeline -->
-	<script>
-		document.getElementsByTagName('html')[0].className += ' js';
-	</script>
-
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+			window.addEventListener('load', refreshSidebarSticky);
+			window.addEventListener('resize', refreshSidebarSticky);
+			document.querySelectorAll('.content img').forEach(function (img) {
+				if (!img.complete) {
+					img.addEventListener('load', refreshSidebarSticky);
+					img.addEventListener('error', refreshSidebarSticky);
+				}
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
 </html>

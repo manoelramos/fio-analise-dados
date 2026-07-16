@@ -304,26 +304,10 @@ section {
 	padding: var(--fio-sys-size-vertical-xxl) 0;
 }
 #course-program .row.justify-content-center {
-	align-items: flex-start;
+	align-items: stretch;
 }
 #course-program .course-program-intro {
 	color: #fff;
-}
-#course-program .card-aulas-list {
-	list-style-type: disc;
-	list-style-position: outside;
-	padding-left: 1.25rem;
-	margin: 0 0 1rem;
-	font-size: var(--fio-sys-typography-size-0);
-	line-height: 1.4;
-	text-align: left;
-}
-#course-program .card-aulas-list li {
-	margin-bottom: 0.65rem;
-	display: list-item;
-}
-#course-program .card-aulas-list li:last-child {
-	margin-bottom: 0;
 }
 #course-program .card {
 	padding: 0;
@@ -332,20 +316,24 @@ section {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	overflow: hidden;
+	border-radius: var(--fio-sys-size-radius-sm);
 }
 
 #course-program .card .card-header {
 	border: none;
 	display: block;
 	background: none;
-	border-bottom: 2px solid #000;
-	padding: 20px;
+	border-bottom: 2px solid var(--fio-sys-color-secondary-dark);
+	border-radius: 0;
+	padding: 20px 20px 12px;
 }
 #course-program .card .card-header h6 {
 	color: #000;
-	font-family: var(--fio-sys-typography-family-primary-regular);
-	font-size: var(--fio-sys-typography-size-0);
+	font-family: var(--fio-sys-typography-family-primary-black);
+	font-size: var(--fio-sys-typography-size-1);
 	line-height: 1.35;
+	margin: 0;
 	width: 100%;
 	white-space: normal;
 	word-wrap: break-word;
@@ -354,18 +342,8 @@ section {
 #course-program .card .card-header h6 .modulo {
 	color: #000;
 	font-family: var(--fio-sys-typography-family-primary-black);
-	font-size: var(--fio-sys-typography-size-1);
+	font-size: inherit;
 	text-transform: uppercase;
-}
-#course-program .card .card-header h6 .nome {
-	display: block;
-	font-size: var(--fio-sys-typography-size-0);
-	color: #000;
-	font-family: var(--fio-sys-typography-family-primary-black);
-	line-height: 1.35;
-	white-space: normal;
-	word-wrap: break-word;
-	overflow-wrap: anywhere;
 }
 
 #course-program .card .card-body {
@@ -375,25 +353,123 @@ section {
 	justify-content: flex-start;
 	align-items: stretch;
 	flex: 1 1 auto;
-	padding: 20px;
+	min-height: 180px;
+	padding: 24px 20px 20px;
 	text-align: left;
 }
-#course-program .card .card-body .fio-button {
-	margin-top: 1rem;
-	align-self: stretch;
+#course-program .card .card-body .nome {
+	display: block;
+	color: #000;
+	font-family: var(--fio-sys-typography-family-primary-black);
+	font-size: var(--fio-sys-typography-size-1);
+	line-height: 1.35;
+	margin: 0 0 1.5rem;
+	white-space: normal;
+	word-wrap: break-word;
+	overflow-wrap: anywhere;
 }
-#course-program .card .card-body p {
-	font-size: var(--fio-sys-typography-size-0);
+#course-program .card .card-body .fio-button {
+	margin-top: auto;
+	align-self: stretch;
+	color: #000;
+	border-color: #000;
+	background-color: #fff;
+}
+#course-program .card .card-body .fio-button:hover,
+#course-program .card .card-body .fio-button:focus {
+	color: #000;
+	border-color: #000;
+	background-color: var(--fio-sys-color-primary-extra-light);
 }
 
 #course-program .card .card-footer {
 	border: none;
-	padding: 0 20px 20px;
+	border-radius: 0;
+	padding: 0;
 	margin-top: auto;
+	background-color: var(--fio-sys-color-accent-medium);
 }
 #course-program .card .card-footer a {
 	width: 100%;
 	border-radius: 0;
+	padding: 16px 20px;
+}
+
+/* Modal de aulas dos módulos */
+.modal-aulas .modal-content {
+	border: var(--fio-sys-size-stroke-md) solid var(--fio-sys-color-primary-dark);
+	border-radius: var(--fio-sys-size-radius-lg);
+	overflow: hidden;
+}
+.modal-aulas .modal-header {
+	border-bottom: none !important;
+	background-color: var(--fio-sys-color-primary-extra-light);
+}
+.modal-aulas .modal-title {
+	color: var(--fio-sys-color-primary-dark);
+	font-family: var(--fio-sys-typography-family-primary-bold);
+}
+.modal-aulas .modal-header .btn-close {
+	opacity: 1;
+	background: transparent;
+	box-shadow: none;
+	font-size: 0;
+	position: relative;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+.modal-aulas .modal-header .btn-close::before {
+	content: "close";
+	font-family: "Material Symbols Rounded";
+	font-size: 1.5rem;
+	color: var(--fio-sys-color-primary-dark);
+	line-height: 1;
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-aulas .modal-aulas-subtitle {
+	color: var(--fio-sys-color-primary-light);
+	font-family: var(--fio-sys-typography-family-primary-bold);
+	font-size: var(--fio-sys-typography-size-1);
+	margin-bottom: var(--fio-sys-size-padding-md);
+}
+.modal-aulas .list {
+	margin-bottom: 0;
+}
+.modal-aulas .list .list-group.list-group-numbered > .list-group-item {
+	border-bottom-color: var(--fio-sys-color-primary-extra-light);
+	border-bottom-width: 1px;
+	padding-top: var(--fio-sys-size-padding-md);
+	padding-bottom: var(--fio-sys-size-padding-md);
+	padding-left: 2.25rem;
+}
+.modal-aulas .list .list-group.list-group-numbered > .list-group-item::before {
+	color: var(--fio-sys-color-primary-light);
+	font-family: var(--fio-sys-typography-family-primary-bold);
+	text-shadow: none;
+}
+.modal-aulas .list .list-group.list-group-numbered > .list-group-item a {
+	display: inline-block;
+	background-color: var(--fio-sys-color-primary-extra-dark);
+	color: #fff;
+	text-decoration: none;
+	padding: 0.2rem 0.55rem;
+	line-height: 1.4;
+	border-radius: 2px;
+	transition: background-color 0.2s ease;
+}
+.modal-aulas .list .list-group.list-group-numbered > .list-group-item a:hover,
+.modal-aulas .list .list-group.list-group-numbered > .list-group-item a:focus {
+	background-color: var(--fio-sys-color-primary-dark);
+	color: #fff;
+	text-decoration: none;
+}
+.modal-aulas .modal-footer {
+	border-top: none;
+	justify-content: flex-end;
 }
 
 @media (min-width: 768px) {
@@ -404,9 +480,8 @@ section {
 		clip-path: polygon(0% 55%, 100% 45%, 100% 46%, 0% 95%);
 	}
 
-	#course-program .card .card-header h6 .modulo {
-		font-size: var(--fio-sys-typography-size-0);
-		text-transform: uppercase;
+	#course-program .card .card-body {
+		min-height: 220px;
 	}
 }
 
