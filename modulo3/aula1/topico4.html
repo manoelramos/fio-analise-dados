@@ -1,352 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="keywords" content="Fiocruz Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
-	<meta property="og:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:image" content="" />
-	<meta property="og:image:width" content="1080" />
-	<meta property="og:image:height" content="1080" />
-	<meta property="og:type" content="website" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:description" content="" />
-	<meta name="twitter:image:src" content="" />
-
-	<!-- Favicons and Touch Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-
-	<link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-
-	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-TileImage" content="../../media/icons/ms-icon-144x144.png" />
-	<!-- <meta name="theme-color" content="#003066" /> -->
-	<meta name="theme-color" content="#001833" />
-
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 3 | Aula 1</title>
-
-	<!-- Bootstrap CSS 5.1.3 -->
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-
-	<!-- Project CSS -->
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button">
-				<span class="icon material-symbols-rounded">read_more</span>
-			</a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title">
-			<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-		</div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 3 | Aula 1</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
+			</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="sidebar__title">
-							<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item">
-								<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>Créditos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
-								<span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
 								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<!--<span class="dropdown-menu__item-link"><strong>Módulo 3</strong><br />Modelos estatísticos <strong class="em-breve">(em breve)</strong></span>-->
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
-								<span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Módulo 3</span>
-									<span class="title">Sistemas de Informação em Saúde</span>
-								</li>
 
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Sistemas de Informações de Produção</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Sistemas de Informações Epidemiológicas</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Sistemas de Informações de Gestão, Infraestrutura e Orçamento</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Acesso aos dados de Saúde</a>
-								</li>
-
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../atividade.html"><strong>Atividade</strong></a>
-								</li>
-
-							</ul>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text class">Aula 1</span>
+					<div class="divider">
+						<hr />
 					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>
-								<span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Aula 1</span>
-									<span class="title">Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</span>
-								</li>
-								<li class="dropdown-menu__item">
-									<nav class="topic-list">
-											<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
-											<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informações em Saúde</a>
-											<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informação sobre Mortalidade (SIM)</a>
-											<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informações sobre Nascidos Vivos (SINASC)</a>
-											<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Limitações e qualidade dos dados</a>
-											<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Disseminação dos dados do SIM e do SINASC</a>
-										
-							<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
-								</li>
-							</ul>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 3</span>
+										<span class="title">Análise Espacial</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Abordagens teóricas da Geografia da Saúde</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Noções básicas de Geoprocessamento e SIG</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Fundamentos de Cartografia</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Prática de SIG I</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Prática de SIG II</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula6/topico1.html"><strong>Aula 6: </strong>Análise espacial – Área</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula7/topico1.html"><strong>Aula 7: </strong>Análise espacial – Pontos</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 1</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 1</span>
+										<span class="title">Abordagens teóricas da Geografia da Saúde</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Mapeamento em estudos de saúde</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Geografia da Saúde</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Mas afinal de que saúde estamos falando?</a>
+															<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Unidade Geográfica de Análise</a>
+															<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="content">
-			<div id="page-title"><div class="container"><div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5"><div class="col-12 col-md-10 col-lg-11"><h2 class="title"><span class="label">Módulo 3 | Aula 1</span><br />Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</h2></div></div></div></div>
-
-				<div id="page-content" class=""><section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 4</span><h3 class="heading__title">Sistema de Informações sobre Nascidos Vivos (SINASC)</h3></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Para compreender a importância do Sistema de Informações sobre Nascidos Vivos (SINASC), é necessário resgatar sua evolução. Em 1973, a Lei nº 6.015 regulamentou os registros civis, atribuindo ao IBGE a responsabilidade pelas estatísticas de nascimentos, que eram informadas nos cartórios e usadas para fins demográficos. Na década de 1980, estudos apontaram 22,6% de subregistro, causado principalmente pela cobrança de taxas.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Diante da baixa cobertura e da necessidade de dados sobre gestação e parto, o Ministério da Saúde criou, em 1990, o SINASC, com a Declaração de Nascido Vivo (DNV) como documento obrigatório para coleta padronizada. A DNV foi estruturada para permitir análises demográficas e epidemiológicas da mãe, do pré-natal e do parto. Em 1992, o sistema já operava em todas as unidades da Federação.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Em 1999, a gestão foi descentralizada e, em 2003, passou à Secretaria de Vigilância em Saúde (atual SVSA). A Portaria nº 116/2009 regulamentou coleta, fluxo e periodicidade dos dados. Em 2012, a Lei nº 12.662 conferiu validade nacional à DNV, sem substituir o registro civil obrigatório.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Ao longo dos anos, variáveis foram incluídas para aprimorar análises, como registro de anomalias congênitas (1999, 2006, 2011), monitoramento de cesarianas pelos grupos de Robson (2011) e medidas do recém-nascido (2016). Em 2021, termos como “Nome da mãe” e “Nome do pai” foram substituídos por “Parturiente” e “Responsável legal”, atendendo à decisão judicial.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O nascimento é um dos eventos vitais, cujo monitoramento contribui significativamente para que se possa entender a situação de saúde de uma população e avaliar políticas e ações de vigilância e atenção à saúde materno-infantil.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula1-topico4-coleta-processamento-nascimentos.png" alt="Mulher em mesa de escritório, de costas, digitando em notebook com tela exibindo gráficos de análise de dados." title="Fonte: Freepik" loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: Freepik</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Coleta e processamento dos dados sobre nascimentos</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A Declaração de Nascido Vivo (DNV) é o documento oficial para registro de todos os nascidos vivos no Brasil e requisito para emissão da Certidão de Nascimento pelos cartórios, conforme a Lei nº 6.015/1973. De uso obrigatório em todo o país, a DNV é um formulário padronizado, pré-numerado, impresso em três vias coloridas (branca, amarela e rosa) em papel carbonado, fornecido exclusivamente pelo Ministério da Saúde às Secretarias Estaduais. Em casos de gravidez múltipla, é emitida uma DNV para cada bebê.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O preenchimento pode ser realizado por qualquer profissional de saúde capacitado, incluindo parteiras tradicionais vinculadas a unidades de saúde, tanto em partos hospitalares quanto domiciliares. O diagnóstico de anomalias congênitas, entretanto, é responsabilidade do médico, que deve descrevê-las detalhadamente, sem agrupamento em síndromes. A DNV reúne 52 variáveis distribuídas em oito blocos, com informações sobre a mãe, o pré-natal, o parto e o recém-nascido, permitindo análises epidemiológicas e demográficas, conforme o Quadro 2.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-3"><p><strong>Quadro 2 – Bloco de informações da DNV</strong></p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-0"><div class="table-responsive aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><table class="table table-bordered"><tbody><tr><th scope='row' class='align-top' style='width:28%'>Bloco 1 – Identificação do recém-nascido</th><td>Nome do recém-nascido, sexo, raça/cor do recém-nascido, peso ao nascer, Índice de Apgar, comprimento, perímetro cefálico, detecção de alguma anomalia congênita.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco 2 – Local de ocorrência</th><td>Local da ocorrência, estabelecimento, CNES, endereço da ocorrência, se fora do estabelecimento ou da residência da parturiente (rua, praça, avenida etc.), CEP, bairro, município de ocorrência, UF.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco 3 – Parturiente</th><td>Nome, cartão SUS, escolaridade, ocupação habitual, data de nascimento, idade, naturalidade, situação conjugal, raça/cor, endereço de residência (logradouro, CEP, bairro, município e UF).</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco 4 – Responsável legal</th><td>Nome e idade.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco 5 – Gestação e parto</th><td>Histórico gestacional (número de gestações anteriores, número de partos vaginais, número de cesáreas, número de nascidos vivos, número de perdas fetais/abortos), data da última menstruação (DUM), número de semanas de gestação, se a DUM for “Ignorada”, número de consultas de pré-natal, mês de gestação em que iniciou o pré-natal, tipo de gravidez, parto (apresentação, o trabalho de parto foi induzido?, tipo de parto, cesárea ocorreu antes do trabalho de parto iniciar, nascimento assistido por…).</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco 6 – Anomalias congênitas</th><td>Descrever todas as anomalias congênitas observadas no recém-nascido.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco 7 – Preenchimento</th><td>Data do preenchimento, nome do responsável pelo preenchimento, função, tipo documento, número do documento, órgão emissor.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco 8 – Cartório</th><td>Cartório, registro, data, município, UF.</td></tr></tbody></table></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mt-1 mb-5"><p class="figure-caption fonte mb-0">Fonte: Brasil (2022b).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Cada via da DNV tem uma destinação específica: a primeira é enviada ao órgão de processamento para digitação e registro no SINASC; a segunda é entregue à família para emissão da certidão de nascimento; e a terceira permanece na unidade de saúde. Em casos de partos fora do hospital, a família deve procurar o cartório ou a Secretaria Municipal de Saúde para emissão da DNV. A Figura 2 sintetiza o fluxo da DNV.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-2"><p><strong>Figura 2: Fluxo de Declaração de Nascidos Vivos: ocorrência em estabelecimento de saúde.</strong></p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula1-fig2-fluxo-dnv.png" alt="Fluxograma do fluxo da Declaração de Nascido Vivo conforme o local de ocorrência do parto: destino das vias branca, amarela e rosa em hospital, domicílio com assistência, domicílio indígena aldeado e domicílio sem assistência." /></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Após o preenchimento, as declarações são revisadas, codificadas e digitadas pelas equipes municipais no SINASC, que transferem os dados para o nível estadual e, posteriormente, para a esfera federal. A codificação das anomalias congênitas deve ser feita por profissionais capacitados, com base na descrição médica. Para nascimentos em territórios indígenas, o processamento é responsabilidade dos Distritos Sanitários Especiais Indígenas (DSEI). O prazo para envio dos arquivos pelos municípios e DSEI ao estado é de até 30 dias após o mês do nascimento, e os estados devem transmitir os dados ao nível federal em até 60 dias.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>No âmbito federal, a Secretaria de Vigilância em Saúde e Ambiente (SVSA) realiza a qualificação da base nacional, verificando consistência, qualidade do preenchimento e duplicidades. Após correções, os dados são consolidados e disponibilizados de forma anonimizada para acesso público gratuito, conforme a Portaria SVS/MS nº 116/2009 e a legislação de proteção de dados pessoais.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Principais usos do Sistema de Informação sobre Nascidos Vivos</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O Sistema de Informação sobre Nascidos Vivos (SINASC) desempenha papel fundamental na compreensão do perfil dos nascimentos no Brasil, permitindo análise detalhada das características da gestação, do parto e do recém-nascido. Essas informações são essenciais para o planejamento da assistência materno-infantil, abrangendo o pré-natal, o parto e os cuidados ao recém-nascido. Além disso, possibilitam o monitoramento da qualidade da atenção à saúde, identificando práticas como o tipo de parto realizado, o número de consultas de pré-natal e a idade materna. O SINASC também subsidia estudos epidemiológicos e demográficos, que investigam fatores associados a desfechos adversos, como baixo peso ao nascer ou prematuridade, e orienta políticas públicas voltadas para a redução de desigualdades e a melhoria dos indicadores de saúde materno-infantil.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Os principais indicadores que utilizam o SINASC incluem:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="accordion accordion-flush aos-init aos-animate" id="m3a1-sin-ind-acc" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600">
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sin-ind-h1">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sin-ind-c1" aria-expanded="false" aria-controls="m3a1-sin-ind-c1">Taxa de natalidade</button>
-</h5>
-<div id="m3a1-sin-ind-c1" class="accordion-collapse collapse" aria-labelledby="m3a1-sin-ind-h1" data-bs-parent="">
-<div class="accordion-body"><p>Taxa de natalidade: expressa o número de nascidos vivos por mil habitantes, permitindo avaliar a dinâmica populacional.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sin-ind-h2">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sin-ind-c2" aria-expanded="false" aria-controls="m3a1-sin-ind-c2">Proporção de partos cesáreos</button>
-</h5>
-<div id="m3a1-sin-ind-c2" class="accordion-collapse collapse" aria-labelledby="m3a1-sin-ind-h2" data-bs-parent="">
-<div class="accordion-body"><p>Proporção de partos cesáreos: utilizada para monitorar práticas obstétricas e a adequação às recomendações de saúde.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sin-ind-h3">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sin-ind-c3" aria-expanded="false" aria-controls="m3a1-sin-ind-c3">Proporção de nascidos vivos com baixo peso</button>
-</h5>
-<div id="m3a1-sin-ind-c3" class="accordion-collapse collapse" aria-labelledby="m3a1-sin-ind-h3" data-bs-parent="">
-<div class="accordion-body"><p>Proporção de nascidos vivos com baixo peso (menos de 2.500 g): indicador importante para avaliar riscos neonatais.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sin-ind-h4">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sin-ind-c4" aria-expanded="false" aria-controls="m3a1-sin-ind-c4">Proporção de prematuridade</button>
-</h5>
-<div id="m3a1-sin-ind-c4" class="accordion-collapse collapse" aria-labelledby="m3a1-sin-ind-h4" data-bs-parent="">
-<div class="accordion-body"><p>Proporção de prematuridade: considera nascimentos com menos de 37 semanas de gestação, associada a maior vulnerabilidade do recém-nascido.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sin-ind-h5">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sin-ind-c5" aria-expanded="false" aria-controls="m3a1-sin-ind-c5">Adequação do pré-natal</button>
-</h5>
-<div id="m3a1-sin-ind-c5" class="accordion-collapse collapse" aria-labelledby="m3a1-sin-ind-h5" data-bs-parent="">
-<div class="accordion-body"><p>Adequação do pré-natal: medida pelo percentual de gestantes que realizaram sete ou mais consultas, refletindo a qualidade da assistência.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sin-ind-h6">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sin-ind-c6" aria-expanded="false" aria-controls="m3a1-sin-ind-c6">Proporção de anomalias congênitas</button>
-</h5>
-<div id="m3a1-sin-ind-c6" class="accordion-collapse collapse" aria-labelledby="m3a1-sin-ind-h6" data-bs-parent="">
-<div class="accordion-body"><p>Proporção de anomalias congênitas: permite monitorar condições de saúde do recém-nascido e orientar ações preventivas.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sin-ind-h7">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sin-ind-c7" aria-expanded="false" aria-controls="m3a1-sin-ind-c7">Indicadores de escolaridade materna</button>
-</h5>
-<div id="m3a1-sin-ind-c7" class="accordion-collapse collapse" aria-labelledby="m3a1-sin-ind-h7" data-bs-parent="">
-<div class="accordion-body"><p>Indicadores de escolaridade materna: fundamentais para analisar desigualdades sociais e sua relação com desfechos perinatais.</p></div></div></div>
-</div></div></div></div></section></div>
-
-				<!-- Navegação da aula -->
-				<section><div class='container'><div class='row justify-content-center'><div class='col-12 col-md-10 col-lg-8'><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico3.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico5.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div></div></div></div></section>
-			</div>
-
-			<footer>
-				<div class="container-fluid">
-					<div class="row justify-content-center align-items-center linha-de-marcas">
-						<div class="col-12 text-center py-3">
-							<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 3 | Aula 1</span>
+									<br />
+									Abordagens teóricas da Geografia da Saúde
+								</h2>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-	</div>
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 4</span><h3 class="heading__title">Geografia da Saúde</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A Geografia da Saúde estuda como o lugar onde as pessoas vivem influencia sua saúde, analisando fatores do território como ambiente, condições sociais, políticas e economia (Monkey &amp; Barcellos, 2006). Diferente do olhar médico tradicional, que foca no indivíduo, essa área considera que o espaço e a organização da sociedade também moldam o processo saúde–doença (Porto et al., 2022).</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula1/figura-geografia-saude.jpeg" alt="Poluição ambiental em corpo d'água" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Até meados do século XX, a área era chamada de <strong>Geografia Médica</strong>, focada principalmente nas doenças infecciosas e parasitárias. Mais tarde, entre as décadas de 1970 e 1980, influenciado por autores como Milton Santos, consolidou-se o termo <strong>Geografia da Saúde</strong>, ampliando o olhar para incluir desigualdades sociais, condições econômicas, acesso aos serviços e o papel do território na produção do bem-estar (Mendes, 1993).</p><p>Nas últimas décadas, a Geografia da Saúde se fortaleceu tanto teoricamente quanto em suas aplicações práticas. Esse crescimento está ligado ao desenvolvimento do Sistema Único de Saúde (SUS), que organiza a saúde a partir de um modelo territorial descentralizado, hierarquizado e integrado por redes de atenção (Brasil, 1990).</p><p>Nesta disciplina, utilizaremos os termos <strong>espaço geográfico, lugar e território</strong>. Embora não seja o objetivo fazermos uma discussão aprofundada sobre as diferenças entre eles, esses termos aparecerão com frequência, especialmente neste módulo. Por isso, serão apresentados de forma breve e didática.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="accordion accordion-flush" id="m3a1-conceitos-geografia"><div class="accordion-item"><h5 class="accordion-header" id="m3a1-conceitos-geografia-0-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-conceitos-geografia-0-c" aria-expanded="false" aria-controls="m3a1-conceitos-geografia-0-c">Espaço Geográfico</button></h5><div id="m3a1-conceitos-geografia-0-c" class="accordion-collapse collapse" aria-labelledby="m3a1-conceitos-geografia-0-h" data-bs-parent="#m3a1-conceitos-geografia"><div class="accordion-body"><p>O <strong>espaço geográfico</strong> é resultado da relação entre sociedade e natureza, o que significa que a saúde das pessoas depende também das condições ambientais, sociais e econômicas do lugar onde vivem. Segundo Milton Santos (2006), esse espaço é formado por sistemas de objetos (como ruas, prédios e serviços) e sistemas de ações (as práticas sociais que acontecem nele). Dessa forma, fatores como saneamento, transporte, moradia e serviços de saúde influenciam diretamente a qualidade de vida.</p></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-conceitos-geografia-1-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-conceitos-geografia-1-c" aria-expanded="false" aria-controls="m3a1-conceitos-geografia-1-c">Lugar</button></h5><div id="m3a1-conceitos-geografia-1-c" class="accordion-collapse collapse" aria-labelledby="m3a1-conceitos-geografia-1-h" data-bs-parent="#m3a1-conceitos-geografia"><div class="accordion-body"><p>O conceito de <strong>lugar</strong> mostra a dimensão mais humana da saúde. Lugar é o espaço onde as pessoas vivem, criam vínculos e constroem significados, influenciando o bem-estar mental, emocional e social. Ambientes marcados por violência e pobreza tendem a gerar medo e sofrimento, enquanto comunidades acolhedoras, com áreas de convivência e redes de apoio, fortalecem o sentimento de pertencimento e proteção, favorecendo a saúde coletiva (Tuan, 1983).</p></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-conceitos-geografia-2-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-conceitos-geografia-2-c" aria-expanded="false" aria-controls="m3a1-conceitos-geografia-2-c">Território</button></h5><div id="m3a1-conceitos-geografia-2-c" class="accordion-collapse collapse" aria-labelledby="m3a1-conceitos-geografia-2-h" data-bs-parent="#m3a1-conceitos-geografia"><div class="accordion-body"><p>O <strong>território</strong> se refere às relações de poder e à forma como o espaço é organizado politicamente. Na saúde, ele é essencial porque orienta o planejamento das ações públicas (Santos, 2006). A Atenção Básica, por exemplo, utiliza territórios específicos para identificar necessidades da população, distribuir recursos e garantir acesso aos serviços. Isso permite reconhecer desigualdades e direcionar melhor ações de promoção, prevenção e cuidado.</p></div></div></div></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Essas noções são fundamentais para compreender a saúde de maneira mais ampla, pois ajudam a analisar como as condições de vida influenciam a situação de saúde das populações. Para o SUS, pensar em território usado significa compreender:</p><div class="list"><ul class="list-group"><li class="list-group-item"><strong>Os fluxos e movimentos:</strong> Por onde as pessoas circulam para trabalhar, buscar atendimento, lazer etc. A área de abrangência de uma Unidade Básica de Saúde (UBS) não pode ser definida apenas por linhas no mapa, mas deve considerar os trajetos reais da população.</li><li class="list-group-item"><strong>As redes sociais e de apoio:</strong> Onde as pessoas buscam ajuda e informação (igrejas, associações de bairro, etc.).</li><li class="list-group-item"><strong>As vulnerabilidades e potencialidades:</strong> O território contém tanto as áreas de risco (ex: áreas de alagamento, pontos de venda de drogas) quanto os ativos de saúde (ex: praças, academias populares, grupos comunitários).</li></ul></div></div></div>
+						</div>
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico3.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico5.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-	<!--  Bootstrap JS and Popper -->
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-
-	<!-- Sticky Sidebar -->
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-
-	<script type="text/javascript">
-		var sidebar = new StickySidebar('.sidebar', {
-			topSpacing: 0,
-			bottomSpacing: 0,
-			containerSelector: '.main',
-			innerWrapperSelector: '.sidebar__inner',
-			minWidth: 991,
-		});
-	</script>
-
-	<!-- Code -->
-	<script src="../../assets/js/code.js"></script>
-
-	<!-- Swiper -->
-	<script src="../../assets/js/swiper-bundle.min.js"></script>
-	<script src="../../assets/js/swiper-init.js"></script>
-
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-
-	<!-- Timeline horizontal -->
-	<script src="../../assets/js/timeline-horizontal/util.js"></script>
-	<!-- util functions included in the CodyHouse framework -->
-	<script src="../../assets/js/timeline-horizontal/swipe-content.js"></script>
-	<!-- A Vanilla JavaScript plugin to detect touch interactions -->
-	<script src="../../assets/js/timeline-horizontal/main.js"></script>
-	<!-- Start the Timeline -->
-	<script>
-		document.getElementsByTagName('html')[0].className += ' js';
-	</script>
-
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar(".sidebar", {
+				topSpacing: 0, bottomSpacing: 0, containerSelector: ".main",
+				innerWrapperSelector: ".sidebar__inner", minWidth: 991,
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
 </html>

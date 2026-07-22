@@ -1,304 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="keywords" content="Fiocruz Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
-	<meta property="og:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:image" content="" />
-	<meta property="og:image:width" content="1080" />
-	<meta property="og:image:height" content="1080" />
-	<meta property="og:type" content="website" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:description" content="" />
-	<meta name="twitter:image:src" content="" />
-
-	<!-- Favicons and Touch Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-
-	<link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-
-	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-TileImage" content="../../media/icons/ms-icon-144x144.png" />
-	<!-- <meta name="theme-color" content="#003066" /> -->
-	<meta name="theme-color" content="#001833" />
-
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 3 | Aula 1</title>
-
-	<!-- Bootstrap CSS 5.1.3 -->
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-
-	<!-- Project CSS -->
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button">
-				<span class="icon material-symbols-rounded">read_more</span>
-			</a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title">
-			<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-		</div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 3 | Aula 1</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
+			</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="sidebar__title">
-							<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item">
-								<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>Créditos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
-								<span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
 								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<!--<span class="dropdown-menu__item-link"><strong>Módulo 3</strong><br />Modelos estatísticos <strong class="em-breve">(em breve)</strong></span>-->
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
-								<span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Módulo 3</span>
-									<span class="title">Sistemas de Informação em Saúde</span>
-								</li>
 
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Sistemas de Informações de Produção</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Sistemas de Informações Epidemiológicas</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Sistemas de Informações de Gestão, Infraestrutura e Orçamento</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Acesso aos dados de Saúde</a>
-								</li>
-
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../atividade.html"><strong>Atividade</strong></a>
-								</li>
-
-							</ul>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text class">Aula 1</span>
+					<div class="divider">
+						<hr />
 					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>
-								<span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Aula 1</span>
-									<span class="title">Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</span>
-								</li>
-								<li class="dropdown-menu__item">
-									<nav class="topic-list">
-											<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
-											<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informações em Saúde</a>
-											<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informação sobre Mortalidade (SIM)</a>
-											<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informações sobre Nascidos Vivos (SINASC)</a>
-											<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Limitações e qualidade dos dados</a>
-											<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Disseminação dos dados do SIM e do SINASC</a>
-										
-							<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
-								</li>
-							</ul>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 3</span>
+										<span class="title">Análise Espacial</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Abordagens teóricas da Geografia da Saúde</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Noções básicas de Geoprocessamento e SIG</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Fundamentos de Cartografia</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Prática de SIG I</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Prática de SIG II</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula6/topico1.html"><strong>Aula 6: </strong>Análise espacial – Área</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula7/topico1.html"><strong>Aula 7: </strong>Análise espacial – Pontos</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 1</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 1</span>
+										<span class="title">Abordagens teóricas da Geografia da Saúde</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Mapeamento em estudos de saúde</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Geografia da Saúde</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Mas afinal de que saúde estamos falando?</a>
+															<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Unidade Geográfica de Análise</a>
+															<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="content">
-			<div id="page-title"><div class="container"><div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5"><div class="col-12 col-md-10 col-lg-11"><h2 class="title"><span class="label">Módulo 3 | Aula 1</span><br />Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</h2></div></div></div></div>
-
-				<div id="page-content" class=""><section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 6</span><h3 class="heading__title">Disseminação dos dados do SIM e do SINASC</h3></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Os dados do SIM e do SINASC, assim como de outros sistemas de informações, estão disponíveis para acesso livre e gratuito pelo Departamento de Informação e Informática do SUS (DataSUS). É possível tanto realizar consultas online quanto baixar os microdados. A seguir, consulte os links para acesso aos dados de cada sistema:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Painéis de Consulta Rápida e Temática</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><ul class="ps-3 mb-0">
-<li>SINASC:  <a href="https://svs.aids.gov.br/daent/centrais-de-conteudos/paineis-de-monitoramento/natalidade/" target="_blank" rel="noopener noreferrer">https://svs.aids.gov.br/daent/centrais-de-conteudos/paineis-de-monitoramento/natalidade/</a>.</li>
-<li>SIM: <a href="https://svs.aids.gov.br/daent/centrais-de-conteudos/paineis-de-monitoramento/mortalidade/" target="_blank" rel="noopener noreferrer">https://svs.aids.gov.br/daent/centrais-de-conteudos/paineis-de-monitoramento/mortalidade/</a>.</li>
-</ul></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Tabulação online dos dados (TABNET/DATASUS)</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><ul class="ps-3 mb-0">
-<li>SIM: <a href="http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/obt10uf.def" target="_blank" rel="noopener noreferrer">http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/obt10uf.def</a></li>
-<li>SINASC: <a href="http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinasc/cnv/nvuf.def" target="_blank" rel="noopener noreferrer">http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sinasc/cnv/nvuf.def</a></li>
-</ul></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Baixar  microdados</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><ul class="ps-3 mb-0">
-<li>Open DataSUS: <a href="https://opendatasus.saude.gov.br/" target="_blank" rel="noopener noreferrer">https://opendatasus.saude.gov.br/</a></li>
-</ul></div></div>
-</div></section></div>
-
-				<!-- Navegação da aula -->
-				<section><div class='container'><div class='row justify-content-center'><div class='col-12 col-md-10 col-lg-8'><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico5.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico7.html" rel="next">Referências <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div></div></div></div></section>
-			</div>
-
-			<footer>
-				<div class="container-fluid">
-					<div class="row justify-content-center align-items-center linha-de-marcas">
-						<div class="col-12 text-center py-3">
-							<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 3 | Aula 1</span>
+									<br />
+									Abordagens teóricas da Geografia da Saúde
+								</h2>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-	</div>
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 6</span><h3 class="heading__title">Unidade Geográfica de Análise</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Até aqui, você viu que algumas doenças aparecem mais em certos lugares do que em outros. A Geografia da Saúde busca entender responder essa questão, analisando como o espaço influencia e revela desigualdades em saúde. Para isso, um passo essencial é definir qual será a unidade geográfica de análise, ou seja, o recorte territorial que será usado no estudo (Meade &amp; Emch, 2010).</p><p>A unidade geográfica de análise é a entidade espacial ou recorte territorial que servirá de base para coletar, organizar e analisar os dados. Ela assume papel estratégico, pois define a escala a partir dos quais os fenômenos serão observados, comparados e interpretados.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Por que a escolha da unidade importa?</h4></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A escolha define o que você enxerga. Por exemplo, analisar o desmatamento em uma escala global revela tendências climáticas, enquanto a análise no nível local (município) revela os atores responsáveis e conflitos agrários específicos.</p><p>A unidade geográfica de análise é fundamental porque mostra como as doenças e os cuidados em saúde se distribuem no espaço, revelando desigualdades, vulnerabilidades e padrões que não aparecem quando olhamos apenas para indivíduos ou para escalas muito amplas (Guimarães, 2003). Ela também organiza a coleta de dados epidemiológicos, já que indicadores como incidência, prevalência, mortalidade e cobertura vacinal são calculados a partir de recortes territoriais específicos, como municípios, bairros ou setores censitários. Escolher bem a unidade torna as análises mais precisas e comparáveis entre diferentes áreas.</p><p>A partir da sua inserção no SUS, você deve saber que a atuação da saúde ocorre em diferentes escalas - municipal, estadual e federal - e cada uma utiliza recortes territoriais próprios para organizar serviços, ações e informações. Esses recortes podem variar entre setores administrativos usados por outras áreas, como energia, telefonia ou educação, e também pelos limites definidos pela própria saúde para atender a população. Mesmo quando não são claramente delimitados, esses territórios são essenciais para planejar os serviços e produzir diagnósticos mais precisos.</p><p>Nesse contexto, entender escala geográfica é fundamental: ela indica o nível de detalhe e a abrangência espacial de um fenômeno, podendo ser global, regional, nacional ou local (Moreira, 2007). Essa noção ajuda a compreender como os problemas de saúde se manifestam em cada território e orienta análises mais adequadas.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="accordion accordion-flush" id="m3a1-escalas"><div class="accordion-item"><h5 class="accordion-header" id="m3a1-escalas-0-h"><button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-escalas-0-c" aria-expanded="true" aria-controls="m3a1-escalas-0-c">Escala global</button></h5><div id="m3a1-escalas-0-c" class="accordion-collapse collapse show" aria-labelledby="m3a1-escalas-0-h" data-bs-parent="#m3a1-escalas"><div class="accordion-body"><p>Na escala global, a saúde é impactada por dinâmicas que ultrapassam fronteiras nacionais. A circulação internacional de pessoas e mercadorias, por exemplo, facilita a disseminação de doenças infecciosas, como ocorreu durante a pandemia de COVID-19. Além disso, questões como mudanças climáticas, insegurança alimentar e desigualdades socioeconômicas globais afetam diretamente os indicadores de saúde em diversos países (ONU, 2024; IPCC, 2023). Organismos internacionais, como a Organização Mundial da Saúde (OMS), desempenham papel fundamental na coordenação de ações, na definição de diretrizes sanitárias e no monitoramento de emergências em saúde pública.</p></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-escalas-1-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-escalas-1-c" aria-expanded="false" aria-controls="m3a1-escalas-1-c">Escala regional</button></h5><div id="m3a1-escalas-1-c" class="accordion-collapse collapse" aria-labelledby="m3a1-escalas-1-h" data-bs-parent="#m3a1-escalas"><div class="accordion-body"><p>Na escala regional, observam-se padrões de saúde que variam conforme características ambientais, econômicas e culturais específicas. Certas regiões podem apresentar maior incidência de doenças tropicais, enquanto outras enfrentam problemas relacionados ao envelhecimento populacional ou à poluição industrial. A análise regional permite identificar desigualdades no acesso a serviços de saúde e na distribuição de recursos, contribuindo para a formulação de estratégias mais adequadas às particularidades de cada área (BRASIL, 2011).</p></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-escalas-2-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-escalas-2-c" aria-expanded="false" aria-controls="m3a1-escalas-2-c">Escala nacional</button></h5><div id="m3a1-escalas-2-c" class="accordion-collapse collapse" aria-labelledby="m3a1-escalas-2-h" data-bs-parent="#m3a1-escalas"><div class="accordion-body"><p>Na escala nacional, a saúde é estruturada por políticas públicas, sistemas de atendimento e investimentos governamentais. No caso do Brasil, por exemplo, o Sistema Único de Saúde (SUS) organiza a oferta de serviços em todo o território, buscando garantir acesso universal e gratuito à população. Nesse nível, são definidos programas de vacinação, campanhas de prevenção, estratégias de combate a epidemias e políticas de financiamento do setor. A escala nacional também evidencia desigualdades internas, como diferenças entre áreas urbanas e rurais.</p></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-escalas-3-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-escalas-3-c" aria-expanded="false" aria-controls="m3a1-escalas-3-c">Escala local</button></h5><div id="m3a1-escalas-3-c" class="accordion-collapse collapse" aria-labelledby="m3a1-escalas-3-h" data-bs-parent="#m3a1-escalas"><div class="accordion-body"><p>Na escala local, a saúde se manifesta no cotidiano das comunidades. É nesse nível que fatores como saneamento básico, qualidade da água, coleta de lixo, condições de moradia e acesso a unidades de saúde influenciam diretamente a qualidade de vida. A atuação de postos de saúde, hospitais municipais e agentes comunitários torna-se decisiva para a prevenção de doenças e para a promoção da saúde (BRASIL, 2011). Além disso, é no espaço local que os impactos de decisões globais e nacionais se concretizam, afetando de maneira direta a população.</p></div></div></div></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Portanto, compreender a saúde a partir das diferentes escalas geográficas permite uma visão integrada dos problemas e das soluções. As políticas globais influenciam estratégias nacionais, que por sua vez precisam considerar as especificidades regionais e locais. Essa articulação entre escalas é fundamental para a construção de sistemas de saúde mais eficientes, equitativos e capazes de responder aos desafios contemporâneos.</p><p>Uma boa definição da unidade geográfica de análise permite identificar desigualdades socioespaciais em saúde de maneira mais assertiva. Problemas como surtos de doenças infecciosas, maior ocorrência de doenças crônicas ou baixa cobertura de serviços frequentemente se concentram em determinados territórios marcados por precariedade de infraestrutura, baixa renda ou dificuldades de acesso aos serviços. Ao delimitar corretamente o recorte espacial, torna-se possível evidenciar a relação entre condições ambientais, sociais e econômicas e os padrões de saúde da população.</p><p>Além disso, a unidade espacial é essencial para o planejamento e a gestão das políticas públicas de saúde. Na Atenção Primária, por exemplo, a organização das equipes e a definição das áreas de abrangência são feitas com base em territórios específicos (Brasil, 2014). Esse recorte orienta a distribuição de recursos, a priorização de ações preventivas e o acompanhamento das famílias, tornando as intervenções mais direcionadas e eficazes.</p><p>Outro aspecto relevante, mas que trataremos nas últimas aulas desta disciplina - Análise Espacial, diz respeito ao rigor metodológico. Os resultados de uma pesquisa podem variar conforme o nível de agregação espacial adotado, fenômeno conhecido como Problema da Unidade Espacial Modificável (MAUP). Isso significa que a escolha da unidade de análise pode influenciar taxas, médias e interpretações, exigindo fundamentação teórica consistente e clareza nos critérios adotados (Openshaw, 1985).</p><p>Portanto, a unidade geográfica de análise é importante nos estudos de saúde porque estrutura a produção do conhecimento, orienta a formulação de políticas públicas e possibilita a identificação de desigualdades territoriais, contribuindo para ações mais equitativas e eficazes no cuidado à população.</p><p>Ao longo desta aula, vimos que compreender a saúde exige um olhar atento para o território e para as diversas relações entre ambiente, sociedade e processos de adoecimento. A Geografia da Saúde, ao articular conceitos como espaço geográfico, lugar e território, permite reconhecer padrões, desigualdades e determinantes que moldam a vida das populações. Mais do que uma abordagem teórica, ela é uma ferramenta essencial para o planejamento em saúde, contribuindo para políticas mais justas, ações mais eficazes e uma compreensão ampliada do cuidado.</p><p class="mb-0">Ao avançarmos nos próximos conteúdos, seguiremos aprofundando essas ideias, consolidando a análise espacial e toda sua operacionalização. Nas próximas aulas, você terá a oportunidade de colocar em prática todos esses conceitos, explorando ferramentas, técnicas e exemplos reais de análise espacial em saúde. Vamos aprender como visualizar dados no território, elaborar e interpretar mapas, identificar padrões de adoecimento e compreender como essas informações apoiam o planejamento em saúde no SUS.</p></div></div>
+						</div>
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico5.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico7.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-	<!--  Bootstrap JS and Popper -->
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-
-	<!-- Sticky Sidebar -->
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/exercise.js"></script>
-
-	<script type="text/javascript">
-		var sidebar = new StickySidebar('.sidebar', {
-			topSpacing: 0,
-			bottomSpacing: 0,
-			containerSelector: '.main',
-			innerWrapperSelector: '.sidebar__inner',
-			minWidth: 991,
-		});
-	</script>
-
-	<!-- Code -->
-	<script src="../../assets/js/code.js"></script>
-
-	<!-- Swiper -->
-	<script src="../../assets/js/swiper-bundle.min.js"></script>
-	<script src="../../assets/js/swiper-init.js"></script>
-
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-
-	<!-- Timeline horizontal -->
-	<script src="../../assets/js/timeline-horizontal/util.js"></script>
-	<!-- util functions included in the CodyHouse framework -->
-	<script src="../../assets/js/timeline-horizontal/swipe-content.js"></script>
-	<!-- A Vanilla JavaScript plugin to detect touch interactions -->
-	<script src="../../assets/js/timeline-horizontal/main.js"></script>
-	<!-- Start the Timeline -->
-	<script>
-		document.getElementsByTagName('html')[0].className += ' js';
-	</script>
-
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar(".sidebar", {
+				topSpacing: 0, bottomSpacing: 0, containerSelector: ".main",
+				innerWrapperSelector: ".sidebar__inner", minWidth: 991,
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
 </html>

@@ -1,390 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="keywords" content="Fiocruz Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
-	<meta property="og:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:image" content="" />
-	<meta property="og:image:width" content="1080" />
-	<meta property="og:image:height" content="1080" />
-	<meta property="og:type" content="website" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:description" content="" />
-	<meta name="twitter:image:src" content="" />
-
-	<!-- Favicons and Touch Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-
-	<link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-
-	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-TileImage" content="../../media/icons/ms-icon-144x144.png" />
-	<!-- <meta name="theme-color" content="#003066" /> -->
-	<meta name="theme-color" content="#001833" />
-
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 3 | Aula 1</title>
-
-	<!-- Bootstrap CSS 5.1.3 -->
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-
-	<!-- Project CSS -->
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button">
-				<span class="icon material-symbols-rounded">read_more</span>
-			</a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title">
-			<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-		</div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 3 | Aula 1</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
+			</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="sidebar__title">
-							<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item">
-								<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>Créditos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
-								<span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
 								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<!--<span class="dropdown-menu__item-link"><strong>Módulo 3</strong><br />Modelos estatísticos <strong class="em-breve">(em breve)</strong></span>-->
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
-								<span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Módulo 3</span>
-									<span class="title">Sistemas de Informação em Saúde</span>
-								</li>
 
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Sistemas de Informações de Produção</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Sistemas de Informações Epidemiológicas</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Sistemas de Informações de Gestão, Infraestrutura e Orçamento</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Acesso aos dados de Saúde</a>
-								</li>
-
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../atividade.html"><strong>Atividade</strong></a>
-								</li>
-
-							</ul>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text class">Aula 1</span>
+					<div class="divider">
+						<hr />
 					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>
-								<span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Aula 1</span>
-									<span class="title">Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</span>
-								</li>
-								<li class="dropdown-menu__item">
-									<nav class="topic-list">
-											<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
-											<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informações em Saúde</a>
-											<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sistema de Informação sobre Mortalidade (SIM)</a>
-											<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Sistema de Informações sobre Nascidos Vivos (SINASC)</a>
-											<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Limitações e qualidade dos dados</a>
-											<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Disseminação dos dados do SIM e do SINASC</a>
-										
-							<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
-								</li>
-							</ul>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 3</span>
+										<span class="title">Análise Espacial</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Abordagens teóricas da Geografia da Saúde</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Noções básicas de Geoprocessamento e SIG</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Fundamentos de Cartografia</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Prática de SIG I</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Prática de SIG II</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula6/topico1.html"><strong>Aula 6: </strong>Análise espacial – Área</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula7/topico1.html"><strong>Aula 7: </strong>Análise espacial – Pontos</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 1</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 1</span>
+										<span class="title">Abordagens teóricas da Geografia da Saúde</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Mapeamento em estudos de saúde</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Geografia da Saúde</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Mas afinal de que saúde estamos falando?</a>
+															<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Unidade Geográfica de Análise</a>
+															<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="content">
-			<div id="page-title"><div class="container"><div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5"><div class="col-12 col-md-10 col-lg-11"><h2 class="title"><span class="label">Módulo 3 | Aula 1</span><br />Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</h2></div></div></div></div>
-
-				<div id="page-content" class=""><section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 3</span><h3 class="heading__title">Sistema de Informação sobre Mortalidade (SIM)</h3></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O Sistema de Informação sobre Mortalidade (SIM), criado pelo Ministério da Saúde em 1975, surgiu para unificar e padronizar os mais de 40 modelos diferentes de Declaração de Óbito expedidos no Brasil. Até então, os dados sobre mortalidade eram fragmentados, não padronizados e sem um fluxo organizado desde a coleta até a divulgação das estatísticas vitais. Esse cenário dificultava a construção de uma vigilância epidemiológica eficiente.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O SIM tem como objetivo coletar, processar, armazenar e divulgar informações sobre todos os óbitos ocorridos no território nacional, incluindo suas causas e características, abrangendo também os óbitos fetais. Com o passar das décadas, o sistema se tornou mais completo e confiável, alcançando alta cobertura em todo o território nacional. Essa evolução permite analisar de forma consistente o perfil de mortalidade da população brasileira em diferentes regiões e recortes.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula1-topico3-analise-dados-mortalidade.png" alt="Equipe em reunião analisando painéis com gráficos e indicadores em tela." title="Fonte: Freepik" loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: Freepik</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Coleta dos dados sobre mortalidade</h4></div></div></div><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O instrumento utilizado para coleta de dados do SIM é a Declaração de Óbitos (DO). Além de ser o documento padrão de coleta de dados do SIM, a DO, conforme determina a Lei dos Registros Públicos — Lei nº 6.015, de 31 de dezembro de 1973 —, também tem caráter jurídico, por ser o documento oficial para a lavratura da Certidão de Óbito pelos Cartórios de Registro Civil.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A DO é impressa com sequência numérica única, formando conjuntos de três vias (branca, amarela e rosa); sua produção e distribuição é de competência exclusiva da Secretaria de Vigilância em Saúde e Ambiente do Ministério da Saúde (SVS/MS), que as repassa para as Secretarias Municipais de Saúde (SMS) e aos Distritos Sanitários Especiais Indígenas (Dsei), que por sua vez as distribuem às unidades notificadoras: estabelecimentos e serviços de saúde, inclusive domiciliar, Serviços de Institutos Médico-Legais cadastrados pela SMS. O cartório de registro civil é considerado a unidade notificadora em localidades sem médicos.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O preenchimento da DO, de acordo com a legislação brasileira, é um ato médico, porque somente esse profissional pode emitir uma DO, salvo em situações específicas fixadas por lei.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Quando a morte acontece por causa natural e a pessoa tinha acompanhamento médico, a Declaração de Óbito (DO) deve ser feita pelo médico responsável. Se a causa for natural, mas sem assistência médica, a DO será feita pelo médico do Serviço de Verificação de Óbitos (SVO). Se não houver esse serviço na cidade, a DO deverá ser emitida por um médico indicado pela Secretaria Municipal de Saúde (SMS). Em casos de morte por violência ou acidente, a DO é feita pelo perito do Instituto Médico-Legal (IML); se não houver, por um perito indicado pela autoridade judicial ou policial.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Em situações especiais, como buscas ativas, quando não for possível emitir a DO oficial, é usada a <a href="#modal-do-epidemiologica" data-bs-toggle="modal" data-bs-target="#modal-do-epidemiologica">DO epidemiológica</a>. Nesse caso, quem a preenche é o responsável pelo Sistema de Informação sobre Mortalidade (SIM) na Secretaria de Saúde.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A DO é formada por 59 variáveis, distribuídas em nove blocos, que identificam e caracterizam as circunstâncias do óbito, conforme o Quadro 1.</p></div></div>
-
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-3"><p><strong>Quadro 1 – Variáveis segundo o bloco da declaração de óbito</strong></p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-0"><div class="table-responsive aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><table class="table table-bordered"><tbody><tr><th scope='row' class='align-top' style='width:28%'>Bloco I – Identificação do falecido</th><td>Tipo de óbito (fetal ou não); data do óbito; cartão SUS; naturalidade; nome do falecido; nome do pai; nome da mãe; data de nascimento; idade; sexo; raça/cor; situação conjugal; escolaridade; ocupação habitual.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco II – Residência</th><td>Logradouro; CEP; bairro/distrito; município de residência; UF.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco III – Ocorrência</th><td>Local de ocorrência do óbito; estabelecimento; endereço de ocorrência; CEP; bairro/distrito; município de ocorrência; UF.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco IV – Óbitos fetais ou de menores de 1 ano</th><td>Informações sobre a mãe (idade; escolaridade; ocupação habitual; número de filhos tidos; número de semanas de gestação; tipo de gravidez; tipo de parto; morte em relação ao parto). Informações sobre o bebê (peso ao nascer, número da Declaração de Nascido Vivo).</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco V – Condições e causas de óbito</th><td>Se mulher em idade fértil, quando ocorreu o óbito (gravidez, parto, abortamento, puerpério, pós-puerpério até um ano após a gestação ou não ocorreu nesses períodos); se recebeu assistência médica; realização de necropsia; causas da morte; atestado médico de óbito (padronizado internacionalmente).</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco VI – Médico atestante</th><td>Nome do médico; CRM; óbito atestado por: assistente, substituto, IML, SVO, outro; município e UF do SVO ou IML; meio de contato; data do atestado; assinatura.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco VII – Causas externas</th><td>Prováveis circunstâncias de morte não natural, tipo de causa externa; acidente de trabalho; fonte de informação; descrição sumária do evento; endereço do local do acidente ou violência.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco VIII – Cartório</th><td>Nome do cartório; registro; data; município; UF.</td></tr><tr><th scope='row' class='align-top' style='width:28%'>Bloco IX – Localidade sem médico</th><td>Nome do declarante; testemunhas do óbito.</td></tr></tbody></table></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mt-1 mb-5"><p class="figure-caption fonte mb-0">Fonte: Brasil (2022a).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Processamento dos dados sobre mortalidade</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Depois de preencher a Declaração de Óbito, o encaminhamento depende da causa da morte (natural ou externa) e do local onde ocorreu (hospital, outro serviço de saúde, via pública, domicílio ou outro), conforme o esquema apresentado na Figura 1.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>As três vias da DO têm destinos diferentes:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="swiper swiper--effect-card card aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<div class="card-header"><span class="h6">Via branca</span></div>
-<div class="card-body"><p>Vai para a Secretaria Municipal de Saúde (SMS) para registro no Sistema de Informação sobre Mortalidade (SIM).</p></div>
-</div>
-<div class="swiper-slide">
-<div class="card-header"><span class="h6">Via amarela</span></div>
-<div class="card-body"><p>É entregue à família ou responsável legal para lavratura da certidão de óbito no cartório.</p></div>
-</div>
-<div class="swiper-slide">
-<div class="card-header"><span class="h6">Via rosa</span></div>
-<div class="card-body"><p>Fica arquivada no prontuário ou no setor de necropsia, quando emitida em hospital, SVO ou IML. Se a morte natural ocorreu fora de um serviço de saúde, a via rosa também fica com a SMS. Em casos de morte por causa externa, a via rosa fica com o perito que emitiu a DO.</p></div>
-</div>
-</div>
-<div class="swiper-pagination swiper-pagination3"></div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Para óbitos naturais em território indígena, a via branca é enviada ao Distrito Sanitário Especial Indígena (DSEI).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-2"><p><strong>Figura 1: Fluxo da emissão da Declaração de Óbito de acordo com a Portaria nº 116 de 2009.</strong></p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula1-fig1-fluxo-do-portaria116.png" alt="Fluxograma: quem deve emitir a Declaração de Óbito e destino das vias, conforme a Portaria nº 116 de 2009." /><figcaption class="figure-caption fonte">Fonte: Brasil, 2023, p.106.</figcaption></figure></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A via branca, ao chegar às SMS onde ocorreu o óbito, passa por revisão nas Secretarias Municipais de Saúde para corrigir erros ou campos em branco. Após essa revisão inicial a DO é digitalizada pelo técnico treinado no SIM local.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Depois, é feita a análise das causas da morte, definindo-se uma única causa principal, chamada causa básica, ou seja, a doença ou lesão que iniciou os eventos que levaram ao óbito.  A codificação é feita por profissionais treinados, chamados codificadores, que aplicam regras para selecionar a causa básica com apoio de ferramentas como o Seletor de Causa Básica.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Alguns óbitos recebem tratamento especial, estabelecido pelo Ministério da Saúde. É obrigatória a investigação de óbitos de mulheres em idade fértil, mortes maternas, fetais e infantis, conforme portarias específicas. Também são investigadas mortes com causa básica mal definida. Essas investigações seguem orientações padronizadas em todo o país, pois são eventos importantes para a Saúde Pública e ajudam a identificar falhas nos serviços de saúde.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Após a digitação da DO pelos municípios, cabe à equipe estadual realizar, por meio do SIM federal, o envio dos dados ao Ministério de Saúde onde as DO serão processadas, tratadas e analisadas para posterior divulgação dos dados consolidados. Todo esse processo demora em torno de dois anos para estruturação e divulgação do banco final do SIM pelo DATASUS.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Principais usos do Sistema de Informação sobre Mortalidade</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O SIM é uma ferramenta essencial para a gestão da Saúde Pública no Brasil. A partir dos dados do SIM é possível realizar análises detalhadas sobre padrões de mortalidade e suas características, ajudando a identificar grupos vulneráveis e monitorar tendências epidemiológicas.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Além disso, o SIM é amplamente utilizado para subsidiar políticas públicas e estratégias de prevenção. Por exemplo, os dados do sistema são fundamentais para monitorar a mortalidade infantil, permitindo que gestores identifiquem regiões com maiores taxas e direcionem programas de atenção materno-infantil. Outro uso prático é no controle de epidemias, como a análise do impacto da covid-19 ou da dengue, ajudando a planejar ações emergenciais. Também é utilizado para avaliar causas externas de morte, como acidentes de trânsito e violência, orientando políticas de segurança e prevenção. Dessa forma, o SIM não apenas organiza informações, mas contribui diretamente para a tomada de decisões que salvam vidas.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Podemos destacar alguns indicadores entre os mais utilizados para análise do perfil de mortalidade da população. São eles:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="accordion accordion-flush aos-init aos-animate" id="m3a1-sim-ind-acc" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600">
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sim-ind-h1">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sim-ind-c1" aria-expanded="false" aria-controls="m3a1-sim-ind-c1">Taxa bruta de mortalidade</button>
-</h5>
-<div id="m3a1-sim-ind-c1" class="accordion-collapse collapse" aria-labelledby="m3a1-sim-ind-h1" data-bs-parent="">
-<div class="accordion-body"><p>Taxa bruta de mortalidade: número total de óbitos por 1.000 habitantes em determinado período, útil para avaliar o nível geral de mortalidade da população.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sim-ind-h2">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sim-ind-c2" aria-expanded="false" aria-controls="m3a1-sim-ind-c2">Taxas específicas de mortalidade por idade e sexo</button>
-</h5>
-<div id="m3a1-sim-ind-c2" class="accordion-collapse collapse" aria-labelledby="m3a1-sim-ind-h2" data-bs-parent="">
-<div class="accordion-body"><p>Taxas específicas de mortalidade por idade e sexo: permitem identificar causas específicas de mortalidade segundo idade e sexo, fundamentais para políticas direcionadas.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sim-ind-h3">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sim-ind-c3" aria-expanded="false" aria-controls="m3a1-sim-ind-c3">Taxa de mortalidade infantil</button>
-</h5>
-<div id="m3a1-sim-ind-c3" class="accordion-collapse collapse" aria-labelledby="m3a1-sim-ind-h3" data-bs-parent="">
-<div class="accordion-body"><p>Taxa de mortalidade infantil: óbitos de crianças menores de 1 ano por mil nascidos vivos, indicador-chave da qualidade da atenção materno-infantil.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sim-ind-h4">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sim-ind-c4" aria-expanded="false" aria-controls="m3a1-sim-ind-c4">Taxa de mortalidade materna</button>
-</h5>
-<div id="m3a1-sim-ind-c4" class="accordion-collapse collapse" aria-labelledby="m3a1-sim-ind-h4" data-bs-parent="">
-<div class="accordion-body"><p>Taxa de mortalidade materna: número de mortes relacionadas à gestação, parto ou puerpério por 100 mil nascidos vivos, usada para monitorar cuidados obstétricos.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sim-ind-h5">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sim-ind-c5" aria-expanded="false" aria-controls="m3a1-sim-ind-c5">Mortalidade proporcional por grupo de causas</button>
-</h5>
-<div id="m3a1-sim-ind-c5" class="accordion-collapse collapse" aria-labelledby="m3a1-sim-ind-h5" data-bs-parent="">
-<div class="accordion-body"><p>Mortalidade proporcional por grupo de causas: distribuição percentual dos óbitos segundo grandes grupos de causas (doenças crônicas, infecciosas, causas externas), baseada na CID-10.</p></div></div></div>
-<div class="accordion-item">
-<h5 class="accordion-header" id="m3a1-sim-ind-h6">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-sim-ind-c6" aria-expanded="false" aria-controls="m3a1-sim-ind-c6">Indicadores de causas mal definidas</button>
-</h5>
-<div id="m3a1-sim-ind-c6" class="accordion-collapse collapse" aria-labelledby="m3a1-sim-ind-h6" data-bs-parent="">
-<div class="accordion-body"><p>Indicadores de causas mal definidas: proporção de óbitos com causa básica não especificada, importante para avaliar a qualidade da informação.</p></div></div></div>
-</div></div></div>
-<div class="row justify-content-center"></div></div></section></div>
-
-				<!-- Navegação da aula -->
-				<section><div class='container'><div class='row justify-content-center'><div class='col-12 col-md-10 col-lg-8'><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico2.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico4.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div></div></div></div></section>
-			</div>
-
-			<footer>
-				<div class="container-fluid">
-					<div class="row justify-content-center align-items-center linha-de-marcas">
-						<div class="col-12 text-center py-3">
-							<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 3 | Aula 1</span>
+									<br />
+									Abordagens teóricas da Geografia da Saúde
+								</h2>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-	</div>
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 3</span><h3 class="heading__title">Mapeamento em estudos de saúde</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Desde o início do século XIX, o uso do mapeamento e da análise espacial passou a ocupar um papel central no desenvolvimento da saúde pública, ao permitir a visualização da distri-buição geográfica das doenças e sua relação com fatores ambientais e sociais. Em um con-texto marcado por rápidas transformações urbanas, industrialização e altas taxas de mor-talidade, mapas e estatísticas tornaram-se ferramentas fundamentais para compreender padrões de adoecimento que não eram evidentes apenas por meio de observações clínicas individuais. Essa mudança representou uma transição do entendimento das doenças como eventos isolados para sua concepção como fenômenos coletivos, socialmente e territorial-mente determinados.</p><p>Alguns marcos importantes do início desta história:</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="accordion accordion-flush" id="m3a1-mapeamento"><div class="accordion-item"><h5 class="accordion-header" id="m3a1-mapeamento-0-h"><button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-mapeamento-0-c" aria-expanded="true" aria-controls="m3a1-mapeamento-0-c">William Farr (décadas de 1830 - 1850) Estatísticas de Mortalidade na Inglaterra:</button></h5><div id="m3a1-mapeamento-0-c" class="accordion-collapse collapse show" aria-labelledby="m3a1-mapeamento-0-h" data-bs-parent="#m3a1-mapeamento"><div class="accordion-body"><div class="row align-items-start g-4"><div class="col-12 col-md-7"><p>Os trabalhos de William Farr, nas décadas de 1830 a 1850, foram essenciais para consolidar essa abordagem. Ao sistematizar registros de mortalidade e analisá-los segundo local, idade e ocupação, Farr demonstrou que a ocorrência de doenças variava de forma consistente entre diferentes áreas e grupos populacionais. Embora ainda influenciado por <a tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-html="true" data-bs-title="Teoria miasmática" data-bs-content="<p>A teoria miasmática foi uma hipótese médica, predominante até o final do século XIX, que defendia que doenças contagiosas (como cólera, peste negra e malária) eram causadas por &quot;miasmas&quot; — odores fétidos e vapores tóxicos exalados por matéria orgânica em decomposição, solos e águas contaminadas.</p>"><strong>teorias miasmáticas</strong></a>, seu uso de dados espaciais permitiu identificar desigualdades regionais de saúde e estabelecer as bases da vigilância epidemiológica moderna. Dessa forma, o mapeamento passou a ser entendido como um instrumento estratégico para a administração sanitária e a formulação de políticas públicas (Eyler, 1973).</p></div><div class="col-12 col-md-5"><figure class="mb-0"><img class="img-fluid mx-auto d-block rounded border" src="../../media/modulo3/aula1/figura-farr.png" alt="Retrato de William Farr" loading="lazy" /></figure><p class="figure-caption fonte small mb-0 mt-2">Fonte: Unknown author - <a href="http://johnsnow.matrix.msu.edu/book_images7.php" target="_blank" rel="noopener noreferrer">johnsnow.matrix.msu.edu</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=20378013" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></p></div></div></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-mapeamento-1-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-mapeamento-1-c" aria-expanded="false" aria-controls="m3a1-mapeamento-1-c">John Snow - mapa dos casos de cólera em Broad Street, Londres:</button></h5><div id="m3a1-mapeamento-1-c" class="accordion-collapse collapse" aria-labelledby="m3a1-mapeamento-1-h" data-bs-parent="#m3a1-mapeamento"><div class="accordion-body"><div class="row align-items-start g-4"><div class="col-12 col-md-7"><p>O marco mais emblemático da epidemiologia espacial é o estudo de John Snow sobre o surto de cólera de 1854 em Londres. Ao mapear os casos da doença e relacioná-los à localização das bombas de água, Snow demonstrou empiricamente a associação entre a contaminação hídrica e a disseminação da cólera. Esse trabalho não apenas contestou a teoria miasmática dominante, mas também evidenciou o poder do mapeamento como ferramenta analítica capaz de revelar relações causais entre ambiente e doença. O mapa de Broad Street tornou-se um símbolo da aplicação do raciocínio geográfico na investigação epidemiológica e no controle de surtos (Snow, 1855).</p><p><strong>John Snow (1813-1858) foi um médico britânico e um dos fundadores da epidemiologia moderna</strong></p></div><div class="col-12 col-md-5"><figure class="mb-0"><img class="img-fluid mx-auto d-block rounded border" src="../../media/modulo3/aula1/figura-snow-retrato.png" alt="Retrato de John Snow" loading="lazy" /></figure><p class="figure-caption fonte small mb-0 mt-2">Fonte: Originally from en.wikipedia; description page is/was here., Domínio público, <a href="https://commons.wikimedia.org/w/index.php?curid=403227" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></p></div></div><div class="row align-items-start g-4 mt-4"><div class="col-12 col-md-5"><figure class="mb-0"><img class="img-fluid mx-auto d-block rounded border" src="../../media/modulo3/aula1/figura-snow-mapa.png" alt="Mapa de cólera de John Snow" loading="lazy" /></figure><p class="figure-caption fonte small mb-0 mt-2">Fonte: <a href="https://picryl.com/media/snow-cholera-map-5f4358" target="_blank" rel="noopener noreferrer">picryl.com</a></p></div><div class="col-12 col-md-7"><p><strong>Mapa elaborado por John Snow no estudo da epidemia de cólera em Londres em 1854.</strong></p><p><strong>Os pontos indicam a localização de pessoas afetadas pela cólera e as cruzetas indicam os poços de onde as pessoas coletavam água para consumo.</strong></p></div></div></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-mapeamento-2-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-mapeamento-2-c" aria-expanded="false" aria-controls="m3a1-mapeamento-2-c">Florence Nightingale (1857–1858) - Guerra da Crimeia:</button></h5><div id="m3a1-mapeamento-2-c" class="accordion-collapse collapse" aria-labelledby="m3a1-mapeamento-2-h" data-bs-parent="#m3a1-mapeamento"><div class="accordion-body"><div class="row align-items-start g-4"><div class="col-12 col-md-7"><p>Florence Nightingale ampliou o uso de representações espaciais e gráficas para demonstrar a influência das condições sanitárias sobre a mortalidade. Por meio de mapas hospitalares e diagramas de áreas polares, Nightingale evidenciou que a maioria das mortes de soldados durante a Guerra da Crimeia era causada por doenças evitáveis, e não por ferimentos de guerra. (Bradshaw, 2020) Ao transformar dados complexos em imagens fáceis de entender, ela ajudou a popularizar o uso de mapas e visualizações como ferramentas importantes na saúde pública, capazes de apoiar mudanças e melhorias nas políticas e instituições.</p></div><div class="col-12 col-md-5"><figure class="mb-0"><img class="img-fluid mx-auto d-block rounded border" src="../../media/modulo3/aula1/figura-nightingale.jpeg" alt="Florence Nightingale" loading="lazy" /></figure><p class="figure-caption fonte small mb-0 mt-2">Fonte: H. Lenthall, London - Este ficheiro foi extraído de outro ficheiro, Domínio público, <a href="https://commons.wikimedia.org/w/index.php?curid=9826164" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></p></div></div></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a1-mapeamento-3-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a1-mapeamento-3-c" aria-expanded="false" aria-controls="m3a1-mapeamento-3-c">Louis-René Villermé (início do século XIX) - estudos sobre mortalidade e condições sociais em Paris:</button></h5><div id="m3a1-mapeamento-3-c" class="accordion-collapse collapse" aria-labelledby="m3a1-mapeamento-3-h" data-bs-parent="#m3a1-mapeamento"><div class="accordion-body"><div class="row align-items-start g-4"><div class="col-12 col-md-7"><p>No início do século XIX, os estudos de Louis-René Villermé introduziram uma dimensão social ao uso do espaço na análise da saúde. Ao correlacionar mortalidade, condições de trabalho e níveis de pobreza em diferentes áreas de Paris, Villermé demonstrou que a distribuição das doenças estava profundamente ligada às desigualdades sociais e territoriais. Embora seus trabalhos antecedam a epidemiologia espacial formal, eles antecipam princípios fundamentais da saúde coletiva contemporânea, ao integrar dados geográficos, sociais e econômicos na explicação dos padrões de adoecimento (Julia &amp; Valleron, 2011).</p></div><div class="col-12 col-md-5"><figure class="mb-0"><img class="img-fluid mx-auto d-block rounded border" src="../../media/modulo3/aula1/figura-villerme.png" alt="Louis-René Villermé" loading="lazy" /></figure><p class="figure-caption fonte small mb-0 mt-2">Fonte: H. Lenthall, London - Este ficheiro foi extraído de outro ficheiro, Domínio público, <a href="https://commons.wikimedia.org/w/index.php?curid=9826164" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></p></div></div></div></div></div></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Essas experiências históricas demonstram que o uso de mapas se tornou fundamental para a saúde pública porque permite visualizar onde surgem doenças, identificar desigualdades e entender como fatores ambientais e sociais influenciam a saúde. Esse legado mudou a forma de estudar e enfrentar problemas de saúde coletiva e, até hoje, continuam essenciais em atividades como o uso de Sistema de Informações Geogrpaficas (SIG), a vigilância epidemiológica no território e o planejamento em saúde baseado em informações espaciais.</p><p>É justamente nesse ponto que a Geografia da Saúde se destaca, pois utiliza essas ferramentas e perspectivas para analisar como o espaço, o território e o lugar influenciam a distribuição das doenças, o acesso aos serviços e as condições de vida das populações.</p></div></div>
+						</div>
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico2.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico4.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-<div class="modal fade" id="modal-do-epidemiologica" tabindex="-1" aria-labelledby="modal-do-epidemiologica-label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal-do-epidemiologica-label">Declaração de óbito epidemiológica</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-      </div>
-      <div class="modal-body">
-        <p>A declaração de óbito epidemiológica é utilizada para contabilizar óbitos que não puderam ser atestados por um médico, evitando que sejam subnotificados nas estatísticas de Saúde Pública. É um formulário padronizado pela SVS/MS, impresso em via única e com numeração sequencial controlada exclusivamente pelo Ministério da Saúde.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="fio-button fio-button-primary" data-bs-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-		<!--  Bootstrap JS and Popper -->
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-
-	<!-- Sticky Sidebar -->
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-
-	<script type="text/javascript">
-		var sidebar = new StickySidebar('.sidebar', {
-			topSpacing: 0,
-			bottomSpacing: 0,
-			containerSelector: '.main',
-			innerWrapperSelector: '.sidebar__inner',
-			minWidth: 991,
-		});
-	</script>
-
-	<!-- Code -->
-	<script src="../../assets/js/code.js"></script>
-
-	<!-- Swiper -->
-	<script src="../../assets/js/swiper-bundle.min.js"></script>
-	<script src="../../assets/js/swiper-init.js"></script>
-
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-
-	<!-- Timeline horizontal -->
-	<script src="../../assets/js/timeline-horizontal/util.js"></script>
-	<!-- util functions included in the CodyHouse framework -->
-	<script src="../../assets/js/timeline-horizontal/swipe-content.js"></script>
-	<!-- A Vanilla JavaScript plugin to detect touch interactions -->
-	<script src="../../assets/js/timeline-horizontal/main.js"></script>
-	<!-- Start the Timeline -->
-	<script>
-		document.getElementsByTagName('html')[0].className += ' js';
-	</script>
-
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar(".sidebar", {
+				topSpacing: 0, bottomSpacing: 0, containerSelector: ".main",
+				innerWrapperSelector: ".sidebar__inner", minWidth: 991,
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
 </html>

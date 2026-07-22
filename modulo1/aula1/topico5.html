@@ -1,381 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<meta name="keywords" content="Fiocruz Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 1 | Aula 1</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="keywords" content="Fiocruz Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
-	<meta property="og:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:image" content="" />
-	<meta property="og:image:width" content="1080" />
-	<meta property="og:image:height" content="1080" />
-	<meta property="og:type" content="website" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:description" content="" />
-	<meta name="twitter:image:src" content="" />
-
-	<!-- Favicons and Touch Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-
-	<link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-
-	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-TileImage" content="../../media/icons/ms-icon-144x144.png" />
-	<!-- <meta name="theme-color" content="#003066" /> -->
-	<meta name="theme-color" content="#001833" />
-
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 1 | Aula 1</title>
-
-	<!-- Bootstrap CSS 5.1.3 -->
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-
-	<!-- Project CSS -->
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button">
-				<span class="icon material-symbols-rounded">read_more</span>
-			</a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title">
-			<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-		</div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="sidebar__title">
-							<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item">
-								<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>Créditos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
-								<span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<!--<span class="dropdown-menu__item-link"><strong>Módulo 3</strong><br />Modelos estatísticos <strong class="em-breve">(em breve)</strong></span>-->
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text module">Módulo <br class="d-none d-lg-block" /><span>1</span></span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
-								<span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Módulo 1</span>
-									<span class="title">Introdução à Informação em Saúde no SUS</span>
-								</li>
-
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>A Política Nacional de Informação e Informática em Saúde (PNIIS)</a>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text class">Aula 1</span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>
-								<span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Aula 1</span>
-									<span class="title">Introdução à Informação em Saúde no SUS</span>
-								</li>
-								<li class="dropdown-menu__item">
-									<nav class="topic-list">
-										<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"> <span class="material-symbols-rounded"></span>Sobre esta aula</a>
-
-										<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"> <span class="material-symbols-rounded"></span>Introdução</a>
-
-										<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Diferença entre dado, informação e conhecimento</a>
-
-										<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Informação para a saúde</a>
-
-										<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Os Sistemas de Informação em Saúde</a>
-
-										<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>As responsabilidades e a organização dos fluxos dos dados em Saúde</a>
-
-										<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Uso das informações em saúde</a>
-
-									
-							<a href="topico8.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
 			</div>
-		</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-		<div class="content">
-			<div id="page-title">
-				<div class="container">
-					<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
-						<div class="col-12 col-md-10 col-lg-11">
-							<h2 class="title">
-								<span class="label">Módulo 1 | Aula 1</span>
-								<br />
-								Introdução à Informação em Saúde no SUS
-							</h2>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>1</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 1</span>
+										<span class="title">Estatística</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Análise exploratória e descritiva</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Estatística básica</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Estatística avançada</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 1</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 1</span>
+										<span class="title">Análise exploratória e descritiva</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Tabelas</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Gráficos</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div id="page-content" class="">
-				<!-- Inserir o conteúdo aqui -->
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 1 | Aula 1</span>
+									<br />
+									Análise exploratória e descritiva
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 5</span><h3 class="heading__title">Referências</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="referencias-aula"><p class="referencias-item">Google Gemini. Simulação de dados hipotéticos sobre controle de Diabetes Tipo 2. Versão de julho de 2026. Disponível em: inteligência artificial generativa da Google. Acesso em: 14 jul. 2026. Conjunto de dados fictícios gerado para fins de validação estatística.</p><p class="referencias-item">Nuttall FQ. Body Mass Index: Obesity, BMI, and Health: A Critical Review. Nutr Today. 2015 May;50(3):117-128. doi: 10.1097/NT.0000000000000092. Epub 2015 Apr 7. PMID: 27340299; PMCID: PMC4890841.</p><p class="referencias-item">Vieira, Sonia. Estatística básica. São Paulo: Cengage Learning, 2015.</p></div></div></div>
+						</div>
+					</section>
+				</div>
+
 				<section>
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-10 col-lg-8 mb-5">
-								<div class="heading__block">
-									<span class="small">Tópico 5</span>
-									<h3 class="heading__title">Os Sistemas de Informação em Saúde</h3>
-								</div>
-
-								<p>Durante a 5ª Conferência Nacional de Saúde, em 1975, foi identificada a "falta de informação adequada e mecanismos institucionais" que possibilitassem o conhecimento das necessidades da população; e foi recomendada "a instituição de mecanismos de integração da informação" (Conferência Nacional de Saúde, 1975, p. 22). Na ocasião, também ocorreu a 1ª Reunião Nacional sobre Sistemas de Informação de Saúde, durante a qual foi apresentado e aprovado o modelo único para a declaração de óbito, os fluxos a serem seguidos e os dados a serem computados no Sistema de Informação sobre Mortalidade (SIM) (Jorge; Laurenti; Gottlieb; 2009). A partir de então, foram criados alguns dos principais sistemas de informações de saúde.</p>
-
-																<p>Com o movimento da Reforma Sanitária e a consequente criação do Sistema Único de Saúde (SUS) pela <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener noreferrer">Constituição Federal de 1988</a>, o movimento pela integração dos serviços de saúde e dos sistemas de informação informatizados se acelerou. O reconhecimento da saúde como direito de todos e dever do Estado reforçou a necessidade de desenvolver ferramentas eficazes para a gestão nacional, incluindo bases de dados robustas e sistemas informatizados capazes de coletar, analisar e disseminar informações relevantes para todos os níveis de gestão, além de apoiar o controle e a participação social.</p>
-
-																<div class="box" data-box="Saiba Mais">
-																	<div class="card">
-																		<div class="card-header">
-																			<span class="icone material-symbols-rounded" aria-hidden="true"></span>
-																			<span class="label">Saiba Mais</span>
-																		</div>
-																		<div class="card-body">
-																			<div class="heading__block">
-																				<p class="h6 heading__title">A descentralização dos SIS</p>
-																			</div>
-																			<p>Até a década de 1970, além de os Sistemas de Informação em Saúde (SIS) serem fragmentados e não integrados, os fluxos da produção de dados ocorriam de forma verticalizada e centralizada, com os municípios atuando apenas como coletores e produtores de dados, que iam do nível local para o nível central (Ministério da Saúde). Em meados da década de 1980, com o movimento da Reforma Sanitária e instituição do SUS, os SIS também passam por um processo de descentralização (Rezende; Soares; Reis, 2020).</p>
-																			<p>As informações ganham caráter mais estratégico na formulação, implementação, avaliação e monitoramento das ações e políticas de Saúde. Nesse contexto, as secretarias municipais de saúde deixam de apenas coletar dados, passando a analisá-los e a utilizá-los nos processos de decisão, gestão e planejamento. Esse movimento não apenas fortaleceu a autonomia municipal, mas também melhorou significativamente a capacidade do sistema de Saúde de responder de forma eficaz às necessidades locais e regionais da população.</p>
-																		</div>
-																	</div>
-																</div>
-
-																<p class="mt-4">Posteriormente, a <a href="https://www.planalto.gov.br/ccivil_03/leis/l8142.htm" target="_blank" rel="noopener noreferrer">Lei n° 8.142/1990</a> definiu que a organização e a coordenação do sistema de informação de saúde são atribuições comuns da União, dos estados, do Distrito Federal e dos municípios. A mesma lei previu, em seu art. 47, que o Ministério da Saúde, em articulação com os níveis estaduais e municipais do SUS, organizaria, no prazo de dois anos, "um sistema nacional de informações em saúde, integrado em todo o território nacional, abrangendo questões epidemiológicas e de prestação de serviços". No ano seguinte, foi criado o Departamento de Informática do SUS (DataSUS), naquele momento com as competências de "especificar, desenvolver, implantar e operar sistemas de informações relativos às atividades finalísticas do SUS" (<a href="https://www.planalto.gov.br/ccivil_03/decreto/1990-1994/d0100.htm" target="_blank" rel="noopener noreferrer">Brasil, 1991</a>).</p>
-
-																<p>O Ministério da Saúde determinou, por meio da <a href="https://docs.bvsalud.org/biblioref/ripsa/N/2003/018.pdf" target="_blank" rel="noopener noreferrer">Portaria n° 3.847</a>, de 25 de novembro de 1998, a necessidade do estabelecimento de um conjunto mínimo de padrões para a intercomunicação dos sistemas de informação e bases de dados em saúde (Risi Júnior, 2006). Naquele momento, eram diversos os desafios e implicações da fragmentação das informações para a Saúde disponíveis, pois existiam diferentes graus de cobertura e qualidade dos dados, com muitas inconsistências e falta de coordenação das informações (Brasil, 2009).</p>
-																<p>Apesar de diversas tentativas por meio do DataSUS, os diferentes SIS continuaram não integrados e apresentando dados duplicados e de difícil tratamento (Cavalcante; Pinheiro, 2011). Dessa forma, era difícil ter informações úteis e oportunas para subsidiar o planejamento e as decisões da gestão em diferentes níveis. Em 2002, o DataSUS foi transferido para a estrutura organizacional da Secretaria Executiva do Ministério da Saúde e, entre suas atribuições, estava "coordenar a implementação do sistema nacional de informação em saúde, nos termos da legislação vigente" (<a href="https://bvsms.saude.gov.br/bvs/publicacoes/trajetoria_datasus.pdf" target="_blank" rel="noopener noreferrer">Brasil, 2002</a>).</p>
-
-																<div class="box" data-box="Saiba Mais">
-																	<div class="card">
-																		<div class="card-header">
-																			<span class="icone material-symbols-rounded" aria-hidden="true"></span>
-																			<span class="label">Saiba Mais</span>
-																		</div>
-																		<div class="card-body">
-																			<p>Em 2023, o DataSUS passou a integrar a Secretaria da Informação e Saúde Digital (SEIDIGI) do Ministério da Saúde (MS), com a responsabilidade de regulamentar e implementar iniciativas estratégicas para apoiar a informatização e a digitalização do SUS.</p>
-																		</div>
-																	</div>
-																</div>
-
-																<p class="mt-4">Dentre os principais marcos legais iniciais que orientaram a estruturação e o funcionamento do SUS e dos sistemas de informação em saúde, destaca-se ainda o <a href="https://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2011/Decreto/D7508.htm" target="_blank" rel="noopener noreferrer">Decreto n° 7.508/2011</a>. Esse decreto regulamenta as diretrizes estabelecidas pela <a href="https://www.planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener noreferrer">Lei n° 8.080/1990</a> para a organização do SUS, reforçando que, para cumprir exigências como avaliação, monitoramento e acompanhamento de indicadores - além de outras atribuições dos entes federativos -, a informação em Saúde e o desenvolvimento de sistemas informacionais são elementos essenciais e estratégicos.</p>
-
-																<p>Por muito tempo não houve uma estratégia de planejamento para todo o setor, e os sistemas foram sendo criados de acordo com necessidades específicas de diferentes áreas, ainda que com a previsão da instituição do Sistema Nacional de Informação em Saúde (SNIS). A partir de 2003, começou a ser idealizada a Política Nacional de Informática e Informação em Saúde (PNIIS), com contribuições de diferentes instituições acadêmicas, do Conselho Nacional de Secretários de Saúde (CONASS) e do Conselho Nacional de Secretários Municipais de Saúde (CONASEMS), e de realização de consulta pública (Fonseca, 2015). O histórico da PNIIS será detalhado na próxima aula.</p>
-
-																<div class="box" data-box="Atenção">
-																	<div class="card aos-init aos-animate" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="600">
-																		<div class="card-header">
-																			<span class="icone material-symbols-rounded" aria-hidden="true"></span>
-																			<span class="label">Atenção</span>
-																		</div>
-																		<div class="card-body">
-																			<div class="custom-shape-divider-top-1720289331">
-																				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-																					<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-																				</svg>
-																			</div>
-																			<div>
-																				<p>Em 2020 foi criada a Rede Nacional de Dados em Saúde (RNDS), plataforma oficial de interoperabilidade do Ministério da Saúde. Ela foi criada com o objetivo de conectar diferentes sistemas de saúde, e estabelece a infraestrutura nacional para o compartilhamento seguro e padronizado de dados, garantindo mais eficiência na gestão da informação e aprimorando a qualidade dos serviços prestados à população. No Módulo 4, aprofundaremos esse tema.</p>
-																			</div>
-																		</div>
-																	</div>
-																</div>
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico4.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="../aula2/topico1.html" rel="next">Próxima aula <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-			</div>
-
-			<!-- Navegação da aula -->
-			<section>
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-12 col-md-10 col-lg-8">
-							<div class="page-nav d-flex justify-content-evenly">
-								<a class="fio-button fio-button-primary" href="topico4.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico Anterior</a>
-								<a class="fio-button fio-button-primary" href="topico6.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a>
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</footer>
+			</div>
 		</div>
 
-		<footer>
-			<div class="container-fluid">
-				<div class="row justify-content-center align-items-center linha-de-marcas">
-					<div class="col-12 text-center py-3">
-						<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar('.sidebar', {
+				topSpacing: 0,
+				bottomSpacing: 0,
+				containerSelector: '.main',
+				innerWrapperSelector: '.sidebar__inner',
+				minWidth: 991,
+			});
 
-	<!--  Bootstrap JS and Popper -->
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+			function refreshSidebarSticky() {
+				if (sidebar && typeof sidebar.updateSticky === 'function') {
+					sidebar.updateSticky();
+				}
+			}
 
-	<!-- Sticky Sidebar -->
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/exercise.js"></script>
-
-	<script type="text/javascript">
-		var sidebar = new StickySidebar('.sidebar', {
-			topSpacing: 0,
-			bottomSpacing: 0,
-			containerSelector: '.main',
-			innerWrapperSelector: '.sidebar__inner',
-			minWidth: 991,
-		});
-	</script>
-
-	<!-- Code -->
-	<script src="../../assets/js/code.js"></script>
-
-	<!-- Swiper -->
-	<script src="../../assets/js/swiper-bundle.min.js"></script>
-	<script src="../../assets/js/swiper-init.js"></script>
-
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-
-	<!-- Timeline horizontal -->
-	<script src="../../assets/js/timeline-horizontal/util.js"></script>
-	<!-- util functions included in the CodyHouse framework -->
-	<script src="../../assets/js/timeline-horizontal/swipe-content.js"></script>
-	<!-- A Vanilla JavaScript plugin to detect touch interactions -->
-	<script src="../../assets/js/timeline-horizontal/main.js"></script>
-	<!-- Start the Timeline -->
-	<script>
-		document.getElementsByTagName('html')[0].className += ' js';
-	</script>
-
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+			window.addEventListener('load', refreshSidebarSticky);
+			window.addEventListener('resize', refreshSidebarSticky);
+			document.querySelectorAll('.content img').forEach(function (img) {
+				if (!img.complete) {
+					img.addEventListener('load', refreshSidebarSticky);
+					img.addEventListener('error', refreshSidebarSticky);
+				}
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
 </html>

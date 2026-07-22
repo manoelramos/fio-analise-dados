@@ -1,327 +1,264 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<meta name="keywords" content="Fiocruz Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 1 | Aula 1</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="keywords" content="Fiocruz Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:url" content="https://mooc.campusvirtual.fiocruz.br/rea/introducao-analise-dados-sus" />
-	<meta property="og:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta property="og:image" content="" />
-	<meta property="og:image:width" content="1080" />
-	<meta property="og:image:height" content="1080" />
-	<meta property="og:type" content="website" />
-
-	<!-- Twitter Cards -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Campus Virtual Fiocruz | Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:description" content="" />
-	<meta name="twitter:image:src" content="" />
-
-	<!-- Favicons and Touch Icons -->
-	<link rel="apple-touch-icon" sizes="57x57" href="../../media/icons/apple-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="60x60" href="../../media/icons/apple-icon-60x60.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="../../media/icons/apple-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="../../media/icons/apple-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="../../media/icons/apple-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="../../media/icons/apple-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="../../media/icons/apple-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="../../media/icons/apple-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-
-	<link rel="icon" type="image/png" sizes="192x192" href="../../media/icons/android-icon-192x192.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="96x96" href="../../media/icons/favicon-96x96.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="../../media/icons/favicon-16x16.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-
-	<meta name="msapplication-TileColor" content="#ffffff" />
-	<meta name="msapplication-TileImage" content="../../media/icons/ms-icon-144x144.png" />
-	<!-- <meta name="theme-color" content="#003066" /> -->
-	<meta name="theme-color" content="#001833" />
-
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 1 | Aula 1</title>
-
-	<!-- Bootstrap CSS 5.1.3 -->
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-
-	<!-- Project CSS -->
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button">
-				<span class="icon material-symbols-rounded">read_more</span>
-			</a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title">
-			<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-		</div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="sidebar__title">
-							<h1>Fontes de Dados e Sistemas de Informação para o SUS</h1>
-						</div>
-					</div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item">
-								<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>Créditos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
-								<span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									 <a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<!--<span class="dropdown-menu__item-link"><strong>Módulo 3</strong><br />Modelos estatísticos <strong class="em-breve">(em breve)</strong></span>-->
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text module">Módulo <br class="d-none d-lg-block" /><span>1</span></span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
-								<span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Módulo 1</span>
-									<span class="title">Introdução à Informação em Saúde no SUS</span>
-								</li>
-
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução à Informação em Saúde no SUS</a>
-								</li>
-								<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>A Política Nacional de Informação e Informática em Saúde (PNIIS)</a>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider">
-					<hr />
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<span class="text class">Aula 1</span>
-					</div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true"> format_list_bulleted</span>
-								<span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title">
-									<span class="label">Aula 1</span>
-									<span class="title">Introdução à Informação em Saúde no SUS</span>
-								</li>
-								<li class="dropdown-menu__item">
-									<nav class="topic-list">
-										<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"> <span class="material-symbols-rounded"></span>Sobre esta aula</a>
-
-										<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"> <span class="material-symbols-rounded"></span>Introdução</a>
-
-										<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Diferença entre dado, informação e conhecimento</a>
-
-										<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Informação para a saúde</a>
-
-										<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Os Sistemas de Informação em Saúde</a>
-
-										<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>As responsabilidades e a organização dos fluxos dos dados em Saúde</a>
-
-										<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Uso das informações em saúde</a>
-
-									
-							<a href="topico8.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
 			</div>
-		</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-		<div class="content">
-			<div id="page-title">
-				<div class="container">
-					<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
-						<div class="col-12 col-md-10 col-lg-11">
-							<h2 class="title">
-								<span class="label">Módulo 1 | Aula 1</span>
-								<br />
-								Introdução à Informação em Saúde no SUS
-							</h2>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>1</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 1</span>
+										<span class="title">Estatística</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Análise exploratória e descritiva</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Estatística básica</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Estatística avançada</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 1</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 1</span>
+										<span class="title">Análise exploratória e descritiva</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Tabelas</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Gráficos</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div id="page-content" class="">
-				<!-- Inserir o conteúdo aqui -->
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 1 | Aula 1</span>
+									<br />
+									Análise exploratória e descritiva
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 4</span><h3 class="heading__title">Gráficos</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Outra forma de sumarização dos dados é o gráfico. Da mesma forma que as tabelas, existem regras para sua construção. Assim:</p><div class="list"><ul class="list-group"><li class="list-group-item">Devem ser autoexplicativos.</li><li class="list-group-item">Devem responder às perguntas: O quê? Quem? Onde? Quando?</li><li class="list-group-item">Devem ter os títulos dos eixos horizontal e vertical, juntamente com as unidades de medida.</li><li class="list-group-item">Uniformize o número de casa decimais.</li><li class="list-group-item">Evite o uso de efeitos 3D, pois torna mais difícil para estimar os valores representados.</li></ul></div><p>Como dito anteriormente, o tipo de variável determina o tipo de técnica a ser utilizada. Isso vale, também, para os gráficos.</p><p>Nos gráficos, temos dois tipos mais apropriados para variáveis qualitativas (nominais e ordinais), que são o gráfico de barras e o gráfico de setores, também chamado de “pizza” ou “torta”.</p><p>Nas variáveis qualitativas, as barras do gráfico podem ser verticais ou horizontais. Entretanto, para as variáveis quantitativas discretas somente devemos usar as barras verticais. Pode-se empregar tanto a frequência absoluta quanto a frequência relativa (em percentual). Vejamos alguns exemplos.</p><p>No gráfico 1, temos a variável glicemia (controlada / não controlada), que é classificada como variável qualitativa nominal. É um gráfico de barras verticais, com os valores expressos em percentuais, mostrando que os pacientes com glicemia não controlada são maioria.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 1: Glicemia de pacientes acompanhados em uma clínica médica.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Gráfico de barras da glicemia" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="640" height="400" fill="#fff"/><rect x="56" y="24" width="560" height="304" fill="none" stroke="#333333" stroke-width="1"/><line x1="56" y1="328.0" x2="616" y2="328.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="332.0" text-anchor="end" font-size="11" fill="#333333">0</text><line x1="56" y1="290.0" x2="616" y2="290.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="294.0" text-anchor="end" font-size="11" fill="#333333">10</text><line x1="56" y1="252.0" x2="616" y2="252.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="256.0" text-anchor="end" font-size="11" fill="#333333">20</text><line x1="56" y1="214.0" x2="616" y2="214.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="218.0" text-anchor="end" font-size="11" fill="#333333">30</text><line x1="56" y1="176.0" x2="616" y2="176.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="180.0" text-anchor="end" font-size="11" fill="#333333">40</text><line x1="56" y1="138.0" x2="616" y2="138.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="142.0" text-anchor="end" font-size="11" fill="#333333">50</text><line x1="56" y1="100.0" x2="616" y2="100.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="104.0" text-anchor="end" font-size="11" fill="#333333">60</text><line x1="56" y1="62.0" x2="616" y2="62.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="66.0" text-anchor="end" font-size="11" fill="#333333">70</text><line x1="56" y1="24.0" x2="616" y2="24.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="28.0" text-anchor="end" font-size="11" fill="#333333">80</text><text x="20" y="176.0" text-anchor="middle" font-size="12" fill="#333333" transform="rotate(-90 20 176.0)">%</text><rect x="132.4" y="223.5" width="127.3" height="104.5" fill="#5B9BD5"/><text x="196.0" y="344" text-anchor="middle" font-size="11" fill="#333333">Controlada</text><rect x="412.4" y="52.5" width="127.3" height="275.5" fill="#5B9BD5"/><text x="476.0" y="344" text-anchor="middle" font-size="11" fill="#333333">Não controlada</text><text x="336.0" y="382" text-anchor="middle" font-size="12" fill="#7030A0">Glicemia</text></svg></figure><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A variável qualitativa ordinal (prática de exercício físico) está apresentada no gráfico 2 por meio de um gráfico de setores, que serve para caracterizar a participação de cada categoria (rara / moderada / diária) em relação ao total. Observa-se, nesse caso, que os pacientes com frequência diária de exercício físico prevalecem em relação às outras categorias.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 2: Prática de exercício físico dos pacientes de uma clínica médica.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Gráfico de setores da prática de exercício físico" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="640" height="380" fill="#fff"/><rect x="40" y="20" width="560" height="280" fill="none" stroke="#333333" stroke-width="1"/><path d="M 320.0 170.0 L 320.0 50.0 A 120 120 0 1 1 282.9 284.1 Z" fill="#B4A7D6" stroke="#fff" stroke-width="1"/><path d="M 320.0 170.0 L 282.9 284.1 A 120 120 0 0 1 222.9 99.5 Z" fill="#6EC6C6" stroke="#fff" stroke-width="1"/><path d="M 320.0 170.0 L 222.9 99.5 A 120 120 0 0 1 320.0 50.0 Z" fill="#5B9BD5" stroke="#fff" stroke-width="1"/><rect x="170" y="312" width="14" height="14" fill="#B4A7D6"/><text x="190" y="323" font-size="11" fill="#333333">Rara</text><rect x="320" y="312" width="14" height="14" fill="#6EC6C6"/><text x="340" y="323" font-size="11" fill="#333333">Moderada</text><rect x="470" y="312" width="14" height="14" fill="#5B9BD5"/><text x="490" y="323" font-size="11" fill="#333333">Diária</text></svg></figure><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>No gráfico 3, apresenta-se a variável adesão à dieta (baixa / moderada / alta) para controle da glicemia dos pacientes da clínica médica por meio do gráfico de barras horizontais. Observe que é uma variável qualitativa ordinal. Chama atenção que menos de 20% dos pacientes têm alta adesão à dieta.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 3: Adesão à dieta para controle de glicemia dos pacientes de uma clínica médica.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Gráfico de barras horizontais da adesão à dieta" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="640" height="360" fill="#fff"/><rect x="120" y="24" width="480" height="288" fill="none" stroke="#333333" stroke-width="1"/><line x1="120.0" y1="24" x2="120.0" y2="312" stroke="#CCCCCC" stroke-width="1"/><text x="120.0" y="330" text-anchor="middle" font-size="11" fill="#333333">0,0</text><line x1="216.0" y1="24" x2="216.0" y2="312" stroke="#CCCCCC" stroke-width="1"/><text x="216.0" y="330" text-anchor="middle" font-size="11" fill="#333333">10,0</text><line x1="312.0" y1="24" x2="312.0" y2="312" stroke="#CCCCCC" stroke-width="1"/><text x="312.0" y="330" text-anchor="middle" font-size="11" fill="#333333">20,0</text><line x1="408.0" y1="24" x2="408.0" y2="312" stroke="#CCCCCC" stroke-width="1"/><text x="408.0" y="330" text-anchor="middle" font-size="11" fill="#333333">30,0</text><line x1="504.0" y1="24" x2="504.0" y2="312" stroke="#CCCCCC" stroke-width="1"/><text x="504.0" y="330" text-anchor="middle" font-size="11" fill="#333333">40,0</text><line x1="600.0" y1="24" x2="600.0" y2="312" stroke="#CCCCCC" stroke-width="1"/><text x="600.0" y="330" text-anchor="middle" font-size="11" fill="#333333">50,0</text><text x="360.0" y="352" text-anchor="middle" font-size="12" fill="#333333">%</text><text x="18" y="168.0" text-anchor="middle" font-size="12" fill="#333333" transform="rotate(-90 18 168.0)">Adesão à dieta</text><rect x="120" y="48.0" width="168.0" height="48.0" fill="#5B9BD5"/><text x="112" y="76.0" text-anchor="end" font-size="11" fill="#333333">Alta</text><rect x="120" y="144.0" width="360.0" height="48.0" fill="#5B9BD5"/><text x="112" y="172.0" text-anchor="end" font-size="11" fill="#333333">Moderada</text><rect x="120" y="240.0" width="432.0" height="48.0" fill="#5B9BD5"/><text x="112" y="268.0" text-anchor="end" font-size="11" fill="#333333">Baixa</text></svg></figure><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>No caso das variáveis quantitativas discretas é possível apresentar um gráfico de barras, mas somente verticais. Veja no exemplo no gráfico 4.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 4: Número de meses de descoberta do diabetes dos pacientes da clínica médica.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Gráfico de barras do número de meses de descoberta do diabetes" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="640" height="400" fill="#fff"/><rect x="56" y="24" width="560" height="304" fill="none" stroke="#333333" stroke-width="1"/><line x1="56" y1="328.0" x2="616" y2="328.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="332.0" text-anchor="end" font-size="11" fill="#333333">0</text><line x1="56" y1="297.6" x2="616" y2="297.6" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="301.6" text-anchor="end" font-size="11" fill="#333333">1</text><line x1="56" y1="267.2" x2="616" y2="267.2" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="271.2" text-anchor="end" font-size="11" fill="#333333">2</text><line x1="56" y1="236.8" x2="616" y2="236.8" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="240.8" text-anchor="end" font-size="11" fill="#333333">3</text><line x1="56" y1="206.4" x2="616" y2="206.4" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="210.4" text-anchor="end" font-size="11" fill="#333333">4</text><line x1="56" y1="176.0" x2="616" y2="176.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="180.0" text-anchor="end" font-size="11" fill="#333333">5</text><line x1="56" y1="145.6" x2="616" y2="145.6" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="149.6" text-anchor="end" font-size="11" fill="#333333">6</text><line x1="56" y1="115.2" x2="616" y2="115.2" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="119.2" text-anchor="end" font-size="11" fill="#333333">7</text><line x1="56" y1="84.8" x2="616" y2="84.8" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="88.8" text-anchor="end" font-size="11" fill="#333333">8</text><line x1="56" y1="54.4" x2="616" y2="54.4" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="58.4" text-anchor="end" font-size="11" fill="#333333">9</text><line x1="56" y1="24.0" x2="616" y2="24.0" stroke="#CCCCCC" stroke-width="1"/><text x="48" y="28.0" text-anchor="end" font-size="11" fill="#333333">10</text><text x="20" y="176.0" text-anchor="middle" font-size="12" fill="#333333" transform="rotate(-90 20 176.0)">N</text><rect x="77.8" y="115.2" width="36.4" height="212.8" fill="#5B9BD5"/><text x="96.0" y="344" text-anchor="middle" font-size="11" fill="#333333">1</text><rect x="157.8" y="115.2" width="36.4" height="212.8" fill="#5B9BD5"/><text x="176.0" y="344" text-anchor="middle" font-size="11" fill="#333333">2</text><rect x="237.8" y="176.0" width="36.4" height="152.0" fill="#5B9BD5"/><text x="256.0" y="344" text-anchor="middle" font-size="11" fill="#333333">3</text><rect x="317.8" y="115.2" width="36.4" height="212.8" fill="#5B9BD5"/><text x="336.0" y="344" text-anchor="middle" font-size="11" fill="#333333">4</text><rect x="397.8" y="145.6" width="36.4" height="182.4" fill="#5B9BD5"/><text x="416.0" y="344" text-anchor="middle" font-size="11" fill="#333333">5</text><rect x="477.8" y="145.6" width="36.4" height="182.4" fill="#5B9BD5"/><text x="496.0" y="344" text-anchor="middle" font-size="11" fill="#333333">6</text><rect x="557.8" y="267.2" width="36.4" height="60.8" fill="#5B9BD5"/><text x="576.0" y="344" text-anchor="middle" font-size="11" fill="#333333">Sem informação</text><text x="336.0" y="382" text-anchor="middle" font-size="12" fill="#7030A0">Número de meses</text></svg></figure><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A quantidade de pacientes que tem pouco tempo que descobriu a doença é semelhante àqueles que têm cinco ou seis meses de descoberta do diabetes.</p><p>Para as variáveis quantitativas contínuas, o ideal é construir um histograma. Existem diversos vídeos na internet sobre como construir um histograma. O link é somente um exemplo. <a href="https://www.youtube.com/watch?v=1YGxwM6qgGQ" target="_blank" rel="noopener noreferrer">Acesse o link aqui</a>.</p><p>Nosso exemplo é com a variável IMC (índice de massa corpórea) dos pacientes de uma clínica médica, apresentada no gráfico 5.</p><p>Observa-se que a maioria tem IMC entre 25 e 35, classificados como sobrepeso e obesidade de grau I.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 5: Índice de Massa Corpórea dos pacientes de uma clínica médica.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Histograma do IMC" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="640" height="400" fill="#fff"/><rect x="48" y="24" width="568" height="320" fill="none" stroke="#333333" stroke-width="1"/><line x1="48" y1="344.0" x2="616" y2="344.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="348.0" text-anchor="end" font-size="11" fill="#333333">0</text><line x1="48" y1="290.7" x2="616" y2="290.7" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="294.7" text-anchor="end" font-size="11" fill="#333333">2</text><line x1="48" y1="237.3" x2="616" y2="237.3" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="241.3" text-anchor="end" font-size="11" fill="#333333">4</text><line x1="48" y1="184.0" x2="616" y2="184.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="188.0" text-anchor="end" font-size="11" fill="#333333">6</text><line x1="48" y1="130.7" x2="616" y2="130.7" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="134.7" text-anchor="end" font-size="11" fill="#333333">8</text><line x1="48" y1="77.3" x2="616" y2="77.3" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="81.3" text-anchor="end" font-size="11" fill="#333333">10</text><line x1="48" y1="24.0" x2="616" y2="24.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="28.0" text-anchor="end" font-size="11" fill="#333333">12</text><text x="48.0" y="362" text-anchor="middle" font-size="11" fill="#333333">15</text><text x="142.7" y="362" text-anchor="middle" font-size="11" fill="#333333">20</text><text x="237.3" y="362" text-anchor="middle" font-size="11" fill="#333333">25</text><text x="332.0" y="362" text-anchor="middle" font-size="11" fill="#333333">30</text><text x="426.7" y="362" text-anchor="middle" font-size="11" fill="#333333">35</text><text x="521.3" y="362" text-anchor="middle" font-size="11" fill="#333333">40</text><text x="616.0" y="362" text-anchor="middle" font-size="11" fill="#333333">45</text><text x="18" y="184.0" text-anchor="middle" font-size="12" fill="#333333" transform="rotate(-90 18 184.0)">Frequência</text><text x="332.0" y="388" text-anchor="middle" font-size="12" fill="#333333">IMC</text><rect x="48.0" y="317.3" width="93.7" height="26.7" fill="#5B9BD5" stroke="#333333" stroke-width="0.5"/><rect x="142.7" y="157.3" width="93.7" height="186.7" fill="#5B9BD5" stroke="#333333" stroke-width="0.5"/><rect x="237.3" y="24.0" width="93.7" height="320.0" fill="#5B9BD5" stroke="#333333" stroke-width="0.5"/><rect x="332.0" y="24.0" width="93.7" height="320.0" fill="#5B9BD5" stroke="#333333" stroke-width="0.5"/><rect x="426.7" y="157.3" width="93.7" height="186.7" fill="#5B9BD5" stroke="#333333" stroke-width="0.5"/><rect x="521.3" y="317.3" width="93.7" height="26.7" fill="#5B9BD5" stroke="#333333" stroke-width="0.5"/></svg></figure><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Até esse momento, tratamos de tabelas e gráficos com uma variável. Para duas variáveis, temos uma tabela de dupla entrada. Com relação aos gráficos, podemos construir um diagrama de barras ou um diagrama de dispersão. O gráfico de linhas deve ser usado quando queremos mostrar a evolução no tempo de um evento.</p><p>Vamos começar com uma tabela de dupla entrada com as variáveis estado civil e região de procedência, por exemplo (Tabela 6).</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Tabela 6: Glicemia segundo adesão à dieta dos pacientes de uma clínica médica.</strong></p><div class="table-responsive aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><table class="table table-sm table-bordered align-middle mb-0"><thead><tr><th scope="col" rowspan="3">Glicemia</th><th scope="col" colspan="6" class="text-center">Adesão à dieta</th><th scope="col" colspan="2" class="text-center">Total</th></tr><tr><th scope="col" colspan="2" class="text-center">Baixa</th><th scope="col" colspan="2" class="text-center">Moderada</th><th scope="col" colspan="2" class="text-center">Alta</th><th scope="col" colspan="2" class="text-center">Total</th></tr><tr><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th></tr></thead><tbody><tr><th scope="row">Controlada</th><td class="text-end">7</td><td class="text-end">63,6</td><td class="text-end">3</td><td class="text-end">27,3</td><td class="text-end">1</td><td class="text-end">9,1</td><td class="text-end">11</td><td class="text-end">100,0</td></tr><tr><th scope="row">Não controlada</th><td class="text-end">11</td><td class="text-end">37,9</td><td class="text-end">12</td><td class="text-end">41,4</td><td class="text-end">6</td><td class="text-end">20,7</td><td class="text-end">29</td><td class="text-end">100,0</td></tr><tr><th scope="row"><strong>Total</strong></th><td class="text-end"><strong>18</strong></td><td class="text-end"><strong>45,0</strong></td><td class="text-end"><strong>15</strong></td><td class="text-end"><strong>37,5</strong></td><td class="text-end"><strong>7</strong></td><td class="text-end"><strong>17,5</strong></td><td class="text-end"><strong>40</strong></td><td class="text-end"><strong>100,0</strong></td></tr></tbody></table></div><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>É importante destacar que os percentuais foram calculados em relação à linha, ou seja, em relação à variável glicemia. A interpretação é, por exemplo, dentre os pacientes com glicemia controlada, 63,6% têm baixa adesão à dieta.</p><p>Na tabela 7, o percentual está calculado em relação à coluna, ou seja, em relação à variável adesão à dieta. Observem que a interpretação é diferente. Vejam.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Tabela 7: Glicemia segundo adesão à dieta dos pacientes de uma clínica médica.</strong></p><div class="table-responsive aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><table class="table table-sm table-bordered align-middle mb-0"><thead><tr><th scope="col" rowspan="3">Glicemia</th><th scope="col" colspan="6" class="text-center">Adesão à dieta</th><th scope="col" colspan="2" class="text-center">Total</th></tr><tr><th scope="col" colspan="2" class="text-center">Baixa</th><th scope="col" colspan="2" class="text-center">Moderada</th><th scope="col" colspan="2" class="text-center">Alta</th><th scope="col" colspan="2" class="text-center">Total</th></tr><tr><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th><th scope="col" class="text-end">N</th><th scope="col" class="text-end">%</th></tr></thead><tbody><tr><th scope="row">Controlada</th><td class="text-end">7</td><td class="text-end">38,9</td><td class="text-end">3</td><td class="text-end">20,0</td><td class="text-end">1</td><td class="text-end">14,3</td><td class="text-end">11</td><td class="text-end">27,5</td></tr><tr><th scope="row">Não controlada</th><td class="text-end">11</td><td class="text-end">61,1</td><td class="text-end">12</td><td class="text-end">80,0</td><td class="text-end">6</td><td class="text-end">85,7</td><td class="text-end">29</td><td class="text-end">72,5</td></tr><tr><th scope="row"><strong>Total</strong></th><td class="text-end"><strong>18</strong></td><td class="text-end"><strong>100,0</strong></td><td class="text-end"><strong>15</strong></td><td class="text-end"><strong>100,0</strong></td><td class="text-end"><strong>7</strong></td><td class="text-end"><strong>100,0</strong></td><td class="text-end"><strong>40</strong></td><td class="text-end"><strong>100,0</strong></td></tr></tbody></table></div><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Dentre aqueles pacientes que têm baixa adesão à dieta, 38,9% apresentam glicemia controlada.</p><p>É importante ressaltar que não existe certo ou errado, pois depende do enfoque que queremos, análise pela variável que estiver na linha ou na coluna.</p><p>Podemos visualizar as variáveis glicemia e adesão à dieta em um gráfico de barras verticais (gráfico 6).</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 6: Glicemia segundo adesão à dieta dos pacientes de uma clínica médica.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Gráfico de barras de glicemia segundo adesão à dieta" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="640" height="420" fill="#fff"/><rect x="48" y="24" width="568" height="308" fill="none" stroke="#333333" stroke-width="1"/><line x1="48" y1="332.0" x2="616" y2="332.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="336.0" text-anchor="end" font-size="11" fill="#333333">0</text><line x1="48" y1="288.0" x2="616" y2="288.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="292.0" text-anchor="end" font-size="11" fill="#333333">2</text><line x1="48" y1="244.0" x2="616" y2="244.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="248.0" text-anchor="end" font-size="11" fill="#333333">4</text><line x1="48" y1="200.0" x2="616" y2="200.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="204.0" text-anchor="end" font-size="11" fill="#333333">6</text><line x1="48" y1="156.0" x2="616" y2="156.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="160.0" text-anchor="end" font-size="11" fill="#333333">8</text><line x1="48" y1="112.0" x2="616" y2="112.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="116.0" text-anchor="end" font-size="11" fill="#333333">10</text><line x1="48" y1="68.0" x2="616" y2="68.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="72.0" text-anchor="end" font-size="11" fill="#333333">12</text><line x1="48" y1="24.0" x2="616" y2="24.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="28.0" text-anchor="end" font-size="11" fill="#333333">14</text><text x="20" y="178.0" text-anchor="middle" font-size="12" fill="#333333" transform="rotate(-90 20 178.0)">N</text><text x="142.7" y="350" text-anchor="middle" font-size="11" fill="#333333">Baixa</text><rect x="95.3" y="178.0" width="53.6" height="154.0" fill="#B4A7D6"/><rect x="158.4" y="90.0" width="53.6" height="242.0" fill="#5B9BD5"/><text x="332.0" y="350" text-anchor="middle" font-size="11" fill="#333333">Moderada</text><rect x="284.7" y="266.0" width="53.6" height="66.0" fill="#B4A7D6"/><rect x="347.8" y="68.0" width="53.6" height="264.0" fill="#5B9BD5"/><text x="521.3" y="350" text-anchor="middle" font-size="11" fill="#333333">Alta</text><rect x="474.0" y="310.0" width="53.6" height="22.0" fill="#B4A7D6"/><rect x="537.1" y="200.0" width="53.6" height="132.0" fill="#5B9BD5"/><text x="332.0" y="368" text-anchor="middle" font-size="12" fill="#333333">Adesão à dieta</text><rect x="212.0" y="384" width="14" height="14" fill="#B4A7D6"/><text x="232.0" y="396" font-size="11" fill="#333333">Controlada</text><rect x="362.0" y="384" width="14" height="14" fill="#5B9BD5"/><text x="382.0" y="396" font-size="11" fill="#333333">Não controlada</text></svg></figure><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Quando se tem duas variáveis quantitativas (discretas ou contínuas) usamos o diagrama de dispersão, que é uma representação gráfica realizada no sistema de coordenadas, em que uma variável é representada no eixo das abscissas (eixo horizontal) e a outra variável no eixo das ordenadas (eixo vertical). Assim, podemos interpretar o relacionamento entre essas duas variáveis na sua forma, direção e intensidade de relacionamento.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 7: Idade segundo salário (expresso como fração do salário-mínimo) de 36 empregados da seção de orçamento da Companhia MB.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Diagrama de dispersão" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="640" height="400" fill="#fff"/><rect x="48" y="24" width="568" height="320" fill="none" stroke="#333333" stroke-width="1"/><line x1="48.0" y1="24" x2="48.0" y2="344" stroke="#CCCCCC" stroke-width="1"/><text x="48.0" y="362" text-anchor="middle" font-size="11" fill="#333333">30</text><line x1="161.6" y1="24" x2="161.6" y2="344" stroke="#CCCCCC" stroke-width="1"/><text x="161.6" y="362" text-anchor="middle" font-size="11" fill="#333333">40</text><line x1="275.2" y1="24" x2="275.2" y2="344" stroke="#CCCCCC" stroke-width="1"/><text x="275.2" y="362" text-anchor="middle" font-size="11" fill="#333333">50</text><line x1="388.8" y1="24" x2="388.8" y2="344" stroke="#CCCCCC" stroke-width="1"/><text x="388.8" y="362" text-anchor="middle" font-size="11" fill="#333333">60</text><line x1="502.4" y1="24" x2="502.4" y2="344" stroke="#CCCCCC" stroke-width="1"/><text x="502.4" y="362" text-anchor="middle" font-size="11" fill="#333333">70</text><line x1="616.0" y1="24" x2="616.0" y2="344" stroke="#CCCCCC" stroke-width="1"/><text x="616.0" y="362" text-anchor="middle" font-size="11" fill="#333333">80</text><line x1="48" y1="344.0" x2="616" y2="344.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="348.0" text-anchor="end" font-size="11" fill="#333333">15</text><line x1="48" y1="290.7" x2="616" y2="290.7" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="294.7" text-anchor="end" font-size="11" fill="#333333">20</text><line x1="48" y1="237.3" x2="616" y2="237.3" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="241.3" text-anchor="end" font-size="11" fill="#333333">25</text><line x1="48" y1="184.0" x2="616" y2="184.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="188.0" text-anchor="end" font-size="11" fill="#333333">30</text><line x1="48" y1="130.7" x2="616" y2="130.7" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="134.7" text-anchor="end" font-size="11" fill="#333333">35</text><line x1="48" y1="77.3" x2="616" y2="77.3" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="81.3" text-anchor="end" font-size="11" fill="#333333">40</text><line x1="48" y1="24.0" x2="616" y2="24.0" stroke="#CCCCCC" stroke-width="1"/><text x="40" y="28.0" text-anchor="end" font-size="11" fill="#333333">45</text><text x="332.0" y="388" text-anchor="middle" font-size="12" fill="#333333">Idade</text><text x="18" y="184.0" text-anchor="middle" font-size="12" fill="#333333" transform="rotate(-90 18 184.0)">IMC</text><circle cx="104.8" cy="292.6" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="116.5" cy="285.9" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="128.1" cy="269.9" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="139.8" cy="261.4" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="151.4" cy="254.0" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="163.1" cy="249.3" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="174.7" cy="246.7" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="186.4" cy="238.5" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="198.0" cy="236.2" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="209.7" cy="230.6" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="221.3" cy="225.8" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="233.0" cy="222.7" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="244.6" cy="209.8" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="256.3" cy="206.0" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="267.9" cy="203.3" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="279.6" cy="201.0" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="291.2" cy="195.3" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="302.9" cy="192.7" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="314.5" cy="185.6" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="326.2" cy="184.7" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="337.8" cy="183.5" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="349.5" cy="178.6" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="361.1" cy="170.7" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="372.8" cy="168.5" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="384.4" cy="165.4" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="396.1" cy="161.0" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="407.7" cy="156.2" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="419.4" cy="151.1" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="431.0" cy="149.3" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="442.7" cy="143.9" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="454.3" cy="141.1" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="466.0" cy="134.2" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="477.6" cy="126.3" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="489.3" cy="124.1" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="500.9" cy="117.7" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="512.6" cy="110.5" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="524.2" cy="103.6" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="535.9" cy="89.0" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="547.5" cy="83.2" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/><circle cx="559.2" cy="75.9" r="4" fill="#fff" stroke="#5B9BD5" stroke-width="1.5"/></svg></figure><p class="figure-caption fonte small mb-0">Fonte: Dados fictícios gerados por Inteligência Artificial (Google Gemini), em julho de 2026.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Podemos observar que à medida que aumenta a idade dos pacientes o índice de massa corpórea também aumenta.</p><p>O gráfico de linhas é usado na escala temporal, que é apresentada no eixo horizontal (eixo X). No eixo das ordenadas é a variável a ser estudada. Uma vantagem desse tipo de gráfico é que várias séries temporais podem ser representadas em um único gráfico 6.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Gráfico 8: Número de nascimentos por região, Brasil, 2000-2024.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" class="img-fluid mx-auto d-block mb-3 rounded border" role="img" aria-label="Gráfico de linhas de nascimentos por região" style="max-width:100%;height:auto;background:#fff"><rect x="0" y="0" width="720" height="440" fill="#fff"/><rect x="64" y="24" width="632" height="316" fill="none" stroke="#333333" stroke-width="1"/><line x1="64" y1="340.0" x2="696" y2="340.0" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="344.0" text-anchor="end" font-size="10" fill="#333333">0</text><line x1="64" y1="294.9" x2="696" y2="294.9" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="298.9" text-anchor="end" font-size="10" fill="#333333">200</text><line x1="64" y1="249.7" x2="696" y2="249.7" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="253.7" text-anchor="end" font-size="10" fill="#333333">400</text><line x1="64" y1="204.6" x2="696" y2="204.6" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="208.6" text-anchor="end" font-size="10" fill="#333333">600</text><line x1="64" y1="159.4" x2="696" y2="159.4" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="163.4" text-anchor="end" font-size="10" fill="#333333">800</text><line x1="64" y1="114.3" x2="696" y2="114.3" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="118.3" text-anchor="end" font-size="10" fill="#333333">1.000</text><line x1="64" y1="69.1" x2="696" y2="69.1" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="73.1" text-anchor="end" font-size="10" fill="#333333">1.200</text><line x1="64" y1="24.0" x2="696" y2="24.0" stroke="#CCCCCC" stroke-width="1"/><text x="56" y="28.0" text-anchor="end" font-size="10" fill="#333333">1.400</text><text x="20" y="182.0" text-anchor="middle" font-size="11" fill="#333333" transform="rotate(-90 20 182.0)">Número de nascimentos</text><text x="64.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 64.0 354)">2000</text><text x="90.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 90.3 354)">2001</text><text x="116.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 116.7 354)">2002</text><text x="143.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 143.0 354)">2003</text><text x="169.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 169.3 354)">2004</text><text x="195.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 195.7 354)">2005</text><text x="222.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 222.0 354)">2006</text><text x="248.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 248.3 354)">2007</text><text x="274.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 274.7 354)">2008</text><text x="301.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 301.0 354)">2009</text><text x="327.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 327.3 354)">2010</text><text x="353.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 353.7 354)">2011</text><text x="380.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 380.0 354)">2012</text><text x="406.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 406.3 354)">2013</text><text x="432.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 432.7 354)">2014</text><text x="459.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 459.0 354)">2015</text><text x="485.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 485.3 354)">2016</text><text x="511.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 511.7 354)">2017</text><text x="538.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 538.0 354)">2018</text><text x="564.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 564.3 354)">2019</text><text x="590.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 590.7 354)">2020</text><text x="617.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 617.0 354)">2021</text><text x="643.3" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 643.3 354)">2022</text><text x="669.7" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 669.7 354)">2023</text><text x="696.0" y="354" text-anchor="end" font-size="9" fill="#333333" transform="rotate(-90 696.0 354)">2024</text><polyline fill="none" stroke="#2F5597" stroke-width="2" points="64.0,44.3 90.3,47.7 116.7,51.1 143.0,54.5 169.3,57.9 195.7,60.1 222.0,62.4 248.3,64.6 274.7,66.9 301.0,69.1 327.3,71.4 353.7,72.5 380.0,73.7 406.3,74.8 432.7,75.9 459.0,73.7 485.3,71.4 511.7,73.7 538.0,75.9 564.3,80.4 590.7,84.9 617.0,91.7 643.3,98.5 669.7,105.3 696.0,136.9"/><polyline fill="none" stroke="#6EC6C6" stroke-width="2" points="64.0,132.3 90.3,134.6 116.7,136.9 143.0,139.1 169.3,141.4 195.7,143.6 222.0,145.9 248.3,148.1 274.7,149.3 301.0,150.4 327.3,151.5 353.7,152.7 380.0,153.8 406.3,154.9 432.7,156.0 459.0,157.2 485.3,158.3 511.7,159.4 538.0,161.7 564.3,163.9 590.7,168.5 617.0,173.0 643.3,177.5 669.7,184.3 696.0,188.8"/><polyline fill="none" stroke="#B4A7D6" stroke-width="2" points="64.0,238.4 90.3,239.6 116.7,240.7 143.0,241.8 169.3,242.9 195.7,244.1 222.0,245.2 248.3,246.3 274.7,247.5 301.0,248.6 327.3,249.7 353.7,250.8 380.0,252.0 406.3,253.1 432.7,254.2 459.0,255.4 485.3,256.5 511.7,257.6 538.0,258.7 564.3,259.9 590.7,261.0 617.0,262.1 643.3,263.3 669.7,263.7 696.0,264.4"/><polyline fill="none" stroke="#2CA6A4" stroke-width="2" points="64.0,272.3 90.3,272.7 116.7,273.2 143.0,273.4 169.3,273.6 195.7,273.9 222.0,274.1 248.3,274.3 274.7,274.5 301.0,274.8 327.3,275.0 353.7,275.2 380.0,275.4 406.3,275.7 432.7,275.9 459.0,276.1 485.3,276.3 511.7,276.6 538.0,276.8 564.3,277.0 590.7,277.3 617.0,277.7 643.3,278.2 669.7,278.6 696.0,279.1"/><polyline fill="none" stroke="#7030A0" stroke-width="2" points="64.0,288.1 90.3,288.3 116.7,288.5 143.0,288.6 169.3,288.8 195.7,288.9 222.0,289.0 248.3,289.1 274.7,289.2 301.0,289.3 327.3,289.4 353.7,289.6 380.0,289.7 406.3,289.8 432.7,289.9 459.0,290.0 485.3,290.1 511.7,290.2 538.0,290.3 564.3,290.5 590.7,290.6 617.0,290.8 643.3,291.0 669.7,291.7 696.0,292.6"/><line x1="55.0" y1="388" x2="73.0" y2="388" stroke="#2F5597" stroke-width="2"/><text x="79.0" y="392" font-size="10" fill="#333333">Região Sudeste</text><line x1="185.0" y1="388" x2="203.0" y2="388" stroke="#6EC6C6" stroke-width="2"/><text x="209.0" y="392" font-size="10" fill="#333333">Região Nordeste</text><line x1="315.0" y1="388" x2="333.0" y2="388" stroke="#B4A7D6" stroke-width="2"/><text x="339.0" y="392" font-size="10" fill="#333333">Região Sul</text><line x1="445.0" y1="388" x2="463.0" y2="388" stroke="#2CA6A4" stroke-width="2"/><text x="469.0" y="392" font-size="10" fill="#333333">Região Norte</text><line x1="575.0" y1="388" x2="593.0" y2="388" stroke="#7030A0" stroke-width="2"/><text x="599.0" y="392" font-size="10" fill="#333333">Região Centro-Oeste</text></svg></figure><p class="figure-caption fonte small mb-0">Fonte: MS/SVSA/CGIAE - Sistema de Informações sobre Nascidos Vivos – SINASC</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-0">O gráfico 8 mostra o número de nascimentos por região do Brasil. Observa-se que, mesmo com tendência de declínio, a região Sudeste é a que possui a maior quantidade de nascimentos ao longo do período.</p></div></div>
+						</div>
+					</section>
+				</div>
+
 				<section>
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="col-12 col-md-10 col-lg-8 mb-5">
-								<div class="heading__block">
-									<span class="small">Tópico 4</span>
-									<h3 class="heading__title">Informação para a saúde</h3>
-								</div>
-
-								<p>A informação é um recurso básico para qualquer atividade humana e, como vimos, envolve o significado atribuído a um determinado dado por meio de convenções e representações (Eduardo, 1990). Em geral, a informação será a base para a tomada de decisões e o planejamento de ações e, posteriormente, para sua avaliação.</p>
-								<p>As principais fontes de dados utilizadas no campo da Saúde Pública são os Sistemas de Informação em Saúde. Contudo, considerando o conceito ampliado de Saúde, a informação se refere não apenas às informações geradas pelo setor Saúde, como os atendimentos prestados, mas a toda informação que contribua para o cuidado, o planejamento, a gestão, a organização, o monitoramento e a avaliação nos vários níveis que constituem o Sistema Único de Saúde. Assim, dados socioeconômicos, demográficos e ambientais, por exemplo, também são importantes para planejamento e gestão. Vale lembrar que diferentes fontes de dados serão abordadas nos próximos módulos.</p>
-
-								<figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600">
-									<img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo1/aula1-topico4-fontes-dados.png" alt="Profissional digitando em um notebook em ambiente de trabalho, representando o uso de dados em saúde." loading="lazy" />
-								</figure>
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico3.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico5.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-			</div>
-
-			<!-- Navegação da aula -->
-			<section>
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-12 col-md-10 col-lg-8">
-							<div class="page-nav d-flex justify-content-evenly">
-								<a class="fio-button fio-button-primary" href="topico3.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico Anterior</a>
-								<a class="fio-button fio-button-primary" href="topico5.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a>
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</footer>
+			</div>
 		</div>
 
-		<footer>
-			<div class="container-fluid">
-				<div class="row justify-content-center align-items-center linha-de-marcas">
-					<div class="col-12 text-center py-3">
-						<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar('.sidebar', {
+				topSpacing: 0,
+				bottomSpacing: 0,
+				containerSelector: '.main',
+				innerWrapperSelector: '.sidebar__inner',
+				minWidth: 991,
+			});
 
-	<!--  Bootstrap JS and Popper -->
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+			function refreshSidebarSticky() {
+				if (sidebar && typeof sidebar.updateSticky === 'function') {
+					sidebar.updateSticky();
+				}
+			}
 
-	<!-- Sticky Sidebar -->
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-
-	<script type="text/javascript">
-		var sidebar = new StickySidebar('.sidebar', {
-			topSpacing: 0,
-			bottomSpacing: 0,
-			containerSelector: '.main',
-			innerWrapperSelector: '.sidebar__inner',
-			minWidth: 991,
-		});
-	</script>
-
-	<!-- Code -->
-	<script src="../../assets/js/code.js"></script>
-
-	<!-- Swiper -->
-	<script src="../../assets/js/swiper-bundle.min.js"></script>
-	<script src="../../assets/js/swiper-init.js"></script>
-
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-
-	<!-- Timeline horizontal -->
-	<script src="../../assets/js/timeline-horizontal/util.js"></script>
-	<!-- util functions included in the CodyHouse framework -->
-	<script src="../../assets/js/timeline-horizontal/swipe-content.js"></script>
-	<!-- A Vanilla JavaScript plugin to detect touch interactions -->
-	<script src="../../assets/js/timeline-horizontal/main.js"></script>
-	<!-- Start the Timeline -->
-	<script>
-		document.getElementsByTagName('html')[0].className += ' js';
-	</script>
-
-	<script>
-		AOS.init();
-	</script>
-</body>
-
+			window.addEventListener('load', refreshSidebarSticky);
+			window.addEventListener('resize', refreshSidebarSticky);
+			document.querySelectorAll('.content img').forEach(function (img) {
+				if (!img.complete) {
+					img.addEventListener('load', refreshSidebarSticky);
+					img.addEventListener('error', refreshSidebarSticky);
+				}
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
 </html>
