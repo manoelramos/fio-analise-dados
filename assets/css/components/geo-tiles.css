@@ -1,0 +1,84 @@
+/* --- GEO TILES (técnicas de geoprocessamento) --- */
+
+.geo-tiles {
+	--_geo-tiles-gap: 3px;
+	/* Teal / azul da referência visual do material */
+	--_geo-tiles-top-bg: hsl(177, 55%, 42%);
+	--_geo-tiles-top-color: #fff;
+	--_geo-tiles-base-bg: hsl(207, 55%, 58%);
+	--_geo-tiles-base-color: #111;
+	--_geo-tiles-radius: 0;
+	--_geo-tiles-font-family: var(--fio-sys-typography-head-family);
+	--_geo-tiles-font-weight: var(--fio-sys-typography-head-weight);
+	--_geo-tiles-font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+	--_geo-tiles-min-height: 7.5rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--_geo-tiles-gap);
+	width: 100%;
+}
+
+.geo-tiles__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--_geo-tiles-gap);
+}
+
+.geo-tiles__item,
+.geo-tiles__base {
+	appearance: none;
+	border: 0;
+	margin: 0;
+	padding: 1rem 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: var(--_geo-tiles-font-family);
+	font-weight: var(--_geo-tiles-font-weight);
+	font-size: var(--_geo-tiles-font-size);
+	line-height: 1.25;
+	cursor: pointer;
+	transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.geo-tiles__item {
+	min-height: var(--_geo-tiles-min-height);
+	background-color: var(--_geo-tiles-top-bg);
+	color: var(--_geo-tiles-top-color);
+	border-radius: var(--_geo-tiles-radius);
+}
+
+.geo-tiles__base {
+	width: 100%;
+	min-height: 3.5rem;
+	background-color: var(--_geo-tiles-base-bg);
+	color: var(--_geo-tiles-base-color);
+	border-radius: var(--_geo-tiles-radius);
+}
+
+.geo-tiles__item:hover,
+.geo-tiles__base:hover,
+.geo-tiles__item:focus-visible,
+.geo-tiles__base:focus-visible {
+	filter: brightness(1.08);
+	transform: translateY(-1px);
+	outline: none;
+}
+
+.geo-tiles__item:focus-visible,
+.geo-tiles__base:focus-visible {
+	box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 767.98px) {
+	.geo-tiles__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.geo-tiles__item {
+		min-height: 5.5rem;
+		font-size: 0.9rem;
+	}
+}

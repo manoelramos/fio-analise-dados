@@ -25,6 +25,21 @@
 	overflow: hidden;
 }
 
+/* Sem linhas laterais (esquerda/direita) */
+.table-responsive .table-bordered.table-sides-open {
+	border-left: none;
+	border-right: none;
+	border-radius: 0;
+}
+
+.table-responsive .table-bordered.table-sides-open > :not(caption) > * > *:first-child {
+	border-left: none;
+}
+
+.table-responsive .table-bordered.table-sides-open > :not(caption) > * > *:last-child {
+	border-right: none;
+}
+
 .table-responsive table thead th {
 	vertical-align: middle;
 	border: none;

@@ -1,214 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-	<meta name="theme-color" content="#001833" />
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 3 | Aula 2</title>
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 3 | Aula 2</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
+			</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item"><div class="sidebar__title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div></div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item"><a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a></li>
-							<li class="nav-item"><a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span><span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a></li>
-															<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
-								</li>
-</ul>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span><span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
 								</li>
-								<li class="dropdown-menu__title"><span class="label">Módulo 3</span><span class="title">Sistemas de Informação em Saúde</span></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Sistemas de Informações de Produção</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Sistemas de Informações Epidemiológicas</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Sistemas de Informações de Gestão, Infraestrutura e Orçamento</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Acesso aos dados de Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../atividade.html"><strong>Atividade</strong></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text class">Aula 2</span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span><span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title"><span class="label">Aula 2</span><span class="title">Sistemas de Informações de Produção</span></li>
-								<li class="dropdown-menu__item">
-																<nav class="topic-list">
-							<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
-							<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução aos SIS de produção</a>
-							<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Sistema de Informações Hospitalares (SIH)</a>
-							<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Sistema de Informações Ambulatoriais (SIA)</a>
-							<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>SIAB, SISAB e e-SUS APS</a>
-							
-							<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="content">
-			<div id="page-title"><div class="container"><div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5"><div class="col-12 col-md-10 col-lg-11"><h2 class="title"><span class="label">Módulo 3 | Aula 2</span><br />Sistemas de Informações de Produção</h2></div></div></div></div>
-			<div id="page-content" class="">
-				<section><div class="container">
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 3</span><h3 class="heading__title">Sistema de Informações Hospitalares (SIH)</h3></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O Sistema de Informações Hospitalares (SIH) é um dos sistemas mais tradicionais e robustos do SUS. Ele reflete o cenário das internações no Brasil. Por meio dele é realizada a coleta, o processamento, a sistematização e a disponibilização dos dados sobre as internações hospitalares realizadas no âmbito do SUS em todo o Brasil. Embora seja originalmente administrativo, o SIH é indispensável para a epidemiologia devido ao seu grande volume, agilidade na disponibilização e cobertura nacional. Esse sistema é usado com sucesso para descrever padrões de morbidade, tendências temporais e desigualdades regionais no acesso à saúde (Bittencourt; Camacho; Leal, 2006).</p></div></div><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula2-topico3-sih-sistemas.png" alt="Profissional vestindo camisa branca e crachá azul, operando um notebook em um ambiente de centro de dados com servidores desfocados ao fundo." loading="lazy" /></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Antes de analisarmos sua importância atual, vale destacar sua evolução. O SIH se origina do antigo Sistema Nacional de Controle e Pagamento de Contas Hospitalares (SNCPCH), que usava a Guia de Internação Hospitalar (GIH) para controle de pagamentos. Devido a dificuldades de processamento manual e fraudes, esse sistema foi substituído pelo Sistema de Assistência Médico-Hospitalar da Previdência Social (SAMHPS) em 1981. Foi apenas em 1991, após a Constituição de 1988 e a Lei Orgânica da Saúde, que o sistema passou a ser conhecido por seu nome atual, sob a gestão do Ministério da Saúde (Levcovitz; Pereira, 1993).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A coleta de dados do SIH gira em torno de um documento-chave: a Autorização de Internação Hospitalar (AIH). É nela que são registradas mais de 50 variáveis, incluindo identificação do paciente, procedimentos realizados, diagnósticos (CID) e valores de repasse. A partir desse documento é que são autorizadas as internações e descritas informações sobre o paciente e os procedimentos clínicos e cirúrgicos que justificam sua internação. O fluxo se inicia com o laudo para Solicitação de AIH, preenchido pelo médico assistente, que deve ser autorizado pelo gestor local para, então, gerar a AIH.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p><strong>Figura 2 - Laudo para solicitação de AIH.</strong></p><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula2-fig2-laudo-aih.png" alt="Formulário do Ministério da Saúde: Laudo para solicitação de autorização de internação hospitalar (AIH)." loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: Brasil (2007).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Existem dois tipos principais de AIH que você precisa conhecer:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="accordion accordion-flush" id="m3a2-aih-tipos"><div class="accordion-item"><h5 class="accordion-header" id="m3a2-aih-h1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a2-aih-c1" aria-expanded="false" aria-controls="m3a2-aih-c1">AIH Tipo 1 (Inicial)</button></h5><div id="m3a2-aih-c1" class="accordion-collapse collapse" aria-labelledby="m3a2-aih-h1" data-bs-parent="#m3a2-aih-tipos"><div class="accordion-body"><p>AIH Tipo 1 (Inicial): a AIH tipo 1 foi estabelecida em abril de 1992 e é gerada na internação do paciente, com validade de 15 (quinze) dias, a contar da data da emissão, exceto para as AIHs com diagnóstico de parto emitidas para gestantes, que têm validade até a data do parto.</p></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a2-aih-h5"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a2-aih-c5" aria-expanded="false" aria-controls="m3a2-aih-c5">AIH Tipo 5 (Longa permanência)</button></h5><div id="m3a2-aih-c5" class="accordion-collapse collapse" aria-labelledby="m3a2-aih-h5" data-bs-parent="#m3a2-aih-tipos"><div class="accordion-body"><p>AIH Tipo 5 (Longa Permanência): a AIH tipo 5 é utilizada para garantir a continuidade do tratamento. Ela deve ser renovada mensalmente e, obrigatoriamente, manter o número da AIH Inicial (Tipo 1) que a originou, garantindo o rastreamento do paciente (Brasil. Ministério da Saúde, 2007).</p></div></div></div></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Importância</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O SIH é fundamental para a gestão hospitalar e o financiamento do sistema, pois processa o pagamento das internações realizadas pelo SUS em hospitais públicos e conveniados. Diferentemente das estatísticas vitais, o tempo de processamento até a disponibilização dessas informações é mais oportuno para apoiar o planejamento e a tomada de decisões.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Além da função administrativa/financeira, ele possui enorme valor epidemiológico. Ao analisar o SIH, conseguimos entender o perfil de morbidade hospitalar (quais doenças mais causam internações), além dos custos associados a cada tipo de tratamento. Ele é a principal fonte para calcular indicadores clássicos, como a taxa de morbidade hospitalar no âmbito do SUS, a média de permanência das internações, entre outros.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Importante">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Importante!</span></div>
-<div class="card-body">
-<p class="h6 heading__title mb-3"><strong>Importante!</strong></p>
-<p class="mb-0">O SIH cobre mais de 80% das internações hospitalares do país, sendo a principal fonte de dados sobre a assistência hospitalar brasileira (Marques et al., 2025)</p>
-</div>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Dados coletados</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>As variáveis do SIH são predominantemente administrativas e financeiras, mas possuem forte aplicação epidemiológica. De acordo com o informe técnico de disseminação de informações do SIH, elaborado pelo DATASUS, elas podem ser categorizadas em quatro grandes grupos:</p></div></div>
-<div class="row justify-content-center">
-<div class="col-12 col-md-10 col-lg-8">
-<div class="row g-4 mb-5">
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a2sihfc1" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Variáveis demográficas e sociais</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a2sihfc1" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Variáveis demográficas e sociais</span><div class="scrollable text-start"><p>Variáveis demográficas e sociais: perfil da população atendida</p><p>Identificação: Sexo (SEXO) e Data de Nascimento (NASC).</p><p>Geografia: município de Residência (MUNIC_RES) e CEP do paciente (CEP) — fundamentais para diferenciar onde o paciente mora de onde ele foi atendido.</p><p>Raça e Etnia: campos RACA_COR e ETNIA.</p><p>Escolaridade e Família: grau de instrução (INSTRU) e número de filhos (NUM_FILHOS).</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a2sihfc1" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a2sihfc2" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Variáveis clínicas e epidemiológicas</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a2sihfc2" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Variáveis clínicas e epidemiológicas</span><div class="scrollable text-start"><p>Variáveis Clínicas e Epidemiológicas: descrevem o motivo e o desfecho da internação</p><p>Diagnósticos:</p><p>Principal: código CID-10 que motivou a internação (DIAG_PRINC).</p><p>Secundário: comorbidades ou complicações (DIAG_SECUN e DIAGSEC1 a 9)</p><p>Causas de morte: CID da morte (CID_MORTE) em caso de óbito.</p><p>Procedimentos: o procedimento realizado (PROC_REA) e o solicitado (PROC_SOLIC).</p><p>Desfechos e gravidade:</p><p>Motivo de saída (alta, óbito, transferência) indicado pelo campo COBRANCA ou MORTE.</p><p>Uso de UTI: dias de UTI (UTI_MES_TO) e tipo de UTI (MARCA_UTI).</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a2sihfc2" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a2sihfc3" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Variáveis administrativas e de gestão</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a2sihfc3" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Variáveis administrativas e de gestão</span><div class="scrollable text-start"><p>Variáveis Administrativas e de Gestão: estrutura do serviço e da internação</p><p>Estabelecimento: CNPJ (CGC_HOSP) e código CNES (CNES) do hospital executante.</p><p>Natureza Jurídica: classificação legal do hospital (NAT_JUR).</p><p>Tempo: data de internação (DT_INTER), data de saída (DT_SAIDA) e dias de permanência (DIAS_PERM).</p><p>Tipo de gestão: se a gestão é plena, estadual ou municipal (GESTOR_TP).</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a2sihfc3" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a2sihfc4" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Variáveis financeiras</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a2sihfc4" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Variáveis financeiras</span><div class="scrollable text-start"><p>Variáveis Financeiras: gestão de recursos do SUS</p><p>Valores agregados: valor total da AIH (VAL_TOT).</p><p>Componentes do custo: valor dos serviços hospitalares (VAL_SH), serviços profissionais (VAL_SP) e valor de UTI (VAL_UTI).</p><p>Financiamento: tipo de financiamento (FINANC), identificando se é recurso de média ou alta complexidade (FAEC).</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a2sihfc4" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Um ponto forte para destacar na aula é o uso do SIH para "capturar" o que outros sistemas ainda não conseguem. O SIH pode funcionar como sentinela para algumas doenças, podendo evidenciar casos subnotificados no SINAN (Bittencourt; Camacho; Leal, 2006). Outro importante uso é seu potencial para cruzamento com o SIM (Sistema de Informação sobre Mortalidade).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>É possível também realizar a avaliação da adequação dos serviços e investigar possíveis fraudes. A taxa de mortalidade hospitalar é o indicador mais usado para avaliar a qualidade dos hospitais, mas deve ser ajustada pelo perfil de gravidade dos pacientes.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Usos e disseminação</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Os dados do SIH são amplamente utilizados para auditoria de contas, repasse de recursos federais para estados e municípios e vigilância epidemiológica. A disseminação ocorre publicamente a partir do TabNet (consulta online) e TabWin (tabulação offline), ambos disponíveis no DATASUS. Nessas plataformas, gestores e pesquisadores podem cruzar variáveis como a causa da internação, valores pagos e tempo de permanência.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Qualidade</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O SIH é considerado um sistema de boa qualidade e cobertura, especialmente devido ao seu vínculo com o pagamento, pois o estabelecimento de saúde só recebe os devidos valores se preencher corretamente os dados no sistema. No entanto, a qualidade depende diretamente do correto preenchimento da AIH pelo médico e outros profissionais envolvidos.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Problemas identificados na literatura incluem:</p><ul class="ps-3 mb-0"><li class="mb-3"><strong>Preenchimento incompleto:</strong> quando faltam dados em algumas variáveis, isso pode ocorrer devido a falhas no registro das informações.</li><li><strong>Erros de codificação:</strong> foram observadas discrepâncias com o dicionário de dados do SIH, o que pode ser resultado de erros de codificação da CID ou falta de padronização. Muitas vezes, ocorre a seleção de procedimentos visando maior remuneração em detrimento da realidade clínica.</li></ul></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Apesar desses problemas, nos últimos anos verificou-se melhora consistente no preenchimento das informações. Para raça/cor, por exemplo, a completude passou de menos de 40% em 2008 para 100% em 2024 (Oliveira et al., 2025).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Limitações</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A principal limitação é que o SIH cobre majoritariamente as internações financiadas pelo SUS. Hospitais exclusivamente privados ou atendimentos via planos de saúde não entram nessa base. Além disso, devido ao caráter administrativo, não são registradas muitas informações socioeconômicas de grande relevância. Além disso, o foco no evento (internação) e não no indivíduo pode gerar superestimativa de casos devido a reinternações (Bittencourt; Camacho; Leal, 2006).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Um paciente crônico internado 3 vezes conta como 3 casos.</p>
-</div>
-</div>
-</div>
-</div></div>
-				</div></section>
-			</div>
-			<section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8"><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico2.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico4.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div></div></div></div></section>
-			<footer>
-				<div class="container-fluid">
-					<div class="row justify-content-center align-items-center linha-de-marcas">
-						<div class="col-12 text-center py-3">
-							<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 3</span>
+										<span class="title">Análise Espacial</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Abordagens teóricas da Geografia da Saúde</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Noções básicas de Geoprocessamento e SIG</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Fundamentos de Cartografia</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Prática de SIG I</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Prática de SIG II</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula6/topico1.html"><strong>Aula 6: </strong>Análise espacial – Área</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula7/topico1.html"><strong>Aula 7: </strong>Análise espacial – Pontos</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 2</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 2</span>
+										<span class="title">Noções básicas de Geoprocessamento e Sistema de Informações Geográficas</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Análise Espacial</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Geoprocessamento</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Dados espaciais</a>
+															<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Sistema de Informações Geográficas</a>
+															<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Funções e objetivos do SIG</a>
+															<a href="topico8.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-	</div>
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-	<script type="text/javascript">var sidebar = new StickySidebar(".sidebar", { topSpacing: 0, bottomSpacing: 0, containerSelector: ".main", innerWrapperSelector: ".sidebar__inner", minWidth: 991 });</script>
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-	<script>AOS.init();</script>
-</body>
+			</div>
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 3 | Aula 2</span>
+									<br />
+									Noções básicas de Geoprocessamento e Sistema de Informações Geográficas
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 3</span><h3 class="heading__title">Análise Espacial</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Conceitualmente Análise Espacial “é um conjunto de técnicas estatísticas e analíticas especificamente desenvolvidas para dados que possuem referência espacial, considerando explicitamente a localização, a dependência espacial e a estrutura espacial dos fenômenos” (Bailey, 1995).</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula2/figura-analise-espacial.png" alt="Profissional analisando mapas e dados espaciais em monitores" loading="lazy" /></figure></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Esta definição dada por Trevor Bailey, um estatístico britânico reconhecido por seu trabalho em análise espacial e geoestatística, buscou instrumentalizar um princípio básico que sustenta a análise espacial conhecido como Primeira Lei da Geografia de Waldo Tobler que é: “Tudo está relacionado com tudo, mas coisas próximas estão mais relacionadas do que coisas distantes” (Tobler, 1970).</p><p class="mb-0">Sem essa lei, não haveria base teórica sólida para afirmar que a proximidade espacial influencia padrões de saúde e doença.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="box" data-box="Atenção"><div class="card aos-init" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="600"><div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Atenção</span></div><div class="card-body"><div class="custom-shape-divider-top-1720289331"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path></svg></div><div><p>É importante dizer que a análise espacial não se resume ao simples mapeamento de eventos de saúde. Não é uma mera localização dos eventos! Ela também engloba o estudo das características particulares dos dados espaciais com toda a sua complexidade (Kaluzny et al., 1996).</p></div></div></div></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Uma das vantagens da abordagem espacial é permitir representar dados epidemiológicos em um plano geométrico, considerando que os fenômenos espaciais próximos compartilham condições ambientais, sociais, históricas, culturais e econômicas semelhantes. Na interpretação dos mapas gerados como resultado da análise espacial é importante conhecer os principais mecanismos envolvidos na produção do agravo, as representações sociais da doença e o modo como ela é tratada pelos serviços de saúde (Pina et al., 2006; Magalhães, 2014).</p><p class="mb-0">Pode-se dizer que, a análise espacial envolve raciocínio teórico e interpretação crítica dos resultados obtidos, sendo necessário uma dimensão operacional e técnica para tratar a informação geográfica. Aqui entra o Geoprocessamento que disponibiliza e executa procedimentos técnicos permitindo identificar padrões, relações, tendências e distribuições no território.</p></div></div>
+						</div>
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico2.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico4.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar(".sidebar", {
+				topSpacing: 0, bottomSpacing: 0, containerSelector: ".main",
+				innerWrapperSelector: ".sidebar__inner", minWidth: 991,
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
 </html>

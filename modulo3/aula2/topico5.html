@@ -1,188 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-	<meta name="theme-color" content="#001833" />
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 3 | Aula 2</title>
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 3 | Aula 2</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
+			</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item"><div class="sidebar__title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div></div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item"><a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a></li>
-							<li class="nav-item"><a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span><span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a></li>
-															<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
-								</li>
-</ul>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span><span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
 								</li>
-								<li class="dropdown-menu__title"><span class="label">Módulo 3</span><span class="title">Sistemas de Informação em Saúde</span></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Sistemas de Informações de Produção</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Sistemas de Informações Epidemiológicas</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Sistemas de Informações de Gestão, Infraestrutura e Orçamento</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Acesso aos dados de Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../atividade.html"><strong>Atividade</strong></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text class">Aula 2</span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span><span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title"><span class="label">Aula 2</span><span class="title">Sistemas de Informações de Produção</span></li>
-								<li class="dropdown-menu__item">
-																<nav class="topic-list">
-							<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
-							<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução aos SIS de produção</a>
-							<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Sistema de Informações Hospitalares (SIH)</a>
-							<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Sistema de Informações Ambulatoriais (SIA)</a>
-							<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>SIAB, SISAB e e-SUS APS</a>
-							
-							<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="content">
-			<div id="page-title"><div class="container"><div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5"><div class="col-12 col-md-10 col-lg-11"><h2 class="title"><span class="label">Módulo 3 | Aula 2</span><br />Sistemas de Informações de Produção</h2></div></div></div></div>
-			<div id="page-content" class="">
-				<section><div class="container">
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 5</span><h3 class="heading__title">Sistemas de Informações da Atenção Básica (SIAB/SISAB/e-SUS)</h3></div></div></div><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A Atenção Básica (AB) é o nível de atenção mais complexo de ser capturado por um sistema de informação, pois lida com a longitudinalidade do cuidado e com a saúde da população em seu território, e não apenas com a doença ou o procedimento. Por esse motivo, a evolução de seus sistemas de informação é marcada por uma transição do registro de atividades agregadas para a individualização do cuidado. Assim, neste bloco estudaremos a evolução histórica do antigo SIAB para a atual estratégia e-SUS APS.</p></div></div><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula2-topico5-siab-esus.png" alt="Profissional de saúde com jaleco e estetoscópio utilizando notebook em ambiente clínico, representando a informatização da Atenção Primária." loading="lazy" /></figure></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O primeiro sistema estruturado para a AB foi o SIAB (Sistema de Informação da Atenção Básica), implementado em 1998 nas Unidades Básicas de Saúde (UBS). O SIAB tinha um foco epidemiológico e territorial, sendo baseado no trabalho de campo dos Agentes Comunitários de Saúde (ACS). Ele era alimentado por fichas de papel preenchidas na visita domiciliar e tabuladas posteriormente. Embora tenha sido um avanço, o SIAB era limitado, pois não individualizava o atendimento, dificultando a rastreabilidade do paciente.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Em 2013 foi lançada a estratégia e-SUS Atenção Primária à Saúde (e-SUS APS), que dá seguimento ao processo de informatização qualificada do SUS em busca de um SUS eletrônico (Muzy, 2021). É importante destacar que, entre 2013 e 2018, foram identificados 54 Sistemas Nacionais de Informação em Saúde (SNIS) em funcionamento no Brasil, sendo 21 especificamente nas UBS (Coelho; Andreazza; Chioro, 2021). Isso evidencia a necessidade de estratégias que unifiquem os registros de saúde no país.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p><strong>Figura 3 - Linha do tempo da estratégia e-SUS APS.</strong></p><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula2-fig3-linha-tempo-esus-aps.png" alt="Linha do tempo da estratégia e-SUS APS, do SIAB às versões do sistema até 2025." loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: Ministério da Saúde (2025).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O SISAB (Sistema de Informação em Saúde para a Atenção Básica) surge em 2013 por intermédio da Portaria GM/MS nº 1.412, de 10 de julho de 2013, como sucessor do SIAB. Ele passou a ser o sistema de informação da Atenção Básica vigente para fins de financiamento e de adesão aos programas e estratégias da Política Nacional de Atenção Básica.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O e-SUS APS marca a transição do registro territorial/agregado para o registro clínico individualizado. Apesar disso, a estratégia de integração ainda não está completa. Apenas 12 dos 31 sistemas foram totalmente integrados. Essa integração foi alta nos sistemas geridos pelo Departamento de Atenção Básica (DAB) que geria o e-SUS, mas baixa nos sistemas de outros departamentos (Coelho; Andreazza; Chioro, 2021).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Importância</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Esse sistema monitora a saúde da população em seu território. Diferentemente do SIH e SIA (focados no agravo e no procedimento), o sistema da Atenção Básica foca no cadastro da população, no acompanhamento longitudinal, na prevenção e nas condições crônicas. O SISAB viabiliza a análise da situação sanitária e de saúde territorial mediante a emissão de relatórios e indicadores estratificados por estado, município, região de saúde e equipe. O sistema destaca-se, primordialmente, pela capacidade de individualização dos dados por cidadão (Muzy, 2021).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O acesso a funcionalidades específicas é restrito a gestores municipais e estaduais, mediante autenticação no Sistema de Controle de Uso do e-SUS. Nesse ambiente restrito, o gestor dispõe de ferramentas para monitorar o fluxo de informações, incluindo relatórios de envio de dados por equipe de Atenção Básica, a origem das transmissões por estabelecimento e a tipologia das fichas processadas.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Além de ser um repositório de dados clínicos e administrativos, o SISAB assumiu papel estratégico fundamental para a sustentabilidade da Atenção Primária, uma vez que é o sistema oficial utilizado para fins de financiamento e adesão aos programas da Política Nacional de Atenção Básica (PNAB). É a partir dele que se monitora o desempenho das equipes, o cumprimento de metas de indicadores e a validação dos cadastros que compõem o cálculo da Capitação Ponderada no programa Previne Brasil. Sem o envio correto dos dados para o SISAB, os municípios podem sofrer perdas de receitas financeiras (Junior, 2023; Lopes et al., 2021).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Para além do aspecto financeiro, o sistema apresenta potencial de suma importância para o apoio operacional e gerencial das equipes de saúde. Ele permite a construção de um diagnóstico situacional do território, auxiliando na identificação e priorização de problemas de saúde locais e no planejamento de ações baseadas em evidências. A partir das informações geradas, é possível avaliar a produtividade profissional, analisar demandas específicas de saúde e monitorar atividades de promoção e prevenção, tornando-se uma ferramenta indispensável para a tomada de decisão qualificada na gestão do SUS (Junior, 2023).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Dados coletados</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Os dados que alimentam o SISAB são oriundos dos softwares da Estratégia e-SUS APS, como o Prontuário Eletrônico do Cidadão (PEC) e a Coleta de Dados Simplificada (CDS). A coleta abrange uma vasta gama de variáveis, que incluem desde a identificação do cidadão (Ficha de Cadastro Individual) até os registros clínicos e administrativos detalhados, como atendimentos individuais, procedimentos, visitas domiciliares e atividades coletivas.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>No escopo da produção assistencial, a partir dos relatórios de saúde, é possível filtrar dados por problema ou condição avaliada (utilizando códigos como a CID-10), tipos de consulta (como pré-natal, puericultura, hipertensão, diabetes), procedimentos realizados (curativos, administração de medicamentos, testes rápidos) e condutas clínicas adotadas. Para atividades coletivas são registrados dados sobre reuniões de equipe, educação em saúde, atendimentos em grupo e mobilização social, permitindo identificar temas abordados e público-alvo.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Usos e disseminação</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A disseminação das informações do SISAB ocorre principalmente através do portal do e-Gestor AB e da área de relatórios do próprio sistema, oferecendo acesso tanto público quanto restrito (para gestores cadastrados). Destaca-se que os dados ofertados ao público são restritos.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Saiba Mais">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Saiba Mais</span></div>
-<div class="card-body">
-<p class="mb-0"><a href="https://sisab.saude.gov.br/index.xhtml" target="_blank" rel="noopener noreferrer">Acesse as tabulações e relatórios disponíveis para explorar as informações disponíveis no SISAB!</a></p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Os gestores utilizam essas ferramentas para monitorar o envio da produção, acompanhar o alcance das metas dos indicadores de desempenho e verificar a validação dos cadastros vinculados às equipes. Relatórios específicos, como o de Produção e o de Atividade Coletiva, permitem a extração de tabelas e gráficos refinados por filtros como município, equipe, ciclo de vida e condição de saúde, apoiando a gestão local.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Apesar da riqueza de dados, a literatura aponta que o uso do SISAB ainda está fortemente concentrado no monitoramento do financiamento, havendo subutilização de seu potencial para o planejamento em saúde e gestão clínica (Junior, 2023). Muitos profissionais e gestores acessam o sistema primordialmente para garantir o repasse de recursos, deixando de explorar relatórios que poderiam caracterizar demandas de atendimento, perfil epidemiológico ou avaliar a resolutividade das equipes (Junior, 2023).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>No campo acadêmico e científico, o SISAB começa a ser utilizado como fonte de dados para pesquisas que analisam a implementação de políticas públicas, a evolução da informatização da Atenção Básica e o perfil dos usuários cadastrados. Contudo, nota-se ainda uma lacuna na produção científica que utilize essa base de forma mais aprofundada a fim de avaliar as ações de saúde ou a qualidade da atenção prestada (Junior, 2023), isso porque o sistema possui um potencial analítico ainda pouco explorado pela comunidade científica e pelos próprios serviços de saúde.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Qualidade</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A qualidade do sistema deu um salto com a exigência do CPF para individualização dos registros. O sistema possui regras de validação que impedem, por exemplo, registrar um pré-natal em paciente do sexo masculino. Outras validações ajudam a garantir a consistência das informações, diminuindo erros de digitação e inconsistências lógicas.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Contudo, a qualidade ainda depende da capacitação dos profissionais (médicos, enfermeiros e agentes comunitários) no uso das ferramentas digitais. A migração de um modelo de registro em papel para um prontuário eletrônico exige treinamento contínuo e adaptação dos fluxos de trabalho na UBS (Junior, 2023). Além disso, a qualidade da informação é heterogênea no território nacional, influenciada pela infraestrutura tecnológica disponível e pela maturidade dos processos de trabalho locais.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Limitações</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>As principais barreiras são tecnológicas e de infraestrutura. Regiões remotas sofrem com conectividade para transmitir os dados ao barramento nacional, obrigando-se a trabalhar no modo offline do PEC ou no modo CDS, gerando atrasos na alimentação do SISAB.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Uma das principais limitações do SISAB é a fragmentação e a falta de integração completa com outros Sistemas Nacionais de Informação em Saúde (SNIS), especialmente os de vigilância epidemiológica (como SINAN e SIM). Embora o e-SUS AB tenha integrado interfaces de sistemas como o SIAB e o Hiperdia, ainda persiste baixa integração com sistemas geridos por outras secretarias do Ministério da Saúde, o que gera retrabalho para os profissionais e dificulta a integralidade do cuidado e a coordenação da rede. A ausência de dados sobre encaminhamentos e contrarreferência no sistema, por exemplo, impede a avaliação completa da coordenação do cuidado (Coelho; Andreazza; Chioro, 2021).</p></div></div>
-				</div></section>
-			</div>
-			<section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8"><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico4.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico6.html" rel="next">Referências <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div></div></div></div></section>
-			<footer>
-				<div class="container-fluid">
-					<div class="row justify-content-center align-items-center linha-de-marcas">
-						<div class="col-12 text-center py-3">
-							<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 3</span>
+										<span class="title">Análise Espacial</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Abordagens teóricas da Geografia da Saúde</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Noções básicas de Geoprocessamento e SIG</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Fundamentos de Cartografia</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Prática de SIG I</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Prática de SIG II</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula6/topico1.html"><strong>Aula 6: </strong>Análise espacial – Área</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula7/topico1.html"><strong>Aula 7: </strong>Análise espacial – Pontos</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 2</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 2</span>
+										<span class="title">Noções básicas de Geoprocessamento e Sistema de Informações Geográficas</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Análise Espacial</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Geoprocessamento</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Dados espaciais</a>
+															<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Sistema de Informações Geográficas</a>
+															<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Funções e objetivos do SIG</a>
+															<a href="topico8.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-	</div>
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-	<script type="text/javascript">var sidebar = new StickySidebar(".sidebar", { topSpacing: 0, bottomSpacing: 0, containerSelector: ".main", innerWrapperSelector: ".sidebar__inner", minWidth: 991 });</script>
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-	<script>AOS.init();</script>
-</body>
+			</div>
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 3 | Aula 2</span>
+									<br />
+									Noções básicas de Geoprocessamento e Sistema de Informações Geográficas
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 5</span><h3 class="heading__title">Dados espaciais</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Ao longo desta disciplina tem-se destacado de que a Análise Espacial se dedica ao tratamento de dados espaciais. Mas afinal, qual a diferença de dado espacial para o dado comum?</p><p>Dados espaciais são aqueles que possuem uma localização geográfica definida, também denominados georreferenciados. Esses tipos de dados diferem dos demais, pois possuem uma posição espacial, isto é, podem ser referenciados ao local de ocorrência na superfície terrestre (Druck, 2004).</p><p>Essa posição geográfica pode ser identificada através:</p><div class="list"><ul class="list-group"><li class="list-group-item">de um par de coordenadas;</li><li class="list-group-item">de seu endereço;</li><li class="list-group-item">relacionado a unidades espaciais – bairros, setores censitários, bacias hidrográficas.</li></ul></div><p>Dentro de ambiente de SIG, trabalhamos com dados espaciais. Eles têm como característica básica o fato de serem compostos por duas componentes distintas (Carvalho et al., 2000):</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="accordion accordion-flush" id="m3a2-componentes-dados"><div class="accordion-item"><h5 class="accordion-header" id="m3a2-componentes-dados-0-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a2-componentes-dados-0-c" aria-expanded="false" aria-controls="m3a2-componentes-dados-0-c">Gráfica (mapas)</button></h5><div id="m3a2-componentes-dados-0-c" class="accordion-collapse collapse" aria-labelledby="m3a2-componentes-dados-0-h" data-bs-parent="#m3a2-componentes-dados"><div class="accordion-body"><p>Descreve a localização, as feições geográficas e os relacionamentos espaciais entre as feições, ou seja, a descrição gráfica do objeto como simbolizado num mapa.</p></div></div></div><div class="accordion-item"><h5 class="accordion-header" id="m3a2-componentes-dados-1-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a2-componentes-dados-1-c" aria-expanded="false" aria-controls="m3a2-componentes-dados-1-c">Não-Gráfica (tabelas)</button></h5><div id="m3a2-componentes-dados-1-c" class="accordion-collapse collapse" aria-labelledby="m3a2-componentes-dados-1-h" data-bs-parent="#m3a2-componentes-dados"><div class="accordion-body"><p>Descreve os fatos e fenômenos, sociais e naturais, representados no mapa, representa as características, qualidades, ou relacionamentos de feições na representação cartográfica.</p></div></div></div></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>As componentes gráficas e não gráficas dos dados espaciais possuem características distintas, o que demanda técnicas específicas para otimizar seu gerenciamento. Na maioria dos programas de SIG, essas duas componentes são armazenadas em bases de dados separadas: os dados gráficos são manipulados diretamente pelo software de SIG, enquanto os dados não gráficos são gerenciados por Sistemas Gerenciadores de Bancos de Dados (SGBD) convencionais (Câmara et al., 2001).</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Armazenamento dos dados</h4></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>As componentes gráficas são estruturadas em forma de planos de informação (layers), organizados como um conjunto de camadas. Cada camada representa um tema e a seleção dos temas que comporão a base de dados integra o processo de modelagem do sistema e depende diretamente dos objetivos do projeto. Já as componentes não gráficas são armazenadas em tabelas organizadas em campos (colunas) e registros (linhas), e geralmente são gerenciadas por Sistemas Gerenciadores de Banco de Dados (SGBD) (Câmara, 2001).</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Figura 5: Camadas de armazenamento da componente gráfica</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula2/figura5-camadas.png" alt="Camadas de armazenamento da componente gráfica" loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: Elaborado pelas autoras</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="box" data-box="Atenção"><div class="card aos-init" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="600"><div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Atenção</span></div><div class="card-body"><div class="custom-shape-divider-top-1720289331"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path></svg></div><div><p>É possível realizar operações gráficas entre as camadas, e não apenas combiná-las visualmente.</p></div></div></div></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Integração das componentes</h4></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-0">A integração entre as duas componentes dos dados espaciais é uma característica básica dos SIG e se dá através de códigos comuns que identifiquem univocamente a entidade nas duas bases, chamados geocódigo.</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="saiba-mais pb-5"><div class="row aos-init" data-aos="fade-left" data-aos-easing="ease-out" data-aos-duration="600"><div class="col-12 d-flex justify-content-center"><button class="saiba-mais fio-button button-md fio-button-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a2-saiba-mais-ibge" aria-expanded="false" aria-controls="m3a2-saiba-mais-ibge"><span class="icone material-symbols-rounded" aria-hidden="true"></span> SAIBA MAIS!</button></div><div class="col-12"><div class="mt-3 collapse" id="m3a2-saiba-mais-ibge"><p>Quando a análise é realizada em nível municipal — ou em unidades territoriais derivadas dos municípios — utiliza‑se, na maioria das vezes, o código de município do IBGE, que identifica cada município de forma única. Esse mesmo código também está presente nas bases gráficas disponibilizadas pelo DATASUS.</p></div></div></div></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Figura 6: Esquema didático da representação de geocódigo - ligação entre a componente gráfica e não gráfica.</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula2/figura6-geocodigo.png" alt="Esquema de geocódigo ligando componente gráfica e não gráfica" loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: Elaborado pelas autoras</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-0">Apesar dessa estrutura complexa, tais distinções permanecem completamente imperceptíveis para o usuário comum.</p></div></div>
+						</div>
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico4.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico6.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar(".sidebar", {
+				topSpacing: 0, bottomSpacing: 0, containerSelector: ".main",
+				innerWrapperSelector: ".sidebar__inner", minWidth: 991,
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
 </html>

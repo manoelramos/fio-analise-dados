@@ -1,179 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-	<meta name="theme-color" content="#001833" />
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 3 | Aula 2</title>
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 3 | Aula 2</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
+			</div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
 						</div>
-					</div>
-					<div class="sidebar__group-item"><div class="sidebar__title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div></div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item"><a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a></li>
-							<li class="nav-item"><a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span><span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a></li>
-															<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
-								</li>
-</ul>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span><span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
 								</li>
-								<li class="dropdown-menu__title"><span class="label">Módulo 3</span><span class="title">Sistemas de Informação em Saúde</span></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Sistemas de Informações de Produção</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Sistemas de Informações Epidemiológicas</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Sistemas de Informações de Gestão, Infraestrutura e Orçamento</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Acesso aos dados de Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../atividade.html"><strong>Atividade</strong></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text class">Aula 2</span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span><span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title"><span class="label">Aula 2</span><span class="title">Sistemas de Informações de Produção</span></li>
-								<li class="dropdown-menu__item">
-																<nav class="topic-list">
-							<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
-							<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução aos SIS de produção</a>
-							<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Sistema de Informações Hospitalares (SIH)</a>
-							<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Sistema de Informações Ambulatoriais (SIA)</a>
-							<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>SIAB, SISAB e e-SUS APS</a>
-							
-							<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="content">
-			<div id="page-title"><div class="container"><div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5"><div class="col-12 col-md-10 col-lg-11"><h2 class="title"><span class="label">Módulo 3 | Aula 2</span><br />Sistemas de Informações de Produção</h2></div></div></div></div>
-			<div id="page-content" class="">
-				<section><div class="container">
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 4</span><h3 class="heading__title">Sistema de Informações Ambulatoriais (SIA)</h3></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Enquanto o SIH foca na internação, o SIA abrange o imenso volume de atendimentos que não exigem hospitalização. O SIA foi criado em meados da década de 1990 com o objetivo de registrar de forma padronizada e informatizada os atendimentos ambulatoriais do SUS de todo o país. Antes de sua implementação, o registro era realizado por meio de Boletins de Serviços Produzidos (BSP) e o pagamento ocorria por meio de Guias de Autorização de Pagamento (GAP) (Ministério da Saúde, 2009). A informatização permitiu um salto de qualidade, facilitando a geração de informações para planejamento, controle e auditoria.</p></div></div><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula2-topico4-sia-informatizacao.png" alt="Profissionais em escritório analisando dados em notebook, em atividade de planejamento e auditoria." loading="lazy" /></figure></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Os principais instrumentos para captação dos dados do SIA são o Boletim de Produção Ambulatorial (BPA), que registra procedimentos de atenção básica e média complexidade, consolidados (BPA-C) ou individualizados (BPA-I), e a Autorização de Procedimentos Ambulatoriais (APAC), que registra procedimentos que exigem autorização prévia do gestor, como os de alta complexidade.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O SIA/SUS registra informações sobre os atendimentos ambulatoriais, como data, local, tipo de atendimento, procedimentos realizados, medicamentos prescritos e CID. Esse sistema disponibiliza dados para gestores, profissionais de saúde, pesquisadores e público em geral, contribuindo para a transparência e o controle social do SUS. Um dos principais usos para o SIA é o acompanhamento da produção ambulatorial, identificando as áreas com maior demanda e os serviços que precisam ser ampliados ou melhorados, além de permitir análises sobre os custos dos procedimentos.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Importância</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O SIA registra o maior volume de dados do SUS, cobrindo desde consultas básicas e curativos até procedimentos de altíssima complexidade, como quimioterapia e hemodiálise. Sua importância reside no monitoramento da produção assistencial fora do ambiente hospitalar, permitindo aos gestores avaliar se a oferta de exames, consultas especializadas e terapias está adequada às necessidades da população.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Além do monitoramento financeiro, o SIA é fundamental para transparência e controle social, pois disponibiliza dados acessíveis não apenas para gestores e profissionais, mas também para pesquisadores e o público em geral. Ele é a ferramenta que permite identificar quais áreas têm maior demanda e quais serviços precisam ser ampliados ou melhorados na rede de saúde.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Dados Coletados</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A coleta no SIA é mais heterogênea do que a do SIH e utiliza principalmente dois instrumentos de captação, dependendo da complexidade e da necessidade de autorização prévia:</p>
-<ul class="ps-3 mb-0">
-<li class="mb-3"><strong>BPA (Boletim de Produção Ambulatorial)</strong> – Utilizado para procedimentos de atenção básica e média complexidade. Esse boletim pode ser:
-<ul class="ps-3 mt-2 mb-0">
-<li class="mb-2"><strong>BPA-Consolidado:</strong> registra procedimentos agregados, como a quantidade de atendimentos médicos em uma unidade, sem identificar o paciente.</li>
-<li><strong>BPA-Individualizado:</strong> registra procedimentos que exigem identificação, como pequenas cirurgias e exames específicos.</li>
-</ul>
-</li>
-<li><strong>APAC (Autorização de Procedimentos de Alta Complexidade)</strong> – Utilizada para tratamentos contínuos ou caros, como de oncologia e nefrologia, coletando dados detalhados do paciente, diagnóstico e esquema terapêutico. Procedimentos de alta complexidade exigem essa autorização prévia do gestor.</li>
-</ul>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>De modo geral, o sistema registra informações vitais como a data do atendimento, o local, o tipo de procedimento realizado, os medicamentos prescritos e a Classificação Internacional de Doenças (CID). Vale ressaltar que, assim como no SIH, o SIA utiliza as informações do CNES (para identificar o estabelecimento) e do SIGTAP (para codificar o procedimento).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Usos e disseminação</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Os dados do SIA, assim como do SIH, também são disseminados via TabNet (consulta online) e TabWin (tabulação offline) no DATASUS. O SIA é vital para o faturamento e repasse de verbas, sendo usado na gestão para monitorar metas. Embora historicamente o SIA seja menos explorado em estudos do que o SIH, o sistema tem alto potencial analítico. Um exemplo recente foi sua utilização para estimar a razão entre a oferta e a demanda de exames preconizados no protocolo de atenção a pessoa com diabetes. Ao analisar os procedimentos registrados, foi possível avaliar a adequação do cuidado ofertado pelo SUS (Muzy et al., 2022).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Qualidade</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A qualidade dos dados do SIA varia muito. As APACs tendem a ter ótima qualidade devido ao alto custo e rigorosa auditoria. Já os dados do BPA-Consolidado possuem baixa capacidade analítica, pois apenas contabilizam quantidades, impedindo, por exemplo, saber quantas vezes o mesmo paciente foi atendido ou qual o perfil demográfico de quem realizou consultas básicas.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Limitações</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A fragmentação é um desafio. O SIA foi desenhado com foco no procedimento e no faturamento, e não no cuidado clínico. Isso torna difícil rastrear a trajetória do paciente pela rede, como saber se quem fez a consulta também fez o exame solicitado.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Além disso, há subnotificação em municípios que não dependem exclusivamente do faturamento federal para manter suas unidades. Outro ponto relevante é que, apesar de sua relevância, ainda existem poucos estudos que utilizam o SIA para avaliar a adequação do SUS de forma sistêmica, talvez devido à complexidade e heterogeneidade de seus instrumentos de coleta.</p></div></div>
-				</div></section>
-			</div>
-			<section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8"><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico3.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico5.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div></div></div></div></section>
-			<footer>
-				<div class="container-fluid">
-					<div class="row justify-content-center align-items-center linha-de-marcas">
-						<div class="col-12 text-center py-3">
-							<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 3</span>
+										<span class="title">Análise Espacial</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Abordagens teóricas da Geografia da Saúde</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Noções básicas de Geoprocessamento e SIG</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Fundamentos de Cartografia</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Prática de SIG I</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Prática de SIG II</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula6/topico1.html"><strong>Aula 6: </strong>Análise espacial – Área</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula7/topico1.html"><strong>Aula 7: </strong>Análise espacial – Pontos</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 2</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 2</span>
+										<span class="title">Noções básicas de Geoprocessamento e Sistema de Informações Geográficas</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Análise Espacial</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Geoprocessamento</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Dados espaciais</a>
+															<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Sistema de Informações Geográficas</a>
+															<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Funções e objetivos do SIG</a>
+															<a href="topico8.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-	</div>
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-	<script type="text/javascript">var sidebar = new StickySidebar(".sidebar", { topSpacing: 0, bottomSpacing: 0, containerSelector: ".main", innerWrapperSelector: ".sidebar__inner", minWidth: 991 });</script>
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-	<script>AOS.init();</script>
-</body>
+			</div>
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 3 | Aula 2</span>
+									<br />
+									Noções básicas de Geoprocessamento e Sistema de Informações Geográficas
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 4</span><h3 class="heading__title">Geoprocessamento</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O geoprocessamento corresponde ao conjunto de técnicas e procedimentos computacionais voltados à coleta, tratamento, manipulação e apresentação de dados espaciais (Câmara, 2001). O geoprocessamento nos possibilita construir mapas de maneira muito mais simples e rápida do que na época de John Snow, ampliando significativamente a capacidade analítica nas investigações espaciais. Não à toa seu uso tem se intensificado a cada década, principalmente devido, especialmente a três fatores:</p><div class="list"><ul class="list-group"><li class="list-group-item">Redução do custo de computadores e softwares;</li><li class="list-group-item">Desenvolvimento de interfaces mais intuitivas e acessíveis e;</li><li class="list-group-item">Crescente disponibilização de dados, favorecida pelo uso ampliado da internet.</li></ul></div><p class="mb-0">Cada uma das técnicas de geoprocessamento tem funções bem específicas. Conheça um pouco algumas delas:</p></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="geo-tiles"><div class="geo-tiles__grid"><button type="button" class="geo-tiles__item" data-bs-toggle="modal" data-bs-target="#modal-m3a2-cartografia">Cartografia Digital</button><button type="button" class="geo-tiles__item" data-bs-toggle="modal" data-bs-target="#modal-m3a2-sensoriamento">Sensoriamento Remoto</button><button type="button" class="geo-tiles__item" data-bs-toggle="modal" data-bs-target="#modal-m3a2-gnss">GNSS</button><button type="button" class="geo-tiles__item" data-bs-toggle="modal" data-bs-target="#modal-m3a2-estatistica">Estatística Espacial</button></div><button type="button" class="geo-tiles__base" data-bs-toggle="modal" data-bs-target="#modal-m3a2-sig-tecnica">Sistema de Informações Geográficas - SIG</button></div></div></div>
+<div class="modal fade" id="modal-m3a2-cartografia" tabindex="-1" aria-labelledby="modal-m3a2-cartografia-label" aria-hidden="true"><div class="modal-dialog modal-xl modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modal-m3a2-cartografia-label">Cartografia Digital</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><p>Cartografia digital – se refere à técnica que desenha ou delimita os objetos geográficos naturais ou artificiais, visíveis na paisagem, unidades de análise e/ou divisões político-administrativas, criando mapas em formato digital. Atualmente, poucos mapas são confeccionados em formato analógico ou em papel. Em geral, são mapas digitais que podem ser editados no computador e impressos, posteriormente, se necessário (Magalhães, 2014).</p><div class="row"><div class="col-12 col-md-6 mb-4"><p class="mb-2"><strong>Figura 1: Mapa em formato digital</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula2/figura1-mapa-digital.png" alt="Mapa em formato digital" loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: Foto de autoria de Mônica Magalhaes</p></div><div class="col-12 col-md-6 mb-4"><p class="mb-2"><strong>Figura 2: Mapa em formato analógico (em papel)</strong></p><figure class="lightbox aos-init" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula2/figura2-mapa-analogico.png" alt="Mapa em formato analógico (em papel)" loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: IBGE. Disponível em: <a href="https://biblioteca.ibge.gov.br" target="_blank" rel="noopener noreferrer">https://biblioteca.ibge.gov.br</a></p></div></div></div><div class="modal-footer"><button type="button" class="fio-button fio-button-primary" data-bs-dismiss="modal">Fechar</button></div></div></div></div><div class="modal fade" id="modal-m3a2-sensoriamento" tabindex="-1" aria-labelledby="modal-m3a2-sensoriamento-label" aria-hidden="true"><div class="modal-dialog modal-xl modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modal-m3a2-sensoriamento-label">Sensoriamento Remoto</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><p>Sensoriamento Remoto – compreende um conjunto de técnicas para obter informações sobre a superfície da Terra sem contato direto. Ou seja, em vez de medir algo “tocando” o objeto, utiliza-se instrumentos que detectam e registram radiação eletromagnética refletida ou emitida pelo alvo (Pina e Madureira, 2000). Normalmente usado na saúde para coletar dados sobre fatores ambientais que influenciam a ocorrência de doenças.</p><p class="mb-2"><strong>Figura 3: Ilustração de satélites imageando a superfície terrestre.</strong></p><figure class="mb-3"><img class="img-fluid mx-auto d-block rounded border" src="../../media/modulo3/aula2/figura3-satelites.png" alt="Satélites imageando a superfície terrestre" loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: David Ducros – CNES, 2002. Disponível em: <a href="https://phototheque.cnes.fr/cnes/media/2791" target="_blank" rel="noopener noreferrer">https://phototheque.cnes.fr/cnes/media/2791</a></p></div><div class="modal-footer"><button type="button" class="fio-button fio-button-primary" data-bs-dismiss="modal">Fechar</button></div></div></div></div><div class="modal fade" id="modal-m3a2-gnss" tabindex="-1" aria-labelledby="modal-m3a2-gnss-label" aria-hidden="true"><div class="modal-dialog modal-xl modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modal-m3a2-gnss-label">GNSS</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><p>Global Navigation Satellite System (Sistema Global de Navegação por Satélite) – sistema baseado em satélites artificiais que transmitem sinais contendo informações de tempo e posição orbital, permitindo que receptores em terra, no ar ou no mar determinem sua localização por meio de cálculos matemáticos. Constitui um dos avanços tecnológicos mais relevantes das últimas décadas, ao possibilitar o posicionamento preciso de objetos e pessoas em escala global. A precisão obtida pode variar conforme o tipo de equipamento e as técnicas utilizadas, podendo alcançar níveis centimétricos em aplicações geodésicas e topográficas.</p><p class="mb-2"><strong>Figura 4: Esquema do funcionamento do Sistema Global de Navegação por Satélite</strong></p><figure class="mb-3"><img class="img-fluid mx-auto d-block rounded border" src="../../media/modulo3/aula2/figura4-gnss.png" alt="Esquema do funcionamento do GNSS" loading="lazy" /></figure><p class="figure-caption fonte small mb-3">Fonte: Elaborado por IA - Copilot</p><p class="mb-0"><strong>Popularmente se chama de GPS, mas diferentemente do que se pensa, o GPS é apenas um dos sistemas que compõem o GNSS, ao lado do GLONASS (Rússia), Galileo (União Europeia) e BeiDou (China) (Silva &amp; Baesso, 2014).</strong></p></div><div class="modal-footer"><button type="button" class="fio-button fio-button-primary" data-bs-dismiss="modal">Fechar</button></div></div></div></div><div class="modal fade" id="modal-m3a2-estatistica" tabindex="-1" aria-labelledby="modal-m3a2-estatistica-label" aria-hidden="true"><div class="modal-dialog modal-xl modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modal-m3a2-estatistica-label">Estatística Espacial</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><p>Estatística Espacial – não é uma técnica de coleta de dados (como o GPS ou o sensoriamento remoto), mas uma técnica analítica do Geoprocessamento, fundamental para interpretar os dados espaciais e gerar conhecimento (Longley, 2015). Ramo da Estatística que permite analisar a localização espacial de eventos e, além de localizar e visualizar a ocorrência de fenômenos que se materializam no espaço geográfico, auxiliar também na geração de modelos da ocorrência destes fenômenos, incorporando, por exemplo, fatores determinantes, a estrutura de distribuição espacial ou a identificação de padrões (Santos, 2007).</p></div><div class="modal-footer"><button type="button" class="fio-button fio-button-primary" data-bs-dismiss="modal">Fechar</button></div></div></div></div><div class="modal fade" id="modal-m3a2-sig-tecnica" tabindex="-1" aria-labelledby="modal-m3a2-sig-tecnica-label" aria-hidden="true"><div class="modal-dialog modal-xl modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modal-m3a2-sig-tecnica-label">Sistema de Informações Geográficas - SIG</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><p>Sistema de Informação Geográfica (SIG) – é um ambiente integrado que permite armazenar, organizar, manipular, analisar e representar dados espaciais. Um SIG envolve não apenas softwares, mas também hardware, banco de dados, metodologias e profissionais capacitados (Aronoff, 1995; Câmara, 2001). Trata-se, portanto, da infraestrutura tecnológica e metodológica que viabiliza o trabalho com informações geográficas.</p><p>O SIG se destaca, dentre as técnicas de Geoprocessamento porque é ele que integra, organiza, analisa e apresenta dados espaciais de forma estruturada e inteligente. Enquanto outras técnicas (como as citadas anteriormente) coletam ou produzem dados, o SIG é o sistema que transforma esses dados em informação útil para tomada de decisão. Sua capacidade em reunir uma grande quantidade de dados convencionais, de expressão espacial, estruturando-os adequadamente, tornou o SIG uma ferramenta essencial para a manipulação de informações geográficas (Carvalho et al., 2000).</p></div><div class="modal-footer"><button type="button" class="fio-button fio-button-primary" data-bs-dismiss="modal">Fechar</button></div></div></div></div>						</div>
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico3.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico5.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar(".sidebar", {
+				topSpacing: 0, bottomSpacing: 0, containerSelector: ".main",
+				innerWrapperSelector: ".sidebar__inner", minWidth: 991,
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
 </html>
