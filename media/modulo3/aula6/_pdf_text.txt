@@ -1,0 +1,451 @@
+
+===== PAGE 1 =====
+Análise Espacial de Dados – Área
+Sobre esta aula
+Seja bem-vindo e bem-vinda à aula “Análise Espacial de Dados – Área”.
+A seguir, veja algumas informações importantes!
+Objetivos de aprendizagem
+ 
+Ao final dessa aula, você será capaz de:
+	
+Compreender o que são dados de área e reconhecer suas particularidades no contexto  
+	
+da saúde pública.
+	
+Interpretar mapas coropléticos e identificar limitações da análise exclusivamente visual.
+	
+Entender o conceito de autocorrelação espacial e suas implicações para a análise  
+	
+de indicadores de saúde.
+	
+Interpretar o Índice de Moran Global e Local
+	
+Reconhecer o problema da instabilidade das taxas em áreas com pequenas populações.
+	
+Compreender o propósito da suavização de taxas, especialmente por meio do Estimador 
+	
+Bayesiano Empírico. 
+    
+Autoria
+Diego Ricardo Xavier
+Doutor em Epidemiologia. Mestrado em Saúde Pública. Pesquisador em Saúde Pública
+Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict)  
+da Fundação Oswaldo Cruz (Fiocruz)
+Mônica de Avelar Figueiredo Mafra Magalhães
+Doutora em Saúde Coletiva. Mestrado em Geoprocessamento. Tecnologista em Saúde 
+Pública. Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict) 
+da Fundação Oswaldo Cruz (Fiocruz).
+Julia Novaes de Barros Peixoto 
+Mestre em Ciências - Métodos quantitativos em Epidemiologia & Engenheira Cartógrafa. 
+Introdução
+A partir do que você explorou anteriormente e do mapa temático elaborado nas últimas  
+aulas, avançaremos agora para a base conceitual da análise de dados organizados  
+por áreas geográficas. Esse tipo de análise utiliza informações agregadas em polígonos  
+territoriais como municípios, bairros, setores censitários ou estados e é amplamente  
+empregada no contexto do Sistema Único de Saúde (SUS). 
+Isso porque grande parte dos dados provenientes de sistemas de informação, como o  
+SINAN (Sistema de Informação de Agravos de Notificação), o SIM (Sistema de Informações 
+sobre Mortalidade) e os dados demográficos do IBGE, é disponibilizada de forma agregada 
+segundo unidades administrativas (Carvalho & Souza-Santos, 2005; Câmara, et al., 2004).
+Essa abordagem permite investigar como doenças, fatores de risco e serviços de saúde  
+se distribuem no território e é especialmente útil para:
+	
+Identificar padrões espaciais de doenças, observando onde há maior ou menor ocorrência.
+	
+Detectar áreas de risco (clusters), revelando regiões prioritárias para intervenção.
+	
+Relacionar saúde com fatores socioambientais, como saneamento, renda, densidade  
+	
+populacional e condições de moradia.
+	
+Apoiar o planejamento dos serviços de saúde, contribuindo para definir a localização  
+	
+de hospitais, postos e ações de vacinação.
+	
+Monitorar e prever surtos, acompanhando a evolução espacial e temporal das doenças.
+	
+Reduzir desigualdades em saúde, ao evidenciar desigualdades territoriais de acesso  
+	
+e vulnerabilidade.
+ANÁLISE ESPACIAL
+MÓDULO 3 | AULA 6
+Em síntese, a análise de área é investigar padrões espaciais na distribuição de taxas ou  
+indicadores de saúde, como taxas de mortalidade, coeficientes de incidência ou indicadores 
+socioeconômicos. A questão central é entender se as áreas com valores altos (ou baixos)  
+de um indicador tendem a se agrupar no espaço, ou se sua distribuição é aleatória  
+(Câmara, et al., 2004).
+Figura 1 - Padrões Espaciais Comuns em Mapas Coropléticos.
+Fonte: Elaborado pelos autores (2026).
+Ao elaborar mapas que mostram como eventos de saúde se distribuem no território,  
+podemos observar diferentes padrões espaciais. A figura apresenta três exemplos fictícios 
+que ilustram situações comuns.
+No primeiro quadro, à esquerda, vemos que as taxas mais altas — indicadas pelas cores 
+mais intensas — se concentram ao redor de uma única área. Esse tipo de padrão sugere a 
+presença de uma fonte específica de exposição, como uma indústria que libera poluentes.
+No segundo quadro, ao centro, as maiores taxas aparecem alinhadas, formando uma faixa 
+contínua. Esse formato linear pode indicar que a exposição segue o traçado de algum  
+elemento geográfico, como uma estrada ou um rio.
+Clusters  
+  
+Na saúde podemos dizer que um cluster  
+descreve um padrão de não aleatoriedade, 
+onde os casos de uma doença não estão  
+distribuídos de forma homogênea ou ao  
+acaso em um território, mas sim  
+concentrados em regiões específicas.
+Ao clicar, na palavra em destaque (clusters) no texto a cima, 
+abre um popover com conteúdo indicado abaixo.
+
+===== PAGE 2 =====
+Já no terceiro quadro, observamos um padrão em mosaico: as áreas com taxas mais  
+elevadas se distribuem em vários pontos, formando diversos aglomerados (clusters).  
+Esse comportamento pode estar associado a múltiplas fontes de exposição espalhadas  
+pelo território, refletindo características sociais e organizacionais das cidades ( 
+Santos & Barcellos, 2006).
+O que são Dados de Área?
+Dados de área são valores (contagens, taxas ou proporções) associados a uma unidade de 
+área geográfica definida. Por exemplo, a taxa de mortalidade infantil de um município, a 
+proporção de domicílios com saneamento básico em um bairro, ou o número de casos de 
+leishmaniose por setor censitário. A forma mais comum de visualização desses dados é  
+através de mapas coropléticos, que você já estudou nas aulas anteriores, onde cada área é 
+colorida de acordo com o valor da variável de interesse (Câmara, et al., 2004).
+Embora sejam visualmente informativos e úteis em uma primeira etapa de análise visual  
+e exploratória, os mapas coropléticos podem levar a interpretações equivocadas.  
+A observação inicial pode sugerir a existência de padrões espaciais, porém nossos olhos  
+podem ser induzidos a perceber agrupamentos ou tendências que não são, necessariamente, 
+estatisticamente significativos. Por essa razão, após essa etapa exploratória, torna-se  
+fundamental empregar ferramentas de estatística espacial, para testar formalmente a  
+existência de padrões espaciais.
+Autocorrelação Espacial
+Lembra da Primeira Lei da Geografia de Tobler: "tudo está relacionado com todo o resto, 
+mas as coisas mais próximas estão mais relacionadas do que as coisas distantes" que  
+tratamos na aula 1 deste módulo? Então, o conceito autocorrelação espacial, fundamental  
+na análise de dados de área, é o termo que descreve a correlação de uma variável com ela 
+mesma através do espaço.
+Em saúde pública, a autocorrelação espacial significa que o valor de um indicador de saúde 
+em uma determinada área (por exemplo, um município) não é independente dos valores  
+nas áreas vizinhas. 
+Matriz de Vizinhança
+Para medir a autocorrelação espacial, primeiro precisamos definir formalmente o que  
+significa "ser vizinho". Isso é feito através de uma matriz de proximidade espacial ou matriz 
+de pesos espaciais (W). Esta matriz (n x n, onde n é o número de áreas) especifica a relação 
+de vizinhança para cada par de áreas (Câmara, et al., 2004).
+Confira
+Autocorrelação 
+Negativa
+Confira
+Autocorrelação 
+Positiva
+Confira
+Ausência de  
+Autocorrelação 
+(Aleatoriedade 
+Espacial)   
+Autocorrelação 
+Positiva 
+Áreas vizinhas tendem a ter  
+valores semelhantes.  
+Municípios com altas taxas de uma  
+doença estão próximos de outros  
+municípios com altas taxas.  
+Isso sugere a ação de fatores de risco  
+subjacentes que também estão  
+espacialmente concentrados.
+Autocorrelação 
+Negativa 
+Áreas vizinhas tendem a ter valores  
+diferentes. Um município com  
+alta taxa está cercado por municípios  
+com baixas taxas. Este padrão é menos  
+comum em fenômenos de saúde.
+Ausência de  
+Autocorrelação 
+(Aleatoriedade 
+Espacial)   
+O valor do indicador em uma área  
+é independente dos valores  
+em seus vizinhos.
+
+===== PAGE 3 =====
+Fonte: Elaborado pelos autores (2026)
+A escolha da matriz é crucial porque diferentes definições de vizinhança podem produzir  
+resultados distintos na identificação de padrões espaciais, autocorrelação ou clusters.  
+Em outras palavras, a maneira como a vizinhança é definida influencia diretamente a  
+interpretação dos padrões espaciais observados. Por esse motivo, essa decisão não deve ser 
+arbitrária, mas sim fundamentada nas características do fenômeno estudado e nos processos 
+que geram a dependência espacial. 
+Nas doenças transmitidas por vetores, como a Dengue, a utilização de matrizes baseadas em 
+contiguidade costuma ser adequada, pois a transmissão tende a ocorrer entre áreas  
+geograficamente adjacentes. Já em doenças associadas à mobilidade populacional, como a 
+COVID-19, critérios baseados em distância ou proximidade entre centroides podem  
+representar melhor as interações espaciais, uma vez que o contágio pode ocorrer entre  
+regiões conectadas por fluxos de deslocamento. Por outro lado, em estudos de exposição 
+ambiental, como os que investigam doenças respiratórias relacionadas à poluição do ar, 
+como a Asma, matrizes baseadas em distância podem ser mais apropriadas, já que os efeitos 
+ambientais frequentemente ultrapassam limites administrativos.
+Medidas Globais de Autocorrelação:  
+Índice de Moran Global (I)
+As medidas globais fornecem um único valor que resume o grau de agrupamento espacial 
+para toda a área de estudo. O indicador mais utilizado é o Índice de Moran Global (I)  
+(Câmara, et al., 2004; Santos & Souza, 2004).
+O Índice de Moran varia de -1 a +1:
+	
+• 	 I > 0: Indica autocorrelação espacial positiva (tendência à formação de clusters  
+	
+	
+de valores similares).
+	
+• 	 I < 0: Indica autocorrelação espacial negativa (tendência à formação de clusters  
+	
+	
+de valores dissimilares).
+	
+• 	 I ≈ 0: Indica ausência de padrão espacial (distribuição aleatória).
+Vamos utilizar um estudo sobre a mortalidade por suicídio no Nordeste brasileiro utilizou o 
+Índice de Moran para avaliar o padrão geral da distribuição dos casos (Santos & Barbosa, 
+2017) para embasar nossa discussão: https://doi.org/10.1590/1414-462X201700030015
+Neste estudo o índice de Moran Global foi de I=0,2608, o que significa que existe  
+autocorrelação espacial positiva, isto é, com tendência à formação de clusters de valores  
+similares. Juntamente com o índice, é calculado um p-valor, que testa a hipótese nula de que 
+os dados são espacialmente aleatórios. Um p-valor baixo (ex: p < 0,05) nos permite concluir 
+que existe uma autocorrelação espacial estatisticamente significativa. 
+Análise Local:  
+Identificação de Clusters (LISA)
+Um índice global como o de Moran pode mascarar padrões locais importantes.  
+A autocorrelação pode ser forte em uma parte do mapa e fraca em outra. Para superar isso, 
+utilizamos os Indicadores Locais de Associação Espacial (LISA - Local Indicators of Spatial 
+Association) (Câmara et.al, 2004; Santos & Souza, 2007).
+A forma mais comum de LISA é o Índice de Moran Local. Ele calcula um valor de Moran 
+para cada área individualmente, permitindo identificar a contribuição de cada área para o pa-
+drão global e localizar os clusters.
+A análise LISA classifica as áreas com autocorrelação local significativa em quatro  
+categorias, que são frequentemente visualizadas em um Mapa de Clusters LISA e no  
+Diagrama de Espalhamento de Moran:
+Figura 2 - Diagrama de Espalhamento de Moran (Moran Scatterplot).
+Critério
+Descrição
+Contiguidade (Rainha)
+Duas áreas são vizinhas se compartilharem qualquer  
+porção de sua fronteira (incluindo apenas um vértice).  
+É o critério mais comum.
+Contiguidade (Torre)
+Duas áreas são vizinhas apenas se compartilharem um 
+segmento de fronteira (não apenas um vértice).
+Distância
+Duas áreas são vizinhas se a distância entre seus  
+centroides (ou pontos centrais) for menor que um  
+determinado raio.
+Neste exemplo, considerando que os vizinhos são as  
+áreas onde o centroide estão dentro do raio (R), a área E 
+tem como vizinhos apenas a área F.
+k-Vizinhos Mais Próximos
+Para cada área, seus vizinhos são as 'k'  
+áreas mais próximas a ela. Exemplo: k=3
+Existem vários critérios para definir a vizinhança:
+Fonte: Elaborado pelos autores (2026).
+A figura explica visualmente como o Diagrama de Moran separa diferentes tipos  
+de padrões espaciais:
+Clusters Alto-Alto e Baixo-Baixo g valores semelhantes agrupados.
+Outliers Alto-Baixo e Baixo-Alto g valores contrastantes posicionados lado a lado.
+A inclinação da reta indica grau de dependência espacial do indicador.
+
+===== PAGE 4 =====
+Figura 5 - Mapa de Clusters LISA. 
+Essa técnica é poderosa para a vigilância em saúde, pois permite identificar não apenas os 
+clusters de risco (Alto-Alto), mas também áreas que podem ter fatores de proteção  
+(Baixo-Baixo) ou que representam transições abruptas no espaço (Alto-Baixo e Baixo-Alto). 
+Voltando ao estudo sobre mortalidade por suicídio no Nordeste brasileiro trabalhando acima, 
+temos uma análise de Moran Local com identificação dos clusters das Taxas de Mortalidade 
+por suicídio, com LISA estatisticamente significativo (MoranMap).
+Fonte: Cadernos de Saúde Coletiva. Disponível em: https://doi.org/10.1590/1414-462X201700030015
+Outros estudos recentes no Brasil têm usado LISA para identificar clusters de mortalidade  
+infantil (Dilélio, et.al, 2024) e para analisar a distribuição espacial do câncer de boca e sua  
+relação com determinantes de saúde (Marsicano et al., 2025).
+Instabilidade de Taxas
+Um dos maiores desafios ao trabalhar com dados de área, especialmente quando as áreas 
+são pequenas (como bairros ou setores censitários), é o problema dos pequenos números, 
+que leva à instabilidade das taxas (Carvalho &Souza-Santos, 2005; Câmara et al., 2004).
+Fonte: Elaborado pelos autores (2026).
+A figura ilustra um cenário  
+típico de análise LISA:
+Dois grandes clusters: 
+	
+• 	 um de alto risco  
+	
+	
+(vermelho)
+	
+• 	 um de baixo risco  
+	
+	
+(azul)
+Outliers espalhados (laranja 
+e verde), representando áreas 
+que contrastam com seus  
+vizinhos.
+A maior parte do mapa é  
+não significativa, indicando  
+ausência de padrões espaciais 
+relevantes nessas células.
+Categoria
+Descrição
+Interpretação em Saúde
+Alto-Alto
+Uma área com alto valor do  
+indicador, cercada por vizinhos 
+que também têm altos valores.
+Cluster de Risco: Aglomerado  
+de áreas com alta prioridade para  
+intervenção.
+Baixo-Baixo
+Uma área com baixo valor do 
+indicador, cercada por vizinhos 
+que também têm baixos valores.
+Cluster de Baixo Risco:  
+Aglomerado de áreas com bons  
+indicadores de saúde.
+Alto-Baixo
+Uma área com alto valor,  
+ercada por vizinhos com  
+baixos valores.
+Outlier Espacial: Uma "ilha"  
+de alto risco em uma "vizinhança"  
+de baixo risco.
+Baixo-Alto
+Uma área com baixo valor,  
+cercada por vizinhos com  
+altos valores.
+Outlier Espacial: Uma "ilha"  
+de baixo risco em uma "vizinhança" 
+de alto risco.
+No mapa podemos  
+observar verifica-se a  
+presença de um  
+aglomerado de alta taxa  
+de mortalidade por  
+suicídio entre os  
+municípios dos Estados  
+do Ceará e Piauí (municípios 
+coloridos de preto).
+Nota: Os nomes acima são fictícios e usados apenas para fins didáticos.
+Observando os dados da tabela, verificamos que os municípios de Lirandópolis e  
+Taguarana tiveram o mesmo número de óbitos, mas como a população do primeiro é  
+pequena, a taxa acaba sendo alta. A mesma coisa acontece para os municípios de Serra  
+de cedro e Campos do Jatobá, ambos tiveram 11 óbitos, mas por causa da população  
+as taxas são bem diferentes.
+Ignorar esse problema pode levar a uma alocação inadequada de recursos, direcionando a 
+atenção para áreas que parecem ter um problema grave, mas que na verdade são apenas  
+estatisticamente instáveis. A solução para isso é a suavização de taxas, sendo o método  
+mais comum o Estimador Bayesiano Empírico (Carvalho &Souza-Santos, 2005;  
+Câmara et al., 2004).
+A ideia do estimador bayesiano é "corrigir" a taxa observada em uma área, levando em  
+consideração sua própria estabilidade (ou seja, o tamanho de sua população) e a informação 
+de seus vizinhos. A taxa suavizada é uma média ponderada entre a taxa observada na área  
+e uma taxa de referência (que pode ser a média global ou a média dos vizinhos).  
+O peso dado à taxa observada é proporcional ao tamanho da população da área. Assim:
+Município (fictício)
+População
+Nº de óbitos
+Tx. Mortalidade
+Lirandópolis
+4.565
+1
+4,4
+Taguarana
+30.113
+1
+0,7
+Iraporé
+9.797
+2
+4,1
+Vargem Serena
+49.038
+2
+0,8
+Serra do Cedro
+18.854
+11
+11,7
+Campos do Jatobá
+130.154
+11
+1,7
+Áreas populosas:
+Áreas pouco populosas:
+Têm taxas estáveis. O estimador dá muito peso à taxa observada, e o valor  
+suavizado será muito próximo do original.
+Áreas populosas:
+Têm taxas instáveis. O estimador dá pouco peso à taxa observada e "puxa"  
+o valor em direção à média de referência, resultando em uma estimativa de risco 
+mais robusta e confiável.
+Áreas pouco populosas:
+IMPORTANTE!
+Áreas com populações pequenas podem apresentar taxas de mortalidade ou  
+incidência extremamente altas ou baixas devido ao acaso. Por exemplo, em um 
+bairro com apenas 10 nascimentos em um ano, um único óbito infantil resultaria 
+em uma taxa altíssima (100 por mil), enquanto a ausência de óbitos resultaria  
+em uma taxa de zero. Esses valores extremos muitas vezes não refletem o risco 
+real, mas sim a flutuação aleatória.
+IMPORTANTE!
+Tabela 1: Taxa de Mortalidade de municípios 
+
+===== PAGE 5 =====
+Figura 5 - Efeito da Suavização Bayesiana na Instabilidade de Taxas.
+Fonte: Elaborado pelos autores (2026).
+Nos mapas abaixo, retirado de um artigo sobre hanseníase em Recife, o método foi utilizado 
+para corrigir as taxas permitindo uma identificação mais precisa dos bairros prioritários para a 
+vigilância (Souza, et.al, 2001; Carvalho e Souza-Santos, 2005).
+Figura 6: Mapa com as taxas brutas e alisadas de hanseníase. Recife, 1993 – 1997.
+Fonte: Souza et al., 2001.
+Observando os mapas pode-se observar que após a suavização, os mapas tornaram-se  
+menos fragmentados, evidenciando bolsões/áreas com maior gravidade para a ocorrência  
+da doença. O modelo bayesiano, usando a vizinhança por adjacência, permitiu reestimar os 
+indicadores epidemiológicos por bairro, suavizando as taxas, reduzindo a flutuação aleatória 
+dos valores e revelando padrões reais (inclusive sugerindo sub-registro) e orientou a  
+priorização territorial das ações de controle.
+REFERÊNCIAS
+CÂMARA, G.; CARVALHO, M. S.; CRUZ, O. G.; CORREA, V. Análise Espacial de Áreas. In: 
+DRUCK, S.; CARVALHO, M. S.; CÂMARA, G.; MONTEIRO, A. V. M. (org.). Análise Espacial de 
+Dados Geográficos. Brasília: EMBRAPA, 2004.
+CARVALHO, M. S.; SOUZA‑SANTOS, R. Análise de dados espaciais em saúde pública:  
+métodos, problemas, perspectivas. Cadernos de Saúde Pública, v. 21, n. 2, p. 361‑378, 2005.
+DILÉLIO, A. S.; NATIVIDADE, M.; FACCHINI, L. A.; PEREIRA, M.; TOMASI, E. Estrutura  
+e processo na atenção primária à saúde das crianças e distribuição espacial da mortalidade 
+infantil. Revista de Saúde Pública, v. 58, p. 21, 2024.  Disponível em: <https://rsp.fsp.usp.br/
+pt-br/article/estrutura-e-processo-na-atencao-primaria-a-saude-das-criancas-e-distribuicao-
+espacial-da-mortalidade-infantil/>.
+MARSICANO, J. A.; SOUSA, G. C. M.; TOLEDO, G. S.; SILVA, A. M.; LEMOS, C. A.; CORDEIRO, 
+R. C. L.; SILVA, R. A. Análise espacial da mortalidade por câncer de boca e determinantes  
+de saúde. *Revista de Odontologia da UNESP*, v. 54, p. e20250001, 2025. Disponível em: 
+<https://www.scielo.br/j/rounesp/a/bJJsnSBYxHVpfPLFZQmsRzQ/?format=html&lang=pt>.
+SANTOS, E. G. O.; BARBOSA, I. R. Conglomerados espaciais da mortalidade por suicídio  
+no nordeste do Brasil e sua relação com indicadores socioeconômicos. Cadernos de Saúde 
+Coletiva, v. 25, n. 3, p. 361‑367, 2017.
+SANTOS, S. M.; SOUZA, W. V. (orgs.). Introdução à Estatística Espacial para a Saúde Pública*. 
+Brasília: Ministério da Saúde/Fiocruz, 2007.
+SANTOS, S. M.; BARCELLOS, C. (Orgs.). Série B. Abordagens espaciais na saúde pública.  
+Brasília: Ministério da Saúde; Fundação Oswaldo Cruz, 2006. v. 1
+SOUZA, W. V.; BARCELLOS, C. C.; CARVALHO, M. S.; CRUZ, O. G.; ALBUQUERQUE, M. F. P. 
+M.; ALVES, K. R.; LAPA, T. M. Aplicação de modelo bayesiano empírico na análise espacial da 
+ocorrência de hanseníase. Revista de Saúde Pública, v. 35, n. 5, p. 474‑480, 2001.
+escrita e por meio de uma escala de barras conhecida como escala gráfica.
+A figura mostra dois gráficos de barras, cada um representando diferentes formas  
+de calcular taxas de mortalidade em municípios fictícios (tabela 1).
+No gráfico da esquerda (A) que mostra as taxas brutas, a distribuição é dispersa e  
+irregular. As diferenças entre municípios refletem a instabilidade das taxas,  
+especialmente em locais com pouca população.
+No gráfico da direita (B) apresenta as taxas suavizadas, calculadas por método  
+bayesiano empírico. São os mesmos seis municípios, com cores seguindo a mesma  
+lógica do painel A.
+Observamos claramente:
+	
+• 	 Como taxas brutas podem ser instáveis, principalmente em municípios com 	 	
+	
+	
+pouca população.
+	
+• 	 Como a suavização bayesiana reduz essa instabilidade, gerando valores mais  
+	
+	
+coerentes e menos dependentes de flutuações aleatórias.

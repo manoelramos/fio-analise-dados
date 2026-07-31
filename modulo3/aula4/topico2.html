@@ -1,332 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="robots" content="noindex" />
-	<meta name="author" content="Fiocruz, Campus Virtual" />
-	<meta name="description" content="Curso Fontes de Dados e Sistemas de Informação para o SUS" />
-	<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
-	<link rel="manifest" href="../media/icons/manifest.json" />
-	<meta name="theme-color" content="#001833" />
-	<title>Curso Fontes de Dados e Sistemas de Informação para o SUS | Mod 3 | Aula 4</title>
-	<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="../../assets/css/style.css" />
-</head>
-<body>
-	<header class="header">
-		<div class="mobile-toggle-open">
-			<a class="mobile-toggle__button" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-		</div>
-		<div class="brand">
-			<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
-		</div>
-		<div class="title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
-			<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
-		</ul>
-	</header>
-	<div class="main">
-		<div class="sidebar" role="navigation">
-			<div class="sidebar__inner" style="position: relative">
-				<div class="sidebar__group d-lg-none">
-					<div class="sidebar__group-item">
-						<div class="sidebar__header">
-							<span>Curso</span>
-							<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-						</div>
-					</div>
-					<div class="sidebar__group-item"><div class="sidebar__title"><h1>Fontes de Dados e Sistemas de Informação para o SUS</h1></div></div>
-					<div class="sidebar__group-item">
-						<ul class="nav">
-							<li class="nav-item"><a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a></li>
-							<li class="nav-item"><a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span><span class="label">Módulos</span>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Introdução à Informação em Saúde no SUS</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Fontes de Dados Socioeconômicos e Demográficos: subsídios para a Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Sistemas de Informação em Saúde</a></li>
-															<li class="dropdown-menu__item">
-									<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo4/aula1/topico1.html"><strong>Módulo 4</strong><br />Interoperabilidade de Sistemas</a>
-								</li>
-</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">apps</span><span class="label">Conteúdo</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title"><span class="label">Módulo 3</span><span class="title">Sistemas de Informação em Saúde</span></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Introdução aos Sistemas de Informação em Saúde e Sistemas de Informações de Estatísticas Vitais</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Sistemas de Informações de Produção</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Sistemas de Informações Epidemiológicas</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Sistemas de Informações de Gestão, Infraestrutura e Orçamento</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Acesso aos dados de Saúde</a></li>
-								<li class="dropdown-menu__item"><a class="dropdown-menu__item-link" tabindex="0" role="link" href="../atividade.html"><strong>Atividade</strong></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="divider"><hr /></div>
-				<div class="sidebar__group">
-					<div class="sidebar__group-item"><span class="text class">Aula 4</span></div>
-					<div class="sidebar__group-item">
-						<div class="dropend">
-							<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
-								<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span><span class="label">Tópicos</span>
-							</button>
-							<ul class="dropdown-menu">
-								<li class="d-lg-none dropdown-menu__header">
-									<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
-									<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
-								</li>
-								<li class="dropdown-menu__title"><span class="label">Aula 4</span><span class="title">Sistemas de Informações de Gestão, Infraestrutura e Orçamento</span></li>
-								<li class="dropdown-menu__item">
-									<nav class="topic-list">
-							<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
-							<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>CNES</a>
-							<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>Disseminação da Informação</a>
-							<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído" ><span class="material-symbols-rounded"></span>SIOPS</a>
-									
-							<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a></nav>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex" />
+		<meta name="author" content="Fiocruz, Campus Virtual" />
+		<meta name="description" content="Curso Análise e Interpretação de Dados em Saúde" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../../media/icons/apple-icon-180x180.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../../media/icons/favicon-32x32.png" />
+		<link rel="manifest" href="../media/icons/manifest.json" />
+		<meta name="theme-color" content="#001833" />
+		<title>Curso Análise e Interpretação de Dados em Saúde | Mod 3 | Aula 4</title>
+		<link rel="stylesheet" href="../../source/bootstrap-5.1.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="mobile-toggle-open">
+				<a class="mobile-toggle__button" tabindex="0" role="button">
+					<span class="icon material-symbols-rounded">read_more</span>
+				</a>
 			</div>
-		</div>
-		<div class="content">
-			<div id="page-title"><div class="container"><div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5"><div class="col-12 col-md-10 col-lg-11"><h2 class="title"><span class="label">Módulo 3 | Aula 4</span><br />Sistemas de Informações de Gestão, Infraestrutura e Orçamento</h2></div></div></div></div>
-			<div id="page-content" class="">
-				<section><div class="container">
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 2</span><h3 class="heading__title">Cadastro Nacional de Estabelecimentos de Saúde (CNES)</h3></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Implementado em nível nacional desde 2003, o CNES constitui o sistema de informação oficial para o cadastramento de todos os estabelecimentos de saúde no país, registrando dados sobre a capacidade instalada e a mão de obra assistencial, independentemente de integrarem o Sistema Único de Saúde (SUS) ou de sua natureza jurídica (público ou privado).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Sua finalidade é servir como ferramenta de apoio para a gestão em saúde, fornecendo um mapeamento da rede assistencial no território. No entanto, o CNES também possui outras importantes finalidades:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><ul class="mb-0"><li>Permitir que a população conheça a real dimensão e disponibilidade dos serviços de saúde no Brasil.</li><li>Ser o vértice da pirâmide de integração com os Sistemas de Informação do Ministério da Saúde.</li><li>Possibilitar maior controle sobre o custeio repassado pelo Ministério da Saúde, correlacionando o financiamento com base na infraestrutura e serviços fornecidos pelos estabelecimentos de saúde.</li></ul></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Para saber mais sobre o que é o CNES, <a href="https://www.youtube.com/watch?v=hPPvQDvqtO8" target="_blank" rel="noopener noreferrer">clique aqui</a>.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Coleta de Dados</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Fluxo de Coleta dos Dados</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O fluxo de coleta de dados para o CNES ocorre de forma hierarquizada e ascendente, envolvendo os estabelecimentos de saúde, os gestores locais (municipais e estaduais) e o Ministério da Saúde.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Conforme prevê a <a href="https://portalsinan.saude.gov.br/images/documentos/Legislacoes/Portaria_Consolidacao_1_28_SETEMBRO_2017.pdf" target="_blank" rel="noopener noreferrer">Portaria de Consolidação nº 1</a>, de 28 de setembro de 2017, do Ministério da Saúde, o cadastramento no CNES é de responsabilidade de cada estabelecimento de saúde, por meio de seus responsáveis técnicos ou administrativos. Utilizando aplicativos computacionais ou serviços de internet disponibilizados pelo Ministério da Saúde, os estabelecimentos preenchem e enviam as Fichas de Cadastro de Estabelecimentos de Saúde (FCES) ao gestor local do CNES (municipal ou estadual, dependendo da gestão do estabelecimento).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula4-topico2-cnes-cadastro-fces.png" alt="Profissional de saúde com jaleco e estetoscópio utilizando laptop para cadastro em sistema de informação de saúde." loading="lazy" /></figure></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Com periodicidade mínima mensal, o gestor local processa as informações das FCES, verifica a consistência dos dados e as insere no Sistema de Cadastro Nacional de Estabelecimentos de Saúde (SCNES), um software do DATASUS utilizado para o cadastramento e gerenciamento das informações em nível local.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>As informações atualizadas são, por fim, transmitidas ao Ministério da Saúde, que as consolida e dissemina por meio de seu site eletrônico.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p class="mb-2"><strong>Figura 1 - Fluxo de Gestão de Informações do CNES.</strong></p><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded border" src="../../media/modulo3/aula4-fig1-fluxo-gestao-informacoes-cnes.png" alt="Fluxograma do fluxo de gestão de informações do CNES: estabelecimentos (FCES) enviam dados aos gestores estadual e municipal, com auditoria in loco, até o banco de dados CNES." loading="lazy" /></figure><p class="figure-caption fonte small mb-0">Fonte: <a href="https://wiki.saude.gov.br/cnes/index.php/P%C3%A1gina_principal#Fluxo_do_CNES" target="_blank" rel="noopener noreferrer">Wiki CNES – Fluxo do CNES</a>.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Dados coletados</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O CNES reúne um amplo conjunto de dados, que podem ser classificados em diferentes tipos.</p></div></div>
-<div class="row justify-content-center">
-<div class="col-12 col-md-10 col-lg-8">
-<div class="row g-4 mb-5">
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc1" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Identificação</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc1" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Identificação</span><div class="scrollable text-start"><p class="mb-0">Nome e tipo do estabelecimento (hospitais, Unidades de Pronto Atendimento (UPA), Unidades de Saúde da Família (USF) etc.) e informações sobre o gestor responsável.</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc1" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc2" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Localização</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc2" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Localização</span><div class="scrollable text-start"><p class="mb-0">Endereço e localização geográfica (geolocalização/coordenadas).</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc2" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc3" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Caracterização institucional</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc3" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Caracterização institucional</span><div class="scrollable text-start"><p class="mb-0">Esfera administrativa (federal, estadual, municipal ou privada) e natureza jurídica (administração direta ou indireta, empresa privada, entidade filantrópica, cooperativa etc.).</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc3" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc4" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Infraestrutura física</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc4" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Infraestrutura física</span><div class="scrollable text-start"><p class="mb-0">Instalações destinadas ao atendimento, como salas, consultórios, leitos e equipamentos.</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc4" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc5" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Recursos Humanos</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc5" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Recursos Humanos</span><div class="scrollable text-start"><p class="mb-0">Quantitativo de profissionais cadastrados, cargos, vínculos empregatícios e carga horária semanal.</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc5" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc6" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Equipes</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc6" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Equipes</span><div class="scrollable text-start"><p class="mb-0">Composição de equipes específicas, como as equipes de Saúde da Família, Equipe Multiprofissional de Atenção Domiciliar, Núcleo de Apoio à Saúde da Família, entre outras.</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc6" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc7" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Serviços prestados</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc7" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Serviços prestados</span><div class="scrollable text-start"><p class="mb-0">Tipos de atendimentos (internações, ambulatoriais, urgências, regulação etc.), serviços especializados (oncologia, cardiologia, nefrologia etc.) e serviços de apoio (farmácia, lavanderia, serviço social, ambulância etc.).</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc7" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-<div class="col-12 col-md-6">
-<div class="flipcard"><div class="flip-card"><input type="checkbox" id="m3a4cnesfc8" class="more" aria-hidden="true" /><div class="flip-card-inner"><div class="card shadow flip-card-front fundo1"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5 card-title">Habilitações</span></div><div class="card-footer text-white"><div class="card-btn"><label for="m3a4cnesfc8" class="fio-button fio-button-primary" aria-hidden="true"><img src="../../media/templates/flipcard-icon-dark.svg" alt="" width="36" /> Confira</label></div></div></div></div><div class="card flip-card-back"><div class="h-100 bg-transparent border-0 text-center"><div class="card-body justify-content-center d-flex flex-column"><span class="h5">Habilitações</span><div class="scrollable text-start"><p class="mb-0">Capacidade do estabelecimento de saúde em desenvolver funções específicas exigidas para a realização de determinado procedimento.</p></div></div><div class="card-footer"><div class="card-btn"><label for="m3a4cnesfc8" class="fio-button fio-button-secondary return" aria-hidden="true"><span class="material-symbols-rounded">arrow_back</span></label></div></div></div></div></div></div></div>
-</div>
-</div>
-</div>
-</div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Qualidade e limitações</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Fortalezas do CNES</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A principal fortaleza do sistema reside em sua cobertura e abrangência. Por ser o cadastro oficial único de todos os estabelecimentos de saúde no país, o CNES possui abrangência nacional e cobertura quase universal dos estabelecimentos existentes. No entanto, outros aspectos do sistema, que reforçam sua qualidade e relevância, merecem ser discutidos.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="accordion accordion-flush" id="m3a4-cnes-for">
-<div class="accordion-item"><h5 class="accordion-header" id="m3a4-cnes-for-0-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a4-cnes-for-0-c" aria-expanded="false">Integração sistêmica</button></h5><div id="m3a4-cnes-for-0-c" class="accordion-collapse collapse" data-bs-parent="#m3a4-cnes-for"><div class="accordion-body"><p>Funciona como a espinha dorsal da informação em saúde no Brasil, servindo de base cadastral para a operacionalização de mais de 112 sistemas nacionais, incluindo o Sistema de Informação Ambulatorial (SIA), o Sistema de Informação Hospitalar (SIH) e o e-SUS APS, entre outros.</p></div></div></div>
-<div class="accordion-item"><h5 class="accordion-header" id="m3a4-cnes-for-1-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a4-cnes-for-1-c" aria-expanded="false">Suporte estratégico à gestão</button></h5><div id="m3a4-cnes-for-1-c" class="accordion-collapse collapse" data-bs-parent="#m3a4-cnes-for"><div class="accordion-body"><p>Fornece subsídios vitais para a tomada de decisão, programação de ações e organização dos serviços nos territórios. Vazios assistenciais, por exemplo, podem ser identificados a partir de seu uso. Outro exemplo é o controle sobre o custeio repassado pelo Ministério da Saúde, correlacionando o financiamento à infraestrutura e serviços efetivamente fornecidos pelos estabelecimentos.</p></div></div></div>
-<div class="accordion-item"><h5 class="accordion-header" id="m3a4-cnes-for-2-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a4-cnes-for-2-c" aria-expanded="false">Acessibilidade facilitada</button></h5><div id="m3a4-cnes-for-2-c" class="accordion-collapse collapse" data-bs-parent="#m3a4-cnes-for"><div class="accordion-body"><p>Iniciativas como o <a href="https://elasticnes.saude.gov.br/" target="_blank" rel="noopener noreferrer">ElastiCNES</a>, oferecem painéis estatísticos interativos que ampliam e simplificam o acesso à informação do sistema.</p></div></div></div>
-<div class="accordion-item"><h5 class="accordion-header" id="m3a4-cnes-for-3-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a4-cnes-for-3-c" aria-expanded="false">Transparência e controle social</button></h5><div id="m3a4-cnes-for-3-c" class="accordion-collapse collapse" data-bs-parent="#m3a4-cnes-for"><div class="accordion-body"><p>Uma de suas grandes fortalezas é proporcionar visibilidade ao potencial assistencial brasileiro, permitindo que o cidadão consulte a disponibilidade de serviços e funcionamento dos estabelecimentos.</p></div></div></div>
-</div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Limitações</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A qualidade dos dados disponíveis no CNES apresenta importantes limitações, que podem variar conforme o tipo de informação, a natureza do estabelecimento e a região do país.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="accordion accordion-flush" id="m3a4-cnes-lim">
-<div class="accordion-item"><h5 class="accordion-header" id="m3a4-cnes-lim-0-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a4-cnes-lim-0-c" aria-expanded="false">Confiabilidade dos dados</button></h5><div id="m3a4-cnes-lim-0-c" class="accordion-collapse collapse" data-bs-parent="#m3a4-cnes-lim"><div class="accordion-body"><p>Estudos comparativos entre os dados do CNES e a realidade local revelam diferentes graus de precisão das informações do sistema.</p><p>Rocha et al. (2018), por exemplo, demonstraram defasagens em registros de hospitais de pequeno porte (até 50 leitos). Ao analisarem 2.777 estabelecimentos desse tipo em todos os estados brasileiros no ano de 2014, os autores verificaram que apenas 44% possuíam o número de leitos adequadamente atualizado, sendo esse percentual menor nas regiões Centro-Oeste (37%) e Nordeste (40%). Também foram identificadas inconsistências no registro de alguns tipos de equipamentos no CNES, especialmente os de menor custo, como desfibriladores, reanimadores pulmonares e eletrocardiógrafos. Além disso, a geolocalização dos estabelecimentos também apresentou significativas imprecisões: somente 63% tinham coordenadas geográficas precisas, e em quase 10% a distância da localização cadastrada do estabelecimento era mais de 5 km distante da localização real.</p></div></div></div>
-<div class="accordion-item"><h5 class="accordion-header" id="m3a4-cnes-lim-1-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a4-cnes-lim-1-c" aria-expanded="false">Cobertura e sub-registro</button></h5><div id="m3a4-cnes-lim-1-c" class="accordion-collapse collapse" data-bs-parent="#m3a4-cnes-lim"><div class="accordion-body"><p>Há uma lacuna crítica na cobertura de estabelecimentos privados que não possuem vínculo com o SUS ou planos de saúde. Uma pesquisa documental realizada em 2021 (Silva, 2021) identificou que 68,5% dos estabelecimentos de saúde privados com CNPJ ativo na Receita Federal não estavam cadastrados no CNES. A baixa cobertura desse segmento ocorre, em grande parte, porque o registro no sistema só é exigido quando o estabelecimento pretende firmar convênio com operadoras de planos de saúde ou prestar serviços ao SUS. Fora desse contexto, muitos estabelecimentos privados não realizam o cadastro, e os gestores locais frequentemente desconhecem sua existência.</p></div></div></div>
-<div class="accordion-item"><h5 class="accordion-header" id="m3a4-cnes-lim-2-h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3a4-cnes-lim-2-c" aria-expanded="false">Clareza metodológica e documentação</button></h5><div id="m3a4-cnes-lim-2-c" class="accordion-collapse collapse" data-bs-parent="#m3a4-cnes-lim"><div class="accordion-body"><p>A qualidade do CNES também é afetada por problemas na documentação técnica e na funcionalidade do sistema. Estudo de Coelho et al. (2024), que analisou a clareza metodológica do sistema, pontuou algumas fragilidades, entre as quais destacam-se:</p><ul class="mb-0"><li><strong>Manuais desatualizados:</strong> o <a href="https://estabelecimentos.saude.gov.br/pages/downloads/documentacao.jsp" target="_blank" rel="noopener noreferrer">Manual de Preenchimento CNES</a>, lançado em 2006 e ainda disponibilizado em 2025, é o único do manual S que apresenta uma tabela de vínculos profissionais para o preenchimento das fichas. No entanto, essa tabela está desatualizada. Os 11 códigos relativos às formas de contratação disponíveis no manual passaram a ser 58 no documento <a href="https://estabelecimentos.saude.gov.br/pages/downloads/documentacao.jsp" target="_blank" rel="noopener noreferrer">“Tabelas de Domínio”</a>, lançado em 2019.</li><li><strong>Mudança de variáveis:</strong> alterações nas variáveis ao longo do tempo (como a substituição de "esfera administrativa" por "natureza jurídica", em 2015) dificultam a análise de séries históricas e a comparabilidade dos dados.</li><li><strong>Linguagem:</strong> alguns documentos disponibilizados no <a href="https://estabelecimentos.saude.gov.br/pages/downloads/documentacao.jsp" target="_blank" rel="noopener noreferrer">site do CNES</a> possuem linguagem excessivamente técnica e, por vezes, imprecisa.</li></ul></div></div></div>
-</div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">Usos do CNES</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">O uso do CNES como ferramenta de gestão e planejamento</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Mapeamento da capacidade instalada – Tomada de decisão baseada em evidências</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O CNES permite aos gestores mapearem a infraestrutura física, os equipamentos disponíveis e a oferta de serviços especializados em cada bairro do Brasil. Além disso, o sistema garante que cada estabelecimento tenha uma identidade única em nível nacional, evitando fragmentação de dados entre diferentes bases de dados. Desse modo, o uso do sistema para o planejamento em saúde é essencial para a focalização das ações em territórios com capacidade instalada fragilizada, identificando seus principais vazios assistenciais (falta de médicos, falta de equipamentos, falta de atenção especializada).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Um gestor estadual utiliza o CNES para identificar que determinados municípios não possuem unidades com equipamentos de raios-X, direcionando a instalação de novos serviços ou a contratação de unidades de apoio nessas áreas.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Resposta a emergências sanitárias</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Emergências sanitárias provocam aumento abrupto da demanda por determinados serviços de saúde. Nesses contextos, a utilização do CNES pode ser de grande valia para a identificação das áreas com menor oferta desses serviços.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Durante a pandemia de covid-19, o CNES foi a fonte primária para verificação da disponibilidade de leitos de UTI e respiradores.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Contratualização e financiamento</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O cadastro no CNES é pré-requisito para o repasse de recursos federais. O não cumprimento da atualização cadastral pode implicar bloqueio de pagamentos. Além disso, o registro é obrigatório para que estabelecimentos privados possam firmar contratos com o SUS ou convênios com planos de saúde.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Além disso, o cadastramento dos estabelecimentos é útil como instrumento que fortalece a regulação e o licenciamento sanitário. Essa funcionalidade é possível à medida que a gestão pública cruza os dados do sistema com os da Vigilância Sanitária para concessão de alvarás e licenças de funcionamento.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Um hospital filantrópico desejava renovar seu convênio com o SUS para realizar cirurgias cardíacas. No entanto, o responsável técnico do hospital se esqueceu de atualizar no CNES a renovação do seu alvará sanitário. Sem a validação do licenciamento sanitário no cadastro, o repasse financeiro federal para aquelas cirurgias foi inviabilizado.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Monitoramento de políticas/programas de saúde</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Programas/políticas públicas de saúde requerem número suficiente de recursos disponíveis (equipamentos, instalações físicas ou recursos humanos) e de serviços ofertados. Nesse sentido, para o monitoramento da implementação dessas políticas é de grande valia a utilização do CNES pelos gestores.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula4-topico2-monitoramento-politicas-cnes.png" alt="Profissional analisando painel de dados em dashboard no computador, em contexto de monitoramento e gestão em saúde." loading="lazy" /></figure></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Na implementação de um programa de fomento à realização de atividades de físicas entre pessoas idosas, gestores podem utilizar o CNES para verificar se as unidades de saúde possuem profissionais de educação física e espaços físicos adequados para a oferta dos serviços pretendidos.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">O Uso do CNES para a Pesquisa</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Avaliação de políticas/Programas de saúde</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Para pesquisas que visam avaliar políticas públicas ou programas de saúde, o CNES é ferramenta central para responder à seguinte pergunta: "a infraestrutura e os procedimentos necessários para o programa ou política funcionar existem e estão localizados onde deveriam estar?"</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula4-topico2-avaliacao-politicas-cnes.png" alt="Profissional analisando dados em múltiplos monitores, em contexto de avaliação de políticas e programas de saúde." loading="lazy" /></figure></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Grande parte das políticas de saúde envolvem a expansão da estrutura (ex.: criação de novas UPAs e USFs, aumento da disponibilidade leitos de UTI ou do número de médicos) e/ou a ampliação dos serviços ofertados à população (ex.: crescimento de consultas pré-natais realizadas, visitas domiciliares por Agentes Comunitários de Saúde).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Nesses casos, o uso do CNES é de grande utilidade para a construção de indicadores nas etapas de “Apreciação da Estrutura” e de “Apreciação dos Processos”, fundamentais para os estudos de avaliação em saúde (<a href="https://books.scielo.org/id/3zcft" target="_blank" rel="noopener noreferrer">Hartz, 1997</a>). Isso porque a avaliação de determinada intervenção não pode se dar apenas pela mensuração dos resultados esperados da política (ex.: redução da mortalidade materna após a implementação de um programa que visa expandir o número de consultas pré-natais realizados em gestantes). Indicadores de resultado — frequentemente estimados a partir dos Sistemas de Informações Epidemiológicos, de Estatísticas Vitais e de Produção (rever aulas 1, 2 e 3) —, se empregados isoladamente na avaliação de determinada política, não são capazes de comprovar seu êxito, ainda que sejam observadas melhoras.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A utilização de <strong>indicadores de recursos</strong>, relacionados a equipamentos, infraestrutura física e profissionais de saúde (Apreciação da Estrutura) necessários ao cumprimento da política são condição necessária para a atribuição dos resultados em saúde à responsabilidade da política analisada. A construção desses indicadores (recursos e processos) é uma das principais utilidades do CNES no âmbito das pesquisas acadêmicas. Embora a qualidade dos serviços não possa ser diretamente mensurada pelo sistema, é possível quantificar uma ampla variedade de recursos físicos e humanos, bem como procedimentos ofertados pelo sistema de saúde.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><figure class="lightbox aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="600"><img class="img-fluid mx-auto d-block mb-3 rounded" src="../../media/modulo3/aula4-topico2-indicadores-recursos-cnes.png" alt="Profissional analisando gráficos em notebook e anotando em caderno, em contexto de quantificação de recursos em saúde." loading="lazy" /></figure></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Em uma avaliação de uma política de atenção oncológica, o CNES poderia ser usado para identificar se a oferta de serviços de quimioterapia e radioterapia foi expandida durante sua implementação.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Estudos de Força de Trabalho</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O CNES pode ser utilizado para estudos relacionados às condições da população empregadas nos estabelecimentos de saúde, como:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><ul class="mb-0">
-<li><a href="https://www.scielosp.org/article/csc/2020.v25n4/1327-1338/pt/" target="_blank" rel="noopener noreferrer">As especificidades regionais na composição profissional de determinados estabelecimentos de saúde.</a></li>
-<li><a href="https://www.cadernosdodesenvolvimento.org.br/cdes/article/view/557" target="_blank" rel="noopener noreferrer">Desigualdades na distribuição dos profissionais de saúde no território.</a></li>
-<li><a href="https://www.scielo.br/j/rae/a/sJV7JLVVwY887Ft8QcvjhCN/?lang=pt" target="_blank" rel="noopener noreferrer">A precariedade dos vínculos empregatícios.</a></li>
-<li><a href="https://lume.ufrgs.br/handle/10183/297697" target="_blank" rel="noopener noreferrer">Rotatividade dos recursos humanos.</a></li>
-</ul></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Você, estudante, poderia analisar a desigualdade do vínculo empregatício de enfermeiras em hospitais de pequeno porte entre as regiões do Brasil.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Estudos de Economia da Saúde</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O uso de dados do CNES, quando cruzado com informações sobre o financiamento dos estabelecimentos de saúde, tem a capacidade de <a href="https://rima.ufrrj.br/jspui/handle/20.500.14407/12107" target="_blank" rel="noopener noreferrer">mensurar aspectos sobre a eficiência do financiamento do sistema de saúde.</a></p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">A conexão dos dados sobre total de médicos empregados em estabelecimentos de saúde vinculados ao SUS (disponibilizado pelo CNES), junto ao total gastos com esses profissionais (disponibilizado pelo Sistema de Informações de sobre o Orçamentos Públicos da Saúde), permitiria estimar o valor gasto com médicos no SUS em cada território.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><p class="h6 heading__title">Estudos de Determinação Social da Saúde</p></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>O CNES pode ser utilizado em estudos sobre Determinação Social da Saúde como uma importante fonte de informação para analisar desigualdades no acesso e na oferta de serviços de saúde entre diferentes grupos sociais e territórios.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>A partir dos dados do CNES, é possível:</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Identificar a distribuição geográfica da infraestrutura de saúde (unidades, leitos, equipamentos e profissionais) em relação a territórios com diferentes níveis de renda, escolaridade e urbanização.</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Analisar vazios assistenciais em áreas socialmente mais vulneráveis, como periferias urbanas, áreas rurais e comunidades tradicionais, a partir da estimativa de indicadores que relacionem o número de recursos disponíveis à população do território (<a href="https://repositorio.ipea.gov.br/server/api/core/bitstreams/66617a31-8608-4ed5-be21-3a2409146fb3/content" target="_blank" rel="noopener noreferrer">ex.: Número de Leitos de Internação/ 100.000 habitantes</a>).</p></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5">
-<div class="box" data-box="Exemplo">
-<div class="card">
-<div class="card-header"><span class="icone material-symbols-rounded" aria-hidden="true"></span><span class="label">Exemplo</span></div>
-<div class="card-body">
-<p class="mb-0">Você, estudante, poderia cruzar os dados do CNES com os dados do Censo Demográfico de 2022 para analisar se há associação entre a proporção de pessoas negras em municípios do estado do Rio de Janeiro com a disponibilidade de médicos por 100.000 habitantes nesses mesmos municípios.</p>
-</div>
-</div>
-</div>
-</div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-4"><div class="heading__block"><h4 class="heading__title">O Uso CNES para Controle Social</h4></div></div></div>
-<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Ao democratizar o acesso às informações sobre serviços, recursos físicos e equipes profissionais, o sistema fortalece a capacidade de controle por parte tanto do cidadão quanto dos órgãos de fiscalização (como Conselhos de Saúde e Ministério Público). Isso permite auditar a veracidade dos dados, confrontando o que está oficialmente cadastrado com a realidade assistencial ofertada no território.</p></div></div>
+			<div class="brand">
+				<img class="img-fluid logo-black" src="../../media/logos/header-fiocruz-campus-virtual.png" alt="Campus Virtual Fiocruz" />
+			</div>
+			<div class="title">
+				<h1>Análise e Interpretação de Dados em Saúde</h1>
+			</div>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="../../index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modal-creditos">Créditos</a></li>
+			</ul>
+		</header>
+		<div class="main">
+			<div class="sidebar" role="navigation">
+				<div class="sidebar__inner" style="position: relative">
+					<div class="sidebar__group d-lg-none">
+						<div class="sidebar__group-item">
+							<div class="sidebar__header">
+								<span>Curso</span>
+								<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="sidebar__title">
+								<h1>Análise e Interpretação de Dados em Saúde</h1>
+							</div>
+						</div>
+						<div class="sidebar__group-item">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="../../index.html" class="nav-link" tabindex="0"><span class="icon material-symbols-rounded" aria-hidden="true">home</span>Início</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-creditos"><span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>Créditos</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-				</div></section>
-			</div>
-			<section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8"><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico1.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico3.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div></div></div></div></section>
-			<footer>
-				<div class="container-fluid">
-					<div class="row justify-content-center align-items-center linha-de-marcas">
-						<div class="col-12 text-center py-3">
-							<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button id="dropdown-modulos" type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">grid_view</span>
+									<span class="label">Módulos</span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-modulos">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo1/aula1/topico1.html"><strong>Módulo 1</strong><br />Estatística</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo2/aula1/topico1.html"><strong>Módulo 2</strong><br />Séries Temporais</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../../modulo3/aula1/topico1.html"><strong>Módulo 3</strong><br />Análise Espacial</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text module">Módulo <br class="d-none d-lg-block" /><span>3</span></span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">apps</span>
+									<span class="label">Conteúdo</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Módulo 3</span>
+										<span class="title">Análise Espacial</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula1/topico1.html"><strong>Aula 1: </strong>Abordagens teóricas da Geografia da Saúde</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula2/topico1.html"><strong>Aula 2: </strong>Noções básicas de Geoprocessamento e SIG</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula3/topico1.html"><strong>Aula 3: </strong>Fundamentos de Cartografia</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula4/topico1.html"><strong>Aula 4: </strong>Prática de SIG I</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula5/topico1.html"><strong>Aula 5: </strong>Prática de SIG II</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula6/topico1.html"><strong>Aula 6: </strong>Análise espacial – Área</a>
+									</li>
+									<li class="dropdown-menu__item">
+										<a class="dropdown-menu__item-link" tabindex="0" role="link" href="../aula7/topico1.html"><strong>Aula 7: </strong>Análise espacial – Pontos</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="divider">
+						<hr />
+					</div>
+					<div class="sidebar__group">
+						<div class="sidebar__group-item">
+							<span class="text class">Aula 4</span>
+						</div>
+						<div class="sidebar__group-item">
+							<div class="dropend">
+								<button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-offset="0,30">
+									<span class="icon material-symbols-rounded" aria-hidden="true">format_list_bulleted</span>
+									<span class="label">Tópicos</span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="d-lg-none dropdown-menu__header">
+										<a class="dropdown-menu__back-button" tabindex="0" role="button"><span class="icon material-symbols-rounded">chevron_left</span> Voltar</a>
+										<a class="mobile-toggle-close" tabindex="0" role="button"><span class="icon material-symbols-rounded">read_more</span></a>
+									</li>
+									<li class="dropdown-menu__title">
+										<span class="label">Aula 4</span>
+										<span class="title">Prática SIG I – QGIS e adequação de base de dados</span>
+									</li>
+									<li class="dropdown-menu__item">
+										<nav class="topic-list">
+															<a href="topico1.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico concluído" status="visited"><span class="material-symbols-rounded"></span>Sobre esta aula</a>
+															<a href="topico2.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Introdução</a>
+															<a href="topico3.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Baixar e instalar o QGIS</a>
+															<a href="topico4.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Fontes de dados espaciais vetoriais</a>
+															<a href="topico5.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Preparando os dados para o QGIS</a>
+															<a href="topico6.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Unindo as Bases de Dados no QGIS (Join)</a>
+															<a href="topico7.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Navegação e salvar projeto</a>
+															<a href="topico8.html" tabindex="0" role="link" class="topic-list__item" aria-label="Tópico não concluído"><span class="material-symbols-rounded"></span>Referências</a>
+										</nav>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
-	</div>
-	<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
-	<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
-	<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
-	<script type="text/javascript">var sidebar = new StickySidebar(".sidebar", { topSpacing: 0, bottomSpacing: 0, containerSelector: ".main", innerWrapperSelector: ".sidebar__inner", minWidth: 991 });</script>
-	<script type="text/javascript" src="../../assets/js/scripts.js"></script>
-	<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
-	<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
-	<script>AOS.init();</script>
-</body>
+			</div>
+			<div class="content">
+				<div id="page-title">
+					<div class="container">
+						<div class="row align-items-center hstify-content-center justify-content-xxl-start ms-lg-5">
+							<div class="col-12 col-md-10 col-lg-11">
+								<h2 class="title">
+									<span class="label">Módulo 3 | Aula 4</span>
+									<br />
+									Prática SIG I – QGIS e adequação de base de dados
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="page-content" class="">
+					<section>
+						<div class="container">
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><div class="heading__block"><span class="small">Tópico 2</span><h3 class="heading__title">Introdução</h3></div></div></div>
+<div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8 mb-5"><p>Após entendermos os conceitos teóricos da análise espacial, é hora de iniciarmos a parte prática utilizando um Sistema de Informação Geográfica (SIG). Nesta e na próxima aula, utilizaremos o QGIS, um software de SIG profissional, gratuito e de código aberto, que se tornou uma das principais ferramentas para geoprocessamento no mundo, inclusive na área da saúde (QGIS DEVELOPMENT TEAM, [s.d.]).</p><p>O sucesso de qualquer análise espacial depende fundamentalmente da qualidade e da correta preparação dos dados. Dados mal formatados, com erros ou em sistemas de coordenadas diferentes, são a principal fonte de problemas em projetos de SIG.</p><p class="mb-0">Portanto, esta primeira aula prática é dedicada à adequação de bases de dados, um passo crucial e muitas vezes subestimado. Para esta aula, nosso objetivo é preparar dois tipos de dados para que possam ser unidos e analisados: uma base de dados de saúde (atributos) e uma base cartográfica (espacial).</p></div></div>
+						</div>
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 col-md-10 col-lg-8">
+								<div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="topico1.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Tópico anterior</a><a class="fio-button fio-button-primary" href="topico3.html" rel="next">Próximo tópico <span class="material-symbols-rounded" aria-hidden="true">east</span></a></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<footer>
+					<div class="container-fluid">
+						<div class="row justify-content-center align-items-center linha-de-marcas">
+							<div class="col-12 text-center py-3">
+								<img class="img-fluid regua-logos" src="../../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="../../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/ResizeSensor.js"></script>
+		<script type="text/javascript" src="../../assets/js/sticky-sidebar.js"></script>
+		<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
+		<script type="text/javascript">
+			var sidebar = new StickySidebar(".sidebar", {
+				topSpacing: 0, bottomSpacing: 0, containerSelector: ".main",
+				innerWrapperSelector: ".sidebar__inner", minWidth: 991,
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/scripts.js"></script>
+		<script type="text/javascript" src="../../assets/js/custom-anime.js"></script>
+		<script type="text/javascript" src="../../source/animate/aos/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
 </html>

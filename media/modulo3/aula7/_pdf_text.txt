@@ -1,0 +1,412 @@
+
+===== PAGE 1 =====
+Análise Espacial  
+de Dados – Pontos
+Sobre esta aula
+Seja bem-vindo e bem-vinda à aula “Análise Espacial de Dados – Pontos”.
+A seguir, veja algumas informações importantes!
+Objetivos de aprendizagem
+ 
+Ao final dessa aula, você será capaz de:
+	
+Compreender os conceitos básicos da análise espacial de dados pontuais;
+	
+Identificar padrões espaciais (regular, aleatório e aglomerado);
+	
+Compreender o princípio do Estimador de Densidade de Kernel (KDE);
+	
+Diferenciar os conceitos de intensidade e risco em representações espaciais;
+	
+Entender a lógica de detecção de clusters por estatística de varredura.
+    
+Autoria
+Diego Ricardo Xavier
+Doutor em Epidemiologia. Mestrado em Saúde Pública. Pesquisador em Saúde Pública
+Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict)  
+da Fundação Oswaldo Cruz (Fiocruz)
+Mônica de Avelar Figueiredo Mafra Magalhães
+Doutora em Saúde Coletiva. Mestrado em Geoprocessamento. Tecnologista em Saúde 
+Pública. Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict) 
+da Fundação Oswaldo Cruz (Fiocruz).
+Julia Novaes de Barros Peixoto 
+Mestre em Ciências - Métodos quantitativos em Epidemiologia & Engenheira Cartógrafa.
+ 
+Introdução à Análise de  
+Padrões Pontuais em Saúde
+Na última aula, exploramos os fundamentos da análise de dados organizados por áreas 
+geográficas, utilizando informações agregadas em polígonos territoriais, como municípios, 
+bairros, setores censitários ou estados. Nesta aula, avançamos para outro tipo de 
+abordagem bastante utilizado na saúde pública: a análise espacial de dados pontuais. 
+Esse método é essencial para compreender a distribuição geográfica de doenças e outros 
+eventos de saúde.
+Um processo pontual corresponde a um conjunto de ocorrências localizadas no espaço, por 
+exemplo, a residência de indivíduos com determinada doença, a localização de óbitos ou 
+mesmo a ocorrência de crimes (Carvalho & Souza-Santos, 2005; Câmara, 2004). O objetivo 
+central desse tipo de análise é ir além da simples listagem de casos e investigar se o padrão 
+espacial observado é aleatório, se os eventos tendem a se concentrar em determinadas 
+áreas ou se apresentam uma distribuição mais regular do que o esperado (Câmara, 2004).
+Essa abordagem permite identificar padrões espaciais e apoiar a tomada de decisões e é 
+especialmente útil para:
+ANÁLISE ESPACIAL
+MÓDULO 3 | AULA 7
+Confira
+Detectar  
+surtos
+Confira
+Identificar 
+clusters de 
+doenças
+Identificar clusters  
+de doenças 
+Identificação de áreas onde há concentração 
+anormal de casos de uma doença. Por meio do 
+mapeamento dos endereços ou coordenadas 
+dos pacientes, é possível verificar se os casos 
+estão distribuídos aleatoriamente ou se se  
+concentram em determinadas regiões.  
+Por exemplo, estudos sobre Dengue  
+frequentemente mostram clusters em bairros 
+com maior presença do mosquito vetor,  
+permitindo que as autoridades sanitárias  
+direcionem ações de controle nesses locais.
+Detectar surtos 
+Permite detectar rapidamente possíveis  
+surtos ao observar aumentos localizados no 
+número de casos. Quando vários registros de 
+uma mesma doença aparecem próximos  
+espacialmente e em curto período de tempo, 
+isso pode indicar um foco de transmissão ativo. 
+Durante a pandemia de COVID-19, mapas  
+com dados georreferenciados foram  
+utilizados para acompanhar a expansão da  
+doença e identificar regiões com crescimento 
+acelerado de casos, permitindo a adoção de 
+medidas específicas de controle.
+
+===== PAGE 2 =====
+Padrões Espaciais Básicos
+O primeiro passo na análise de um conjunto de dados pontuais é determinar se os eventos 
+observados seguem algum padrão sistemático, em oposição a uma distribuição puramente 
+aleatória. Existem três padrões teóricos básicos:
+Figura 1: Padrão de espacialização de eventos no território.
+Localização: 
+Atributos (Opcional):
+A informação primária é a coordenada geográfica de cada evento.
+Localização: 
+Assim, a análise espacial de dados pontuais contribui significativamente para a  
+compreensão da dinâmica das doenças e para o desenvolvimento de políticas públicas  
+mais eficientes, orientadas pelas características geográficas e sociais de cada região
+O que são Dados Pontuais?
+Dados pontuais em saúde referem-se a eventos cuja localização geográfica pode ser  
+representada por uma coordenada (latitude e longitude) em um mapa, entretanto a origem 
+da localização pode ser o endereço do evento. Um aspecto fundamental é que, nessa  
+abordagem, a área física do evento não é o elemento principal da análise. O interesse está 
+na posição espacial do evento dentro do espaço de estudo (Câmara, 2004).
+Em epidemiologia, um exemplo clássico é a representação da residência de casos de uma 
+doença. Outros exemplos incluem a localização de nascimentos, óbitos, ou a ocorrência  
+de acidentes. Mesmo em estudos de cidades, estas podem ser consideradas como um ponto  
+no espaço, dependendo da escala da análise (Câmara, 2004).
+Os dados de distribuições pontuais possuem duas características principais:
+Fonte: Elaborado pelos autores (2026).
+Confira
+Estudar  
+fatores  
+ambientais
+Confira
+Planejar 
+serviços de 
+saúde
+Confira
+Melhorar  
+a vigilância  
+epidemiológica
+Planejar serviços  
+de saúde 
+Ao analisar a localização da população,  
+dos casos de doenças e das unidades de  
+atendimento, é possível identificar áreas com 
+baixa cobertura ou difícil acesso aos serviços. 
+No Brasil, esse tipo de análise auxilia o  
+planejamento do Sistema Único de Saúde,  
+contribuindo para definir onde instalar novas 
+unidades básicas de saúde ou reforçar  
+a oferta de atendimento.
+Estudar fatores  
+ambientais 
+Permite investigar a relação entre doenças e 
+fatores ambientais. Ao sobrepor a localização 
+dos casos com variáveis como poluição,  
+condições climáticas ou características do  
+território, estudos conseguem identificar  
+possíveis associações. Por exemplo, estudos 
+podem relacionar a ocorrência de Asma com 
+áreas de maior poluição do ar, ou casos de  
+Malária com regiões próximas a corpos d’água 
+que favorecem a proliferação de mosquitos.
+Melhorar a vigilância 
+epidemiológica   
+Permite o monitoramento contínuo da  
+distribuição das doenças no território.  
+A partir do registro georreferenciado dos casos, 
+é possível acompanhar tendências, identificar 
+áreas prioritárias e planejar intervenções  
+de prevenção e controle. Um exemplo é  
+o monitoramento de casos de Febre Amarela 
+para definir regiões onde campanhas de  
+vacinação devem ser intensificadas.
+Frequentemente, os pontos estão associados a atributos adicionais. Por exemplo,  
+um ponto representando um caso de tuberculose pode ter atributos como idade do  
+paciente, sexo, data de diagnóstico e desfecho do tratamento. Quando os pontos  
+possuem esses atributos, o processo é denominado processo pontual marcado [2].
+Atributos (Opcional):
+
+===== PAGE 3 =====
+IMPORTANTE!
+A aplicação do estimador de Kernel é uma alternativa para analisar o  
+comportamento de padrões de pontos e estimar a intensidade pontual do  
+processo em toda a região de estudo. Para isto, pode-se ajustar uma função bi-
+dimensional sobre os eventos considerados, compondo uma superfície cujo valor 
+será proporcional à intensidade de amostras por unidade de área (Câmara, 2004).
+IMPORTANTE!
+O modelo de referência para um padrão aleatório é o de Completa Aleatoriedade  
+Espacial (CSR - Complete Spatial Randomness). Sob o CSR, qualquer ponto tem a mesma 
+probabilidade de ocorrer em qualquer lugar dentro da área de estudo, e a posição de um 
+ponto é independente dos outros (Câmara, 2004). A maioria das técnicas de análise de  
+padrões pontuais visa testar se os dados observados se desviam significativamente deste 
+modelo de aleatoriedade.
+Apesar de suas vantagens analíticas, o uso de dados pontuais em saúde exige cuidados  
+importantes, especialmente relacionados à privacidade e confidencialidade dos indivíduos,  
+já que a localização exata pode permitir a identificação indireta de pessoas. Por isso, em 
+muitos estudos, as coordenadas são deslocadas, agregadas ou anonimizadas antes da  
+divulgação dos resultados.
+Mapas de Calor (Estimador  
+de Densidade de Kernel)
+Uma das técnicas mais populares e visualmente intuitivas para analisar padrões pontuais  
+é a criação de mapas de calor, tecnicamente conhecida como Estimador de Densidade  
+de Kernel (Kernel Density Estimation - KDE). Este método permite estimar a intensidade  
+do processo em toda a área de estudo, gerando uma superfície contínua que representa a 
+densidade de eventos (Carvalho & Souza-Santos, 2005; Santos et al., 2007). É bastante  
+utilizado na análise exploratória de dados espaciais (AEDE).
+Figura 2 - Do Mapa de Pontos ao Mapa de Calor (Kernel).
+O KDE funciona posicionando uma função tridimensional (o kernel) sobre cada ponto  
+do mapa. A função atribui o maior valor ao local exato do ponto, com valores decrescentes 
+à medida que a distância do ponto aumenta, até chegar a zero em um raio de influência (τ) 
+definido. A superfície de densidade final é a soma de todas as funções de kernel individuais. 
+O resultado é um mapa de gradientes de cor, onde as áreas "mais quentes" (geralmente em 
+vermelho) representam maior concentração de eventos (Câmara, 2004, Santos et al., 2007).
+Observando a figura, ficará mais fácil compreender:
+Figura 3 - Como Funciona o Estimador de Densidade de Kernel (KDE).
+Padrão
+Descrição
+Exemplo em Saúde Pública
+Regular  
+(Disperso)
+Os eventos estão mais  
+uniformemente espaçados 
+do que seria esperado  
+pelo acaso. A presença  
+de um ponto diminui a  
+probabilidade de encontrar 
+outros pontos nas  
+proximidades.
+É um padrão raro em  
+epidemiologia, mas poderia 
+teoricamente ocorrer em  
+cenários de competição por 
+recursos ou em processos de 
+exclusão, como a distribuição 
+de unidades de saúde que 
+seguem uma lógica de  
+distanciamento mínimo.
+Aleatório  
+(Random)
+A posição de um evento 
+não tem qualquer  
+influência sobre a posição 
+de outro. Este padrão  
+serve como uma hipótese 
+nula (ausência de padrão) 
+em muitos testes  
+estatísticos.
+A distribuição de uma doença 
+não infecciosa rara, sem  
+fatores de risco geográficos 
+conhecidos.
+Aglomerado  
+(Clustered)
+Os eventos estão mais  
+próximos uns dos outros  
+do que seria esperado  
+pelo acaso. A presença de 
+um ponto aumenta a  
+probabilidade de  
+encontrar outros pontos 
+nas proximidades.
+Um surto de doença  
+infecciosa em um bairro  
+específico; casos de câncer 
+próximos a uma fonte de  
+poluição ambiental.
+AEDE  
+  
+Análise exploratória de dados espaciais  
+é um conjunto de técnicas para  
+visualizar, descrever e identificar  
+padrões, clusters (agrupamentos) e  
+anomalias (outliers) em dados geográficos.
+Ao clicar, na palavra em destaque (AEDE) 
+no texto a cima, abre um popover com 
+conteúdo indicado ao lado.
+Fonte: Elaborado pelos autores (2026).
+A figura compara um mapa de pontos com um mapa de calor gerado por Kernel.  
+No mapa de pontos, cada caso aparece como um ponto vermelho, mas a visualização 
+fica dispersa e dificulta perceber padrões. Já o mapa de calor utiliza o estimador  
+de densidade de Kernel para suavizar os pontos e destacar áreas com maior  
+concentração de eventos: cores quentes indicam alta densidade e cores frias,  
+baixa densidade. Essa técnica evidencia agrupamentos (hotspots) e facilita a  
+interpretação espacial, revelando padrões que não são facilmente identificáveis  
+no mapa de pontos.
+Fonte: Elaborado pelos autores (2026).
+A figura mostra o funcionamento do Estimador de Densidade de Kernel (KDE) ao  
+transformar eventos pontuais em uma curva contínua de densidade. Cada ponto preto  
+representa um evento no espaço, sobre o qual é aplicada uma função kernel — as curvas  
+suaves tracejadas — que distribui sua influência ao redor. O raio (τ) determina até onde  
+essa influência se estende. A soma dessas funções gera a curva azul, que representa a  
+densidade estimada: quanto maior a sobreposição das curvas individuais, maior a densidade 
+naquele local. Assim, o KDE converte pontos isolados em uma superfície contínua que  
+facilita visualizar concentrações e identificar áreas com maior ocorrência de eventos.
+
+===== PAGE 4 =====
+É muito usada em estudos de saúde para identificar concentrações espaciais de eventos de 
+saúde. Ela transforma pontos, como casos, óbitos, focos etc., em um mapa de densidade,  
+revelando as áreas com maior intensidade do evento estudado, chamado de hotspots  
+ou áreas quentes. Foi utilizada, por exemplo, para descrever a distribuição espacial de  
+internações evitáveis por tuberculose em Ribeirão Preto-SP, ajudando a identificar áreas  
+com maior concentração de casos que demandavam atenção prioritária (Yamamura, 2016). 
+Acesse em: https://www.scielo.br/j/rsp/a/St4S8zXDjKwP7gsrC89x8Rx/?format=pdf&lang=pt
+Figura 1. Mapa de Kernel das internações evitáveis por tuberculose. Ribeirão Preto, SP, 
+Brasil, 2006-2012.
+Fonte: https://www.scielo.br/j/rsp/a/St4S8zXDjKwP7gsrC89x8Rx/?format=pdf&lang=pt
+Neste estudo, os mapas gerados com a aplicação da técnica de Kernel mostram os locais 
+com maior densidade de casos por quilômetro quadrado (km2) representados em vermelho. 
+Observa-se distribuição heterogênea, com a formação de dois possíveis grandes  
+aglomerados, concentrados principalmente nas zonas oeste e norte do município.  
+Áreas sem ocorrência de internações foram predominantes na zona sul do município.
+Diferença entre Intensidade e Risco
+É fundamental distinguir os conceitos de intensidade e risco, embora ambos possam ser  
+visualizados em mapas. Como aponta Carvalho (2005), a análise de risco pode ser mais 
+complexa, envolvendo a modelagem simultânea de aspectos individuais e socioambientais, 
+tratando o espaço como uma superfície contínua, como em um desenho de caso-controle 
+onde as coordenadas geográficas são analisadas.
+Figura 4 - Intensidade vs. Risco: Por que a distinção importa?
+Confira
+Risco
+Confira
+Intensidade
+Intensidade 
+Refere-se à contagem de eventos por  
+unidade de área. Um mapa de calor (KDE)  
+é um mapa de intensidade. Ele mostra onde  
+os eventos estão espacialmente concentrados. 
+No entanto, um mapa de alta intensidade  
+pode simplesmente refletir uma área com  
+alta densidade populacional. Se há mais  
+pessoas vivendo em uma área, é natural  
+que haja mais eventos de saúde ali, mesmo  
+que o risco individual não seja maior.
+Risco 
+Refere-se à probabilidade de um indivíduo  
+sofrer um determinado evento. Para estimar  
+o risco, a contagem de casos (numerador)  
+deve ser dividida pela população sob risco  
+(denominador). Um mapa de risco, portanto, 
+mostra a probabilidade de ocorrência  
+do evento, ajustada pela distribuição  
+da população. Uma área pode ter baixa  
+intensidade (poucos casos), mas um  
+risco muito alto se a população residente  
+for muito pequena.
+Clusters Espaciais
+Um cluster espacial é um aglomerado de eventos em uma área geográfica que é maior  
+do que o esperado pelo acaso. A detecção de clusters é um dos principais objetivos da  
+análise espacial em epidemiologia. Existem diferentes métodos para identificar clusters,  
+sendo um dos mais conhecidos a estatística de varredura espacial (scan statistic),  
+implementada em softwares como o SaTScan™ (Carneiro et al., 2007)
+Nesta aula, não buscamos nos aprofundar na técnica nem no uso de softwares  
+específicos, mas sim apresentar seu funcionamento e ilustrá-la com um exemplo prático. 
+Figura 5 - Estatística de varredura espacial (Scan Statistic) para detecção de clusters.
+Fonte: Elaborado pelos autores (2026).
+Na figura, a Região A aparece com mais casos no mapa de intensidade, sugerindo 
+maior gravidade. No entanto, ao observar o mapa de risco, percebe-se que a  
+Região B é mais preocupante proporcionalmente, pois possui menos habitantes e,  
+ainda assim, apresenta alta incidência.
+Fonte: Elaborado pelos autores (2026).
+
+===== PAGE 5 =====
+A figura demonstra o uso da estatística de varredura espacial (Scan Statistic) para identificar 
+clusters. Os pontos vermelhos indicam casos dentro de um cluster significativo, destacado 
+pelo círculo vermelho (p < 0,05), onde há concentração de eventos maior que o esperado  
+ao acaso. Os círculos tracejados cinza representam janelas testadas sem significância  
+estatística. Assim, a imagem mostra como o método varre o espaço com diferentes janelas  
+e identifica apenas as regiões com evidência real de agrupamento espacial.
+Figura 5: Esquema de varredura scan
+Fonte: KULLDORFF, M. SaTScanTM software for spatial, temporal and space-time scan statistics
+Este método funciona "varrendo" a área de estudo com janelas de diferentes tamanhos  
+(geralmente circulares). Para cada janela, o software compara o número de casos  
+observados dentro dela com o número de casos que seria esperado se a distribuição fosse 
+aleatória. Quando uma janela apresenta um excesso de casos estatisticamente significativo, 
+ela é identificada como um cluster (Carneiro et al., 2007, Melo et al., 2023).
+Essa abordagem tem sido amplamente utilizada no Brasil para investigar a distribuição de  
+diversas doenças, como a detecção de clusters de dengue na Paraíba (Melo et al., 2023). 
+Acesse em: https://www.scielo.br/j/cadsc/a/HGjB9yBPzHSxL5XLGngmNGB/?lang=pt
+Figura 6: Mapas da Razão de Incidências Espacial (RIE) do dengue na Paraíba,  
+Scan flex e Scan circular para 2013.
+Fonte: Melo et al. 2022. Cadernos Saúde Coletiva, v. 30, n. 1, p. 69‑79
+A identificação desses clusters permite uma alocação mais precisa de recursos e  
+a investigação de fatores de risco locais que possam estar contribuindo para a  
+concentração de casos.
+REFERÊNCIAS
+CARVALHO, M. S.; SOUZA-SANTOS, R. Análise de dados espaciais em saúde pública:  
+métodos, problemas, perspectivas. Cadernos de Saúde Pública, v. 21, n. 2, p. 361‑378, 2005.
+CÂMARA, G.; CARVALHO, M. S. Análise espacial de eventos. In: DRUCK, S.; CARVALHO, M. 
+S.; CÂMARA, G.; MONTEIRO, A. V. M. (org.). Análise espacial de dados geográficos. Brasília: 
+EMBRAPA, 2004.
+SANTOS, S. M.; SOUZA, W. V. (org.). Introdução à estatística espacial para a saúde pública. 
+Brasília: Ministério da Saúde/Fiocruz, 2007.
+CARNEIRO, D. D.; Bavia M. E.; Rocha, W. J.; Tavares, A.C.; Cardim, L.L.; Alemayehu, B.  
+Application of spatio-temporal scan statistics for the detection of areas with increased risk  
+for American visceral leishmaniasis in the state of Bahia, Brazil. Geospatial Health, v. 2,  
+n. 1, p. 115‑127, 2007.
+KULLDORFF, M. SaTScan™ software for spatial, temporal and space-time scan statistics: 
+User guide. [S.l.: s.n.], 2024. Disponível em: <https://www.satscan.org>. Acesso em:  
+10 mar. 2026.
+MELO, A. C. O.; MELO, J. C. S.; MORAES, R. Epidemiologia espacial e a detecção de  
+aglomerados espaciais do dengue na Paraíba: uma comparação entre os métodos Scan  
+flexível e Scan circular. Cadernos Saúde Coletiva, v. 30, n. 1, p. 69‑79, 2022.
+YAMAMURA, M.; FREITAS, I. M.; SANTO NETO, M.; CHIARAVALLOTI NETO, F. Análise  
+espacial das internações evitáveis por tuberculose em Ribeirão Preto, SP (2006‑2012).  
+Revista de Saúde Pública, v. 50, p. 20, 2016
+Esta figura mostra a estatística 
+scan que se baseia em um  
+algoritmo que percorre a área  
+de estudo como um cilindro,  
+com variados tamanhos, que  
+se move no espaço (base do  
+cilindro) e no tempo (altura  
+do cilindro) em busca de áreas 
+cuja ocorrência de um fenômeno 
+seja significativamente  
+mais provável.
+Os mapas revelam que  
+o maior número de  
+municípios que possuem 
+risco elevado em 2013  
+encontra-se ao oeste,  
+havendo uma pequena  
+concentração na parte  
+central do estado. As  
+regiões do extremo leste e 
+centro-sul possuem  
+incidência relativamente 
+baixa em comparação com 
+as demais áreas do mapa.

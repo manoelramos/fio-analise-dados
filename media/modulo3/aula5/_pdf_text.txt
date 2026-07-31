@@ -1,0 +1,356 @@
+
+===== PAGE 1 =====
+Prática SIG II– QGIS e 
+Mapas Temáticos
+Sobre esta aula
+Seja bem-vindo e bem-vinda à aula “Prática SIG II– QGIS e Mapas Temáticos”.
+A seguir, veja algumas informações importantes!
+Objetivos de aprendizagem
+ 
+Ao final dessa aula, você será capaz de:
+	
+Fazer um mapa temático utilizando simbologia mais adequada
+	
+Conhecer Principais Métodos de Classificação 
+	
+Utilizar ferramentas do QGIS para classificação de variáveis
+	
+Fazer um layout do mapa elaborado.  
+  
+Autoria
+Julia Novaes de Barros Peixoto 
+Mestre em Ciências - Métodos quantitativos em Epidemiologia & Engenheira Cartógrafa. 
+Mônica de Avelar Figueiredo Mafra Magalhães
+Doutora em Saúde Coletiva. Mestrado em Geoprocessamento. Tecnologista em Saúde 
+Pública. Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict) 
+da Fundação Oswaldo Cruz (Fiocruz).
+Diego Ricardo Xavier
+Doutor em Epidemiologia. Mestrado em Saúde Pública. Pesquisador em Saúde Pública
+Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict) da  
+Fundação Oswaldo Cruz (Fiocruz)  
+Introdução
+Na aula anterior, realizamos o passo fundamental de preparar e unir nossas bases  
+de dados. Agora, com uma camada vetorial enriquecida com os indicadores de saúde,  
+podemos avançar para a etapa de visualização e comunicação dos resultados: a  
+criação de mapas temáticos.
+Um mapa temático bem construído é uma ferramenta de comunicação extremamente eficaz, 
+capaz de revelar padrões espaciais, destacar desigualdades e subsidiar a tomada de decisão 
+em saúde pública de forma rápida e intuitiva. Nesta aula, aprenderemos a criar mapas  
+coropléticos no QGIS, explorando diferentes métodos de classificação de dados e finalizando 
+com a elaboração de um layout de impressão profissional (PEREIRA et al., [s.d.]).
+Ao seguir estes passos, você será capaz de transformar dados brutos de saúde em mapas 
+temáticos informativos e profissionais, uma habilidade essencial para a análise e  
+comunicação de informações em saúde pública. A capacidade de visualizar dados  
+espacialmente permite a identificação de padrões que seriam invisíveis em uma tabela,  
+contribuindo para um planejamento mais justo e eficaz das ações de saúde no território 
+(UESC, 2024).
+Simbologia e Classificação de Dados
+A simbologia é o conjunto de regras visuais (cores, tamanhos, formas) que usamos para  
+representar os dados no mapa. Para mapas coropléticos, onde representamos dados  
+quantitativos agregados por áreas, a escolha da cor e, principalmente, do método de  
+classificação dos dados é crucial.
+Passos para Estilizar a Camada:
+	
+• 	 Abrir o Painel de Estilização: Com a camada unificada da aula anterior selecionada, 	 	
+	
+	
+clique com o botão direito sobre ela e vá em Propriedades, ou clique no ícone de  
+	
+	
+pincel para abrir o Painel de Estilização de Camada > Simbologia.
+ANÁLISE ESPACIAL
+MÓDULO 3 | AULA 5
+	
+• 	 Mudar de "Símbolo Simples" para "Graduado": No topo do painel, mude o tipo  
+	
+	
+de simbologia de Símbolo Simples para Graduado. A simbologia graduada permite  
+	
+	
+aplicar uma rampa de cores a uma variável numérica.
+	 • 	Configurar a Simbologia Graduada:
+	
+	
+• 	 Valor: Selecione a coluna (o indicador de saúde) que você deseja mapear  
+	
+	
+	
+(ex: taxa_2024).
+	
+	
+• 	 Gradiente de cores: Escolha uma paleta de cores adequada. Para dados de  
+	
+	
+	
+saúde, rampas de cores sequenciais (que vão de um tom claro a um escuro da  
+	
+	
+	
+mesma cor, como amarelos ou azuis) ou divergentes (que usam duas cores para  
+	
+	
+	
+extremos opostos e uma cor neutra no meio) são as mais indicadas. Evite rampas 
+ 	
+	
+	
+de cores aleatórias (espectrais), pois elas não possuem uma ordem visual lógica  
+	
+	
+	
+(BREWER, [s.d.]).
+	
+	
+• 	 Modo (Mode): Aqui você define o método de classificação, ou seja, como os dados 
+	
+	
+	
+serão divididos em classes (intervalos).
+
+===== PAGE 2 =====
+Principais Métodos de Classificação
+A escolha do método de classificação pode alterar drasticamente a aparência e a  
+interpretação do mapa (SLOCUM et al., 2009).
+Retorne ao QGIS e configure a simbologia utilizando os intervalos calculados: 
+1. Abrir as propriedades da camada
+	
+•	 No painel Camadas, localize a camada que será utilizada no mapa.
+    	• 	 Clique com o botão direito do mouse sobre a camada.
+    	• 	 Selecione Propriedades.
+2. Acessar a simbologia da camada
+    	• 	 Na janela Propriedades da Camada, clique na aba Simbologia.
+    	• 	 No tipo de simbologia, selecione Graduado.
+Esse tipo de simbologia permite representar valores numéricos por classes com  
+cores diferentes.
+3. Escolher o campo de dados
+    	• 	 No campo Valor, selecione o atributo que será representado no mapa taxa_24.
+    	• 	 Esse campo será usado para calcular os intervalos das classes.
+4. Definir o método de classificação
+    	• 	 No campo Modo, selecione Intervalo Igual.
+    	• 	 Defina o número de classes desejado de 5 classes.
+Vamos preencher os intervalos com os valores das classes de percentil que calculamos  
+no passo anterior. 
+5. Escolher a rampa de cores
+    	• 	 Clique em Gradiente de cores.
+    	• 	 Escolha uma rampa de cores adequada (por exemplo: amarelo g vermelho).
+    	• 	 Rampas sequenciais são recomendadas para representar intensidade de valores.
+6. Gerar as classes
+    	• 	 Clique no botão Classificar.
+    	• 	 O QGIS irá gerar automaticamente os intervalos de valores para cada classe.
+Cada classe representará um intervalo percentual da distribuição dos dados.
+7. Ajustar os limites das classes
+Caso seja necessário:
+    	• 	 Clique duas vezes sobre um intervalo.
+    	• 	 Ajuste o valor inferior ou valor superior.
+    	• 	 Clique em OK.
+8. Aplicar a simbologia
+    	• 	 Clique em Aplicar.
+    	• 	 Depois clique em OK para fechar a janela.
+Método
+Descrição
+Vantagens / Desvantagens
+Intervalos Iguais  
+(Equal Interval)
+A amplitude de cada  
+classe é a mesma.  
+(Ex: 0-10, 10-20, 20-30).
+Vantagem: Fácil de entender. 
+Desvantagem:  Pode resultar  
+em classes com muitas ou  
+nenhuma observação se os  
+dados forem assimétricos.
+Quantil  
+(Equal Count)
+Cada classe contém  
+o mesmo número de  
+feições (áreas).
+Vantagem: Garante que todas 
+as cores sejam usadas no mapa. 
+Desvantagem: Pode agrupar  
+valores muito diferentes na  
+mesma classe ou separar  
+valores muito semelhantes  
+em classes diferentes.  
+Os intervalos podem ser  
+confusos (ex: 0-7.3, 7.3-12.1).
+Quebras Naturais  
+(Jenks)
+Algoritmo que busca  
+minimizar a variância  
+dentro de cada classe e 
+maximizar a variância  
+entre as classes. Ele  
+identifica agrupamentos 
+"naturais" nos dados.
+Vantagem: Geralmente produz  
+a representação mais fiel  
+da distribuição dos dados.  
+Desvantagem:  Os intervalos  
+são específicos para cada  
+conjunto de dados, dificultando  
+a comparação entre diferentes 
+mapas.
+Desvio Padrão  
+(Standard Deviation)
+As classes são definidas 
+pelo desvio padrão em  
+relação à média dos dados.
+Vantagem: Útil para identificar 
+outliers (valores extremos)  
+e ver a relação de cada área  
+com a média.  
+Desvantagem:  Menos intuitivo 
+para um público não estatístico.
+Percentil  
+(Percentile)
+As classes são definidas  
+com base em percentis  
+da distribuição dos dados 
+(ex: 0–25%, 25–50%,  
+50–75%, 75–100%).  
+Cada classe representa 
+uma posição relativa  
+do valor dentro do conjunto 
+de dados.
+Vantagem: Permite comparar  
+facilmente a posição relativa  
+de cada área dentro da  
+distribuição.  
+Desvantagem:  Assim como o 
+quantil, pode agrupar valores 
+muito diferentes na mesma  
+classe se houver grande  
+variação nos dados.
+Após escolher o método e o número de classes desejado (geralmente entre 4 e 6), clique no 
+botão Classificar. O QGIS irá gerar os intervalos e aplicar as cores ao mapa.
+Aprenda a calcular o percentil no Excel:
+	 • 	Vamos padronizar as classes da legenda calculando o Percentil, para isso  
+	
+	
+disponibilizamos um Excel com cálculo:
+	
+	
+	
+1. 	No Excel, abra o arquivo “divisão_via_percentil.xlsx” disponibilizado na  
+	
+	
+	
+	
+plataforma. Ele calcula de forma automática a divisão das classes. Para isso,  
+	
+	
+	
+	
+copie os valores das taxas do ano que se deseja fazer o mapa.
+	
+	
+	
+2. 	Caso, queira fazer o mapa de mais de um ano para comparação, deve-se colocar  
+	
+	
+	
+	
+as taxas uma abaixo da outra na coluna taxa da tabela para o cálculo considerar 
+	
+	
+	
+	
+os dados de todos os anos.
+	
+	
+	
+3. 	Elimine os valores vazios e zeros, em seguida reordene os valores na  
+	
+	
+	
+	
+ordem crescente.
+Para o ano de 2024, se desejarmos ter 5 classes a considerar teremos: 
+
+===== PAGE 3 =====
+O mapa será atualizado com as cores correspondentes às classes.
+Para mais opções de cores clique na seta a direita do Gradiente de cores e clique em Todos 
+os gradientes de cores.
+O mapa aparecerá com as cores por município e a legenda na lateral com os valores.
+9. Ajustar o nome da camada para a legenda
+Para melhorar a apresentação da legenda:
+    	 • 	 Clique com o botão direito na camada.
+    	 • 	 Selecione Renomear Camada.
+    	 • 	 Digite um título descritivo.
+Exemplo: 
+Taxa de dengue – 2025 (por 100.000 habitantes)
+Criando um Layout de Impressão
+O passo final é organizar o seu mapa e todos os seus elementos essenciais (título, legenda, 
+escala, etc.) em um layout formal para exportação como imagem ou PDF.
+Passos para Criar o Layout:
+    	• 	 Novo Compositor de Impressão: Vá no menu Projeto > Novo Layout de Impressão.  
+	
+	
+Dê um nome ao seu layout.
+
+===== PAGE 4 =====
+	
+• 	 Adicionar o Mapa: Na nova janela do compositor, vá em Adicionar Item > Adicionar  
+	
+	
+Mapa. Desenhe um retângulo na página para posicionar o seu mapa.
+    	• 	 Adicionar os Elementos Essenciais: Utilizando o menu Adicionar Item, insira os  
+	
+	
+seguintes componentes no seu layout:
+        	 	
+w 	Adicionar Título: Use a ferramenta Adicionar Rótulo. Desenhe o retângulo onde 
+	
+	
+	
+	
+deseja posicionar o título do mapa. 
+Do lado direito na parte inferior em Propriedades do Item podemos escrever o título e editar 
+tamanho da fonte.
+Posicione o alinhamento como central, clique em fonte e coloque o estilo como negrito  
+e o tamanho da fonte 16. O texto irá alterar de forma automática.
+Adicionar Legenda: Use a ferramenta Adicionar Legenda. Nas Propriedades do Item da  
+legenda, você pode editar os nomes das camadas e classes para torná-los mais claros.
+    	• 	 Na aba Propriedades do Item desabilite a Atualização automática para habilitar  
+	
+	
+as funções de excluir item da legenda e ordenar os itens.
+
+===== PAGE 5 =====
+    	• 	 Adicionar Barra de Escala: Use a ferramenta Adicionar Barra de Escala.
+    	• 	 Adicionar Fonte e Informações: Use a ferramenta Adicionar Rótulo para criar caixas  
+	
+	
+de texto com a fonte dos dados, o sistema de coordenadas e o nome do autor.  
+	
+	
+Na Propriedade do Item é possível escrever o texto e editar a fonte.
+    	• 	 Ajustar e Organizar: Mova e redimensione os elementos na página para criar um  
+	
+	
+layout balanceado e esteticamente agradável. Use as guias e ferramentas de  
+	
+	
+alinhamento para ajudar. Salve o projeto.
+    	• 	 Adicionar Seta Norte: Use a ferramenta Adicionar Seta Norte.
+REFERÊNCIAS
+BREWER, Cynthia A. ColorBrewer 2.0: color advice for cartography. Disponível em:  
+https://colorbrewer2.org/. Acesso em: 19 fev. 2026.
+PEREIRA, Anderson et al. Modelos de mapas temáticos utilizando o QGIS. OpenGeoOne. 
+Disponível em: https://github.com/OpenGeoOne/mapas-tematicos-qgis. Acesso em: 19 fev. 
+2026.
+SLOCUM, Terry A.; MCMASTER, Robert B.; KESSLER, Fritz C.; HOWARD, Hugh H. Thematic 
+cartography and geovisualization. 3. ed. Upper Saddle River, NJ: Pearson Prentice Hall, 2009.
+UNIVERSIDADE ESTADUAL DE SANTA CRUZ (UESC). Cartilha básica de geoprocessamento 
+em saúde. Ilhéus: UESC, 2024. Disponível em: https://www.uesc.br/nucleos/bomdevida/2024/
+Cartilha_Basica_Geoprocessamento_Saude.pdf. Acesso em: 19 fev. 2026.
+    	• 	 Exportar o Mapa: Quando o layout estiver pronto, você pode exportá-lo em diferentes 
+	
+	
+formatos através do menu Layout:
+        	 	
+w Exportar como Imagem... (PNG, JPG)
+        	 	
+w Exportar como SVG... (formato vetorial)
+        	 	
+w Exportar como PDF...
