@@ -1,0 +1,448 @@
+
+===== PAGE 1 =====
+ANÁLISE ESPACIAL
+MÓDULO 3 | AULA 4
+Fonte: Site QGis - https://www.qgis.org/
+Prática SIG I – QGIS e  
+adequação de base de dados
+Sobre esta aula
+Seja bem-vindo e bem-vinda à aula “Prática SIG I – QGIS e adequação de base de dados”.
+A seguir, veja algumas informações importantes!
+Objetivos de aprendizagem
+ 
+Ao final dessa aula, você será capaz de:
+	
+Baixar e instalar o QGIS
+	
+Conhecer algumas fontes de dados espaciais vetoriais
+	
+Adicionar os dados no QGIS
+	
+Visualizar dados (ordenação, cores e clarificação)
+	
+Utilizar ferramentas básicas de navegação QGIS
+	
+Salvar um projeto 
+    
+Autoria
+Julia Novaes de Barros Peixoto 
+Mestre em Ciências - Métodos quantitativos em Epidemiologia & Engenheira Cartógrafa.
+Mônica de Avelar Figueiredo Mafra Magalhães
+Doutora em Saúde Coletiva. Mestrado em Geoprocessamento. Tecnologista em Saúde 
+Pública. Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict) 
+da Fundação Oswaldo Cruz (Fiocruz).
+Diego Ricardo Xavier 
+Doutor em Epidemiologia. Mestrado em Saúde Pública. Pesquisador em Saúde Pública  
+no Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict)  
+da Fundação Oswaldo Cruz (Fiocruz). 
+Introdução
+Após entendermos os conceitos teóricos da análise espacial, é hora de iniciarmos a parte 
+prática utilizando um Sistema de Informação Geográfica (SIG). Nesta e na próxima aula,  
+utilizaremos o QGIS, um software de SIG profissional, gratuito e de código aberto, que se 
+tornou uma das principais ferramentas para geoprocessamento no mundo, inclusive na área 
+da saúde (QGIS DEVELOPMENT TEAM, [s.d.]).
+O sucesso de qualquer análise espacial depende fundamentalmente da qualidade e da  
+correta preparação dos dados. Dados mal formatados, com erros ou em sistemas de  
+coordenadas diferentes, são a principal fonte de problemas em projetos de SIG.
+  
+Portanto, esta primeira aula prática é dedicada à adequação de bases de dados, um passo 
+crucial e muitas vezes subestimado. Para esta aula, nosso objetivo é preparar dois tipos  
+de dados para que possam ser unidos e analisados: uma base de dados de saúde (atributos) 
+e uma base cartográfica (espacial).
+Baixar e instalar o QGIS
+Acesse https://qgis.org/pt_BR/site/ e clique em Baixe agora.
+Instalaremos a última versão mais estável, a 3.40 - Bratislava.  
+Existem outras versões muito parecidas, mas dê preferência por esta para  
+acompanhar melhor a prática.
+ATENÇÃO
+	
+1. 	Clique em Download na barra superior.
+	
+2. 	Na caixa flutuante a direita clique em “Skip it and go to download”
+	
+3. 	Em seguida clique na opção de versão “Download LTR 3.40” e o processo de  
+	
+	
+download irá se iniciar automaticamente.
+Figura 1: Acesso ao download do QGIS.
+
+
+===== PAGE 2 =====
+O executável do programa ficará salvo no download do computador.Clique duas vezes 
+e inicie a instalação. 
+Figura 2: Localizando o arquivo do programa baixado. 
+Fonte: Elaborado pelas autoras
+Você lembra que o dado vetorial possui a estrutura geométrica de ponto, linha ou área?
+Figura 5: Formas de dados vetoriais.
+Fonte: Site QGis - https://www.qgis.org/
+Conhecendo algumas fontes de  
+dados espaciais vetoriais
+O formato de arquivo vetorial padrão usado no QGIS é o arquivo de forma ESRI chamado 
+shapefile. Um shapefile consiste na verdade de um conjunto de vários arquivos. Os três  
+seguintes são necessários:
+	
+	
+	
+.shp arquivo que contém as formas vetoriais.
+	
+	
+	
+.dbf arquivo que contém os atributos no formato dBase.
+	
+	
+	
+.shx arquivos index.
+Shapefiles também podem incluir um arquivo com a extensão.prj que contém as informações 
+de projeção. Embora seja muito útil um arquivo de projeção, não é obrigatório. 
+Figura 4: Estrutura de um shapefile. 
+Fonte: Elaborado pelas autoras
+Fontes nacionais de dados: 
+1. Dados Geoespaciais e Cartográficos
+Fonte: Site QGis - https://www.qgis.org/
+Após a instalação, vá ao “Iniciar do Windows” e busque por QGIS. Se não encontrar, vá na 
+“Pesquisa” e escreva QGIS. Para abrir o programa, basta clicar no ícone para o aplicativo. 
+Pronto, podemos iniciar!
+Figura 3: Iniciando o QGIS. 
+2. Dados Ambientais
+Fonte
+Tipo de Dados
+Link
+IBGE
+Cartografia oficial, malhas  
+territoriais, dados censitários
+https://www.ibge.gov.br/
+INPE
+Imagens de satélite,  
+monitoramento ambiental
+https://www.gov.br/inpe/pt-br/
+acesso-a-informacao/dados-
+-abertos
+INDE
+Catálogo de geosserviços 
+(WMS, WFS, metadados)
+https://inde.gov.br/Catalogo-
+Geosservicos
+4. Dados Socioeconômicos e Governamentais
+Fonte
+Tipo de Dados
+Link
+IBAMA
+Fiscalização e dados  
+ambientais federais
+https://dadosabertos.ibama.
+gov.br/
+INEA
+Dados ambientais  
+estaduais (RJ)
+http://www.inea.rj.gov.br/
+Observatório  
+Clima & Saúde (Fiocruz)
+Relação entre clima e saúde
+https://climaesaude.icict.fio-
+cruz.br/
+3. Dados em Saúde Pública
+Fonte
+Tipo de Dados
+Link
+DATASUS (TABNET)
+Estatísticas e indicadores  
+do SUS
+http://tabnet.datasus.gov.br/
+PCDAS
+Conjuntos de dados  
+aplicados à saúde
+https://pcdas.icict.fiocruz.br/
+conjunto-de-dados/
+PROADESS
+Avaliação do desempenho  
+do SUS
+https://www.proadess.icict 
+.fiocruz.br/
+SISAP-Idoso
+Indicadores de saúde  
+da população idosa
+https://sisapidoso.icict. 
+fiocruz.br/
+RIPSA
+Indicadores estratégicos  
+de saúde
+https://www.ripsa.org.br/
+Fonte
+Tipo de Dados
+Link
+Atlas do Desenvolvimento  
+Humano no Brasil
+IDH, renda, educação,  
+vulnerabilidade social
+http://www.atlasbrasil.org.br/
+Portal Brasileiro de  
+Dados Abertos
+Conjuntos de dados  
+governamentais diversos
+https://dados.gov.br/dados/
+conjuntos-dados
+Base de dados
+ONG – plataforma pública  
+de dados 
+https://basedosdados.org/ 
+search
+
+
+===== PAGE 3 =====
+Preparando os dados para o QGIS
+Base Cartográfica (Espacial)
+A base cartográfica, também chamada de shapefile (.shp), contém a geometria das unidades 
+de análise (ex: os polígonos dos municípios do Brasil). Malhas municipais, estaduais e de  
+setores censitários podem ser baixadas gratuitamente do site do IBGE.
+Para a prática dessa aula vamos utilizar o arquivo: BR_Municipios_2024. Este arquivo  
+foi construído e disponibilizado pelo IBGE e já está organizado para este exercício.
+Mas você pode ter acesso a ele no link: 
+https://www.ibge.gov.br/geociencias/downloads-geociencias.html
+organização_do_território > malhas-territoriais > malhas_municipais >  
+município_2024 > Brasil > BR_Municipios_2024.zip
+Normalmente, o Windows baixa o arquivo na pasta de Download. Repasse o arquivo  
+baixado para a pasta que você criou “PraticaQGIS”, clique com o botão direito no arquivo  
+e vá na opção extrair.
+Adicionando os dados no QGIS
+ 
+	
+• 	 Inicie o QGIS.
+	
+• 	 Abra um novo projeto em branco.
+	
+• 	 Para abrir os arquivos, vá na barra superior e clique em Camada > Adicionar  
+	
+	
+Camada 	> Adicionar Camada Vetorial. Busque o diretório onde o arquivo foi salvo  
+	
+	
+clicando nos três pontos em Fonte> Base de vetores. Configure o formato de dado que 	
+	
+	
+está buscando adicionar, neste caso será ‘shapefile’.
+Antes de iniciar a busca de um dado geoespacial é importante definir a escala de 
+análise do seu projeto: nacional, estadual ou municipal. Para dados municipais, 
+acesse os sites da prefeitura para verificar a disponibilidade de dados ou solicite 
+à secretaria de urbanismo.
+ATENÇÃO
+Crie um diretório na sua máquina chamado “PraticaQGIS” (sem espaço) em um 
+caminho que você memorize.
+ATENÇÃO
+
+
+===== PAGE 4 =====
+Antes de começar a trabalhar com os dados é importante verificar a tabela de atributos  
+do dado, que é a componente .dbf da base de dados.
+Vamos explorar a tabela da camada dos municípios, clicando com o botão direito na camada 
+e clique em Abrir tabela de atributos.
+Botão direito no dado > Abrir tabela de atributos
+Nela, conseguimos saber quais informações temos de cada registro. Neste caso, cada  
+linha da tabela é referente a um município do Brasil com seu código único, nome, estado,  
+região e área.
+Antes de começar a trabalhar com os dados, é importante verificar o sistema de  
+coordenadas e se possui alguma projeção atribuída ao dado. Para dados oficiais brasileiros, 
+os dados devem estar em SIRGAS 2000.
+Na janela “Camadas”, selecione a shape BR_Municipios_2024 e com Botão direito >  
+Propriedades > Informações
+A Base de Dados de Saúde (Atributos)
+Para este exercício, usaremos o arquivo: taxa_dengue.xlsx
+Mas você pode baixá-lo como já viu na disciplina Fontes de dados, pelo TabNet do  
+DATASUS como tabelas em formato .csv ou planilhas Excel (.xls, .xlsx). 
+	
+• 	 Acesse o Tabnet https://datasus.saude.gov.br/informacoes-de-saude-tabnet/
+	
+• 	 Epidemiológicas e Morbidade > Doenças e Agravos de Notificação - 2007  
+	
+	
+em diante (SINAN) > Dengue 2014 em diante 
+	
+• 	 Vá até o rodapé da página e selecione a Abrangência Geográfica > BR por Região,  
+	
+	
+UF e Município.
+	
+• 	 Para linha selecione os municípios de notificação e para as colunas os anos  
+	
+	
+observados de 2024 a 2025.
+	
+• 	 Vá no final da página e clique em Mostrar para ter uma pré-visualização da tabela  
+	
+	
+antes de baixar. No final da página clique em ‘Cópia como .csv’. Salve o dado  
+	
+	
+baixado na pasta Prática QGIS.
+	
+• 	 Clique no dado > abrir. Depois clique em Adicionar na parte inferior da janela.
+
+
+===== PAGE 5 =====
+Anteriormente, baixamos a tabela de número de casos de dengue notificados por ano para 
+os municípios do BR. Suponhamos que você queira calcular a taxa anual de dengue para 
+cada município e para isso precise adicionar a sua tabela a população.
+Dados de população são gerados pelo IBGE. Para obter dados da população por município 
+de anos não censitários bastar ir em https://sidra.ibge.gov.br, selecionar os anos que deseja 
+(no caso da prática selecionamos 2024 e 2025 e municípios como nível territorial).
+Passos para Adequação: 
+Limpeza da Tabela: Abra o arquivo em um editor de planilhas (Excel, LibreOffice Calc).  
+Remova linhas de cabeçalho e rodapé desnecessárias, mesclagens de células e caracteres 
+especiais dos nomes das colunas. A primeira linha da tabela deve conter os nomes das  
+colunas (variáveis), e as linhas seguintes, os dados. 
+Salvar em Formato Adequado: O formato mais compatível para importação no QGIS é o 
+CSV (Comma-Separated Values). Ao salvar, escolha a opção "CSV (separado por vírgulas)" 
+ou "CSV (UTF-8)". O UTF-8 é recomendado para garantir que caracteres como acentos  
+e "ç" sejam preservados (PROGRAMMING HISTORIAN, [s.d.]).
+Para acompanhar como tratar o dado por completo e o cálculo da taxa, clique aqui! 
+	
+• 	 Para adicionar os dados tabulares no QGIS, na barra superior vá em  
+	
+	
+Camada > Adicionar Camada > Adicionar Camada de Texto Delimitado. Clique no  
+	
+	
+arquivo dentro do diretório e Abrir.
+	
+• 	 Antes de Adicionar o dado, configure a entrada como a delimitação sendo tabulado 
+por 'ponto e vírgula’, tipo de dado sem geometria e o código do município no formato 'string’ 
+- texto. E os demais campos de casos, população e taxa como numérico.
+Adequando a tabela de atributos dos dados
+Verificação do Código de Ligação: Para unir a tabela de saúde a um mapa, precisamos  
+de um campo chave (ou código de ligação) comum a ambas as bases. Para dados municipais 
+no Brasil, o código ideal é o código do município de 6 ou 7 dígitos do IBGE. Verifique se sua 
+tabela de saúde possui essa coluna e se os códigos estão formatados como número ou texto, 
+sem pontos ou traços.
+
+
+===== PAGE 6 =====
+Criar um novo campo com CD_MUN reduzido para 6 dígitos na tabela de atributos no 
+dado espacial BR_Municipios_2024:
+	
+• 	 Abra a tabela de atributos: Clique com o botão direito na camada g Abrir Tabela  
+	
+	
+de Atributos.
+	
+• 	 Abra a Calculadora de Campos: Ícone da calculadora g Abrir Calculadora de Campos.
+Configure o novo campo:
+	
+a. 	Marque Criar um novo campo;
+	
+b. 	Nome do campo: CD_MUN6;
+	
+c. 	 Tipo: Texto (string);
+	
+d. 	Comprimento: 6.
+Use esta expressão: left("CD_MUN", 6)
+	
+•	 Clique em OK.
+	
+•	 Isso pega apenas os 6 primeiros caracteres do código de 7 dígitos.
+O novo campo é criado de forma temporária para salvá-lo na tabela de atributos vá na barra 
+superior e clique em Salvar alterações        . Depois saia do modo de edição clicando ao lado 
+em Alternar modo de edição        . 
+	
+	
+Observe que a coluna do novo campo aparece no final da tabela de atributos.
+Unindo as Bases de Dados no QGIS (Join) 
+Com as duas bases de dados gráfica (mapa) e não gráfica (tabela) adequadas, o próximo 
+passo é realizar a união das duas (Join). Essa operação irá vincular os dados da sua tabela  
+de saúde (.csv) aos polígonos do seu mapa (.shp) com base no campo chave comum  
+(QGIS DOCUMENTATION, [s.d.]).
+Passos para o Join: 
+Abrir as Propriedades da Camada Vetorial: Clique com o botão direito na camada do mapa 
+(o shapefile) e vá em Propriedades.
+
+
+===== PAGE 7 =====
+	
+•	 Acessar a Aba "Uniões" (Joins): No menu à esquerda da janela de propriedades,  
+	
+	
+selecione a aba Uniões. 
+	
+•	 Criar uma Nova União: Clique no ícone de "+" (ou "Adicionar nova união"). Uma nova  
+	
+	
+janela se abrirá: 
+	
+• 	 Unir Camada: Selecione a sua tabela .csv. 
+	
+• 	 Unir Campo: Selecione a coluna com o código do município na sua tabela .csv.  
+	
+• 	 Campo Alvo: Selecione a coluna com o código do município na tabela de atributos  
+	
+	
+do shapefile. 
+	
+• 	 Clique em OK. 
+Verificar o Resultado: Após confirmar a união, abra novamente a tabela de atributos do  
+shapefile. As colunas da sua tabela de saúde agora devem aparecer ao lado das colunas  
+originais do mapa. A união é temporária. Para torná-la permanente, você deve salvar a  
+camada com um novo nome.
+Para salvar um shapefile com um novo nome de forma segura é recomendado exportá-lo  
+com um novo nome, dessa maneira todos os arquivos que o compõem também receberam o 
+mesmo nome.
+	
+• 	 Clique com botão direito na camada e vá em Exportar > Guardar elementos como.
+	
+• 	 Selecione o tipo de dado que deseja salvar ‘shapefile’ e o local onde deseja salvar  
+	
+	
+o shapefile em Nome do arquivo.
+	
+• 	 Clique Salvar e OK.
+Ao final desta aula, você terá um único arquivo shapefile contendo tanto a informação  
+espacial (geometria dos municípios) quanto os atributos de saúde que você deseja analisar. 
+Esta camada de dados unificada é a matéria-prima para a criação de mapas temáticos, que 
+será o foco da nossa próxima aula prática.
+
+
+===== PAGE 8 =====
+Ferramentas básicas de navegação QGIS
+Agora que ajustamos a camada, vamos explorar algumas ferramentas de navegação.
+	
+• 	 Movendo o scroll do mouse você pode dar zoom + ou -. Essas opções também estão  
+	
+	
+disponíveis na barra superior de ferramentas nos ícones:
+O ícone Ver tudo permite retornar a visualização total do projeto.
+	
+• 	 Outra opção é deslocar o mapa de um lado para outro usando o ícone:
+	
+• 	 Caso esteja testando o melhor zoom de visualização, você pode comparar o antes  
+	
+	
+com o depois usando esses ícones.
+	
+• 	 Podemos também identificar feições usando o ícone         e clicando no mapa.  
+	
+	
+Vai aparecer um box com os atributos da feição. Observer que a informação do box  
+	
+	
+é referente à camada que está ativa, caso queira mudar clique na camada de  
+	
+	
+interesse antes de selecionar a feição no mapa.
+Salvando um projeto
+Para finalizar vamos salvar o projeto iniciado, para visualizações futuras. Salvar um projeto 
+garante que a visualização editada fique salva para ser vista novamente, mas isso não  
+impede que o shapefile seja usado e visualizado em outro projeto ou em outro programa de 
+Sistema de Informação Geográfica (SIG) que aceite o shapefile como dados de visualização.
+Podemos usar o ícone         ou ir em Projeto > Salvar. O projeto do QGIS tem o formato .qgz,  
+vamos salvá-lo como Aula 1 na pasta do curso. 
+ 
+REFERÊNCIAS:
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). Resolução da Presidência 
+n.º 1, de 25 de fevereiro de 2005. Dispõe sobre a adoção do SIRGAS2000 como novo sistema 
+de referência geodésico para o Sistema Geodésico Brasileiro. Rio de Janeiro: IBGE, 2005.  
+Disponível em: https://geoftp.ibge.gov.br/metodos_e_outros_documentos_de_referencia/ 
+normas/resolucao_pr_01_25fev2005.pdf. Acesso em: 19 fev. 2026.
+PROGRAMMING HISTORIAN. Geocodificando dados históricos com o QGIS. Disponível em: 
+https://programminghistorian.org/pt/licoes/geocodificando-qgis. Acesso em: 19 fev. 2026.
+QGIS DEVELOPMENT TEAM. QGIS Geographic Information System. Open Source Geospatial 
+Foundation. Disponível em: https://qgis.org. Acesso em: 19 fev. 2026.
+QGIS DOCUMENTATION. Unindo e relacionando dados. QGIS Documentation 3.40.  
+Disponível em: https://docs.qgis.org/3.40/pt_BR/docs/user_manual/working_with_vector/
+joins_relations.html. Acesso em: 19 fev. 2026.

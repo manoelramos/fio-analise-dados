@@ -351,7 +351,7 @@ def build_page(num: int, content: str) -> str:
 					<div class="container-fluid">
 						<div class="row justify-content-center align-items-center linha-de-marcas">
 							<div class="col-12 text-center py-3">
-								<img class="img-fluid regua-logos" src="{ASSETS}media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
+								<img class="img-fluid regua-logos" src="{ASSETS}media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
 							</div>
 						</div>
 					</div>
@@ -507,6 +507,44 @@ def content_excel() -> str:
         )
         + figure_plain("excel-passo3-menu-tendencia.png", "Menu Adicionar Linha de Tendência")
         + row(
+            p('No painel de formatação que se abrirá, escolha a opção Linear.')
+        )
+        + figure_plain("excel-passo3-linear.png", "Opção Linear no painel de formatação")
+        + row(
+            p("<strong>4 Exibir a Equação e o R²:</strong>")
+            + '<div class="list"><ul class="list-group">'
+            + '<li class="list-group-item">Ainda no mesmo painel, role para baixo e marque as caixas de seleção '
+            '"Exibir Equação no gráfico" e "Exibir valor de R-quadrado no gráfico".</li>'
+            + "</ul></div>"
+        )
+        + figure_plain("excel-passo4-equacao.png", "Exibir equação e R-quadrado no gráfico")
+        + row(
+            p("<strong>5 Incluir elementos do Gráfico:</strong>")
+            + '<div class="list"><ul class="list-group">'
+            + '<li class="list-group-item">Selecione o gráfico e clique no botão '
+            f'<img src="{MEDIA}excel-icone-mais.png" alt="+" width="22" height="22" '
+            'class="align-middle d-inline-block" style="vertical-align:-4px;" />.</li>'
+            + '<li class="list-group-item">Selecione os itens: Títulos dos eixos e Legenda (neste exemplo, na parte inferior) '
+            "para inserir no gráfico.</li>"
+            + "</ul></div>"
+        )
+        + figure_plain("excel-passo5-elementos.png", "Elementos do gráfico no Excel")
+        + row(
+            '<div class="list"><ul class="list-group">'
+            + '<li class="list-group-item">Para nomear os Títulos dos eixos basta clicar na caixa de cada item e escrever '
+            "o título do eixo.</li>"
+            + "</ul></div>"
+        )
+        + figure_plain("excel-passo5-eixos.png", "Títulos dos eixos no gráfico")
+        + row(
+            p("<strong>6 Formatar o Gráfico:</strong>")
+            + '<div class="list"><ul class="list-group">'
+            + '<li class="list-group-item">Com o gráfico selecionado, você pode formatar o tipo, tamanho e a cor da fonte. '
+            "Neste exemplo optou-se pela fonte tipo: Calibri, negrito, 10 e preta.</li>"
+            + "</ul></div>"
+        )
+        + figure_plain("excel-passo6-fonte.png", "Formatação da fonte do gráfico")
+        + row(
             p(
                 "Para modificar a cor ou a espessura das linhas. Clique duas vezes em cima da "
                 "linha dentro do gráfico. No painel de formatação que se abrirá, escolha a opção "
@@ -522,38 +560,6 @@ def content_excel() -> str:
             )
         )
         + figure_plain("excel-passo3-contorno.png", "Formatação do contorno da caixa da equação")
-        + row(
-            p('No painel de formatação que se abrirá, escolha a opção Linear.')
-        )
-        + figure_plain("excel-passo3-linear.png", "Opção Linear no painel de formatação")
-        + row(
-            p("<strong>4 Exibir a Equação e o R²:</strong>")
-            + '<div class="list"><ul class="list-group">'
-            + '<li class="list-group-item">Ainda no mesmo painel, role para baixo e marque as caixas de seleção '
-            '"Exibir Equação no gráfico" e "Exibir valor de R-quadrado no gráfico".</li>'
-            + "</ul></div>"
-        )
-        + figure_plain("excel-passo4-equacao.png", "Exibir equação e R-quadrado no gráfico")
-        + row(
-            p("<strong>5 Incluir elementos do Gráfico:</strong>")
-            + '<div class="list"><ul class="list-group">'
-            + '<li class="list-group-item">Selecione o gráfico e clique no botão .</li>'
-            + '<li class="list-group-item">Selecione os itens: Títulos dos eixos e Legenda (neste exemplo, na parte inferior) '
-            "para inserir no gráfico.</li>"
-            + '<li class="list-group-item">Para nomear os Títulos dos eixos basta clicar na caixa de cada item e escrever '
-            "o título do eixo.</li>"
-            + "</ul></div>"
-        )
-        + figure_plain("excel-passo5-elementos.png", "Elementos do gráfico no Excel")
-        + figure_plain("excel-passo5-eixos.png", "Títulos dos eixos no gráfico")
-        + row(
-            p("<strong>6 Formatar o Gráfico:</strong>")
-            + '<div class="list"><ul class="list-group">'
-            + '<li class="list-group-item">Com o gráfico selecionado, você pode formatar o tipo, tamanho e a cor da fonte. '
-            "Neste exemplo optou-se pela fonte tipo: Calibri, negrito, 10 e preta.</li>"
-            + "</ul></div>"
-        )
-        + figure_plain("excel-passo6-fonte.png", "Formatação da fonte do gráfico")
         + row(p("O resultado será semelhante à Figura 1."))
         + figure_captioned(
             "figura1-excel.png",
@@ -693,7 +699,7 @@ def content_joinpoint() -> str:
                 "e com que intensidade."
             )
         )
-        + saiba_mais_toggle("saiba-mais-joinpoint", "SABIA MAIS!", saiba_body)
+        + saiba_mais_toggle("saiba-mais-joinpoint", "SAIBA MAIS!", saiba_body)
     )
 
 

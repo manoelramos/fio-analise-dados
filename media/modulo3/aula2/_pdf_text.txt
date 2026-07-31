@@ -1,0 +1,520 @@
+
+===== PAGE 1 =====
+Noções básicas de  
+Geoprocessamento e Sistema  
+de Informações Geográficas 
+Sobre esta aula
+Seja bem-vindo e bem-vinda à aula “Noções básicas de Geoprocessamento e  
+Sistema de Informações Geográficas”.
+A seguir, veja algumas informações importantes!
+Objetivos de aprendizagem
+ 
+Ao final dessa aula, você será capaz de:
+	
+Compreender o Conceito de Análise Espacial;	
+	
+Compreender o conceito de Geoprocessamento;
+	
+Enumerar as técnicas de Geoprocessamento;
+	
+Definir Sistemas de Informações Geográficas;
+	
+Enumerar as funções e objetivos de utilização de SIG na Saúde.
+    
+Autoria
+Mônica de Avelar Figueiredo Mafra Magalhães
+Doutora em Saúde Coletiva. Mestrado em Geoprocessamento. Tecnologista em Saúde 
+Pública. Instituto de Comunicação e Informação Científica e Tecnológica em Saúde (Icict) 
+da Fundação Oswaldo Cruz (Fiocruz).
+Julia Novaes de Barros Peixoto 
+Mestre em Ciências - Métodos quantitativos em Epidemiologia & Engenheira Cartógrafa. 
+Introdução
+Na aula anterior, você explorou os fundamentos teóricos da Geografia da Saúde, seus  
+conceitos, história, relevância e os primeiros estudos que demonstraram que a distribuição 
+das doenças no território não ocorre de forma aleatória, mas seguem padrões  
+relacionados às condições ambientais, sociais e econômicas.
+Dessa forma, atuar no contexto da Geografia da Saúde exige, fundamentalmente,  
+o domínio e a aplicação da Análise Espacial. Essa abordagem fornece ferramentas  
+metodológicas que permitem mensurar propriedades e analisar os relacionamentos entre  
+fenômenos presentes na superfície terrestre, considerando explicitamente sua localização e 
+incorporando o espaço como elemento central do estudo (Druck et al., 2004).
+Neste sentido, nesta e nas próximas aulas você será introduzido aos princípios  
+e as tecnologias que sustentam as abordagens da análise espacial, entendendo como  
+eles contribuem para a formulação de diagnósticos situacionais, identificação de  
+vulnerabilidades e planejamento de ações mais eficientes e equitativas nos territórios.
+Análise Espacial
+Conceitualmente Análise Espacial “é um conjunto de técnicas estatísticas e analíticas  
+especificamente desenvolvidas para dados que possuem referência espacial, considerando 
+explicitamente a localização, a dependência espacial e a estrutura espacial dos fenômenos” 
+(Bailey, 1995). 
+ANÁLISE ESPACIAL
+MÓDULO 3 | AULA 2
+Uma das vantagens da abordagem espacial é permitir representar dados epidemiológicos 
+em um plano geométrico, considerando que os fenômenos espaciais próximos compartilham 
+condições ambientais, sociais, históricas, culturais e econômicas semelhantes.  
+Na interpretação dos mapas gerados como resultado da análise espacial é importante  
+conhecer os principais mecanismos envolvidos na produção do agravo, as representações 
+sociais da doença e o modo como ela é tratada pelos serviços de saúde (Pina et al., 2006; 
+Magalhães, 2014). 
+Pode-se dizer que, a análise espacial envolve raciocínio teórico e interpretação crítica  
+dos resultados obtidos, sendo necessário uma dimensão operacional e técnica para tratar  
+a informação geográfica. Aqui entra o Geoprocessamento que disponibiliza e executa  
+procedimentos técnicos permitindo identificar padrões, relações, tendências e distribuições 
+no território.
+Geoprocessamento
+O geoprocessamento corresponde ao conjunto de técnicas e procedimentos  
+computacionais voltados à coleta, tratamento, manipulação e apresentação de dados  
+espaciais​ (Câmara, 2001). O geoprocessamento nos possibilita construir mapas de maneira 
+muito mais simples e rápida do que na época de John Snow, ampliando significativamente 
+a capacidade analítica nas investigações espaciais. Não à toa seu uso tem se intensificado a 
+cada década, principalmente devido, especialmente a três fatores:
+	
+Redução do custo de computadores e softwares;
+	
+Desenvolvimento de interfaces mais intuitivas e acessíveis e;
+	
+Crescente disponibilização de dados, favorecida pelo uso ampliado da internet.
+Cada uma das técnicas de geoprocessamento tem funções bem específicas. Conheça um 
+pouco algumas delas:
+(Recurso de Hotspot + modal. A ideia é clicar em cada "caixa" e abrir o conteúdo a seguir.)
+Esta definição dada por Trevor Bailey, um estatístico britânico reconhecido por seu trabalho 
+em análise espacial e geoestatística, buscou instrumentalizar um princípio básico que  
+sustenta a análise espacial conhecido como Primeira Lei da Geografia de Waldo Tobler que 
+é: “Tudo está relacionado com tudo, mas coisas próximas estão mais relacionadas do que 
+coisas distantes” (Tobler, 1970).
+Sem essa lei, não haveria base teórica sólida para afirmar que a proximidade espacial  
+influencia padrões de saúde e doença.
+É importante dizer que a análise espacial não se resume ao simples mapeamento 
+de eventos de saúde. Não é uma mera localização dos eventos!  Ela também  
+engloba o estudo das características particulares dos dados espaciais com toda  
+a sua complexidade (Kaluzny et al., 1996).
+ATENÇÃO
+Cartografia  
+Digital
+Sensoriamento
+Remoto
+GNSS
+Estatística
+Espacial
+Sistema de Informações Geográfias - SIG
+Cartografia digital​ - se refere à técnica que desenha ou delimita os objetos geográficos  
+naturais ou artificiais, visíveis na paisagem, unidades de análise e/ou divisões político- 
+administrativas, criando mapas em formato digital. Atualmente, poucos mapas são  
+confeccionados em formato analógico ou em papel. Em geral, são mapas digitais  
+que podem ser editados no computador e impressos, posteriormente, se necessário  
+(Magalhães, 2014).
+Figura 1:  	 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Figura 2: 
+Mapa em formato digital	 	
+	
+	
+	
+	
+	
+Mapa em formato analógico (em papel)
+Fonte: Foto de autoria de Mônica Magalhaes
+Fonte: Foto de autoria de Mô-
+nica Magalhaes
+Fonte: IBGE. Disponível em:  https://biblioteca.ibge.gov.br
+
+===== PAGE 2 =====
+Dados espaciais
+Ao longo desta disciplina tem-se destacado de que a Análise Espacial se dedica  
+ao tratamento de dados espaciais. Mas afinal, qual a diferença de dado espacial para  
+o dado comum?
+Dados espaciais são aqueles que possuem uma localização geográfica definida, também  
+denominados georreferenciados. Esses tipos de dados diferem dos demais, pois possuem 
+uma posição espacial, isto é, podem ser referenciados ao local de ocorrência na superfície 
+terrestre (Druck, 2004).
+Essa posição geográfica pode ser identificada através:
+	
+de um par de coordenadas;
+	
+de seu endereço;
+	
+relacionado a unidades espaciais – bairros, setores censitários, bacias hidrográficas.
+Dentro de ambiente de SIG, trabalhamos com dados espaciais. Eles têm como característica 
+básica o fato de serem compostos por duas componentes distintas (Carvalho et al., 2000): 
+Gráfica (mapas): 
+Não-Gráfica (tabelas):
+Descreve a localização, as feições geográficas e os relacionamentos espaciais entre  
+as feições, ou seja, a descrição gráfica do objeto como simbolizado num mapa
+Gráfica (mapas): 
+Descreve os fatos e fenômenos, sociais e naturais, representados no mapa,  
+representa as características, qualidades, ou relacionamentos de feições na  
+representação cartográfica.
+Não-Gráfica (tabelas):
+As componentes gráficas e não gráficas dos dados espaciais possuem características  
+distintas, o que demanda técnicas específicas para otimizar seu gerenciamento. Na maioria 
+dos programas de SIG, essas duas componentes são armazenadas em bases de dados  
+separadas: os dados gráficos são manipulados diretamente pelo software de SIG,  
+enquanto os dados não gráficos são gerenciados por Sistemas Gerenciadores de Bancos  
+de Dados (SGBD) convencionais (Câmara et al., 2001). 
+Armazenamento dos dados
+As componentes gráficas são estruturadas em forma de planos de informação (layers),  
+organizados como um conjunto de camadas. Cada camada representa um tema e a seleção 
+dos temas que comporão a base de dados integra o processo de modelagem do sistema e 
+depende diretamente dos objetivos do projeto. Já as componentes não gráficas são  
+armazenadas em tabelas organizadas em campos (colunas) e registros (linhas), e geralmente 
+são gerenciadas por Sistemas Gerenciadores de Banco de Dados (SGBD) (Câmara, 2001). 
+Figura 5: Camadas de armazenamento da componente gráfica
+Sensoriamento Remoto –  
+compreende um conjunto de técnicas 
+para obter informações sobre a  
+superfície da Terra sem contato  
+direto. Ou seja, em vez de medir  
+algo “tocando” o objeto, utiliza-se 
+instrumentos que detectam e  
+registram radiação eletromagnética 
+refletida ou emitida pelo alvo (Pina  
+e Madureira, 2000). Normalmente 
+usado na saúde para coletar dados 
+sobre fatores ambientais que  
+influenciam a ocorrência de doenças.
+Figura 3: Ilustração de satélites imageando  
+a superfície terrestre.
+Fonte: David Ducros – CNES, 2002. 
+Disponível em: 
+https://phototheque.cnes.fr/cnes/media/2791
+Global Navigation Satellite System (Sistema Global de Navegação por Satélite) –  
+sistema baseado em satélites artificiais que transmitem sinais contendo informações  
+de tempo e posição orbital, permitindo que receptores em terra, no ar ou no mar  
+determinem sua localização por meio de cálculos matemáticos. Constitui um dos  
+avanços tecnológicos mais relevantes das últimas décadas, ao possibilitar o  
+posicionamento preciso de objetos e pessoas em escala global.  A precisão obtida  
+pode variar conforme o tipo de equipamento e as técnicas utilizadas, podendo alcançar 
+níveis centimétricos em aplicações geodésicas e topográficas. 
+Fonte: Elaborado por IA - Copilot
+Popularmente se chama de GPS, 
+mas diferentemente do que se 
+pensa, o GPS é apenas um dos 
+sistemas que compõem o GNSS, 
+ao lado do GLONASS (Rússia), 
+Galileo (União Europeia) e BeiDou 
+(China) (Silva &Baesso, 2014).
+Figura 4: Esquema do funcionamento do Sistema 
+Global de Navegação por Satélite 
+Estatística Espacial – não é uma técnica de coleta de dados (como o GPS ou o  
+sensoriamento remoto), mas uma técnica analítica do Geoprocessamento,  
+fundamental para interpretar os dados espaciais e gerar conhecimento (Longley, 2015). 
+Ramo da Estatística que permite analisar a localização espacial de eventos e, além  
+de localizar e visualizar a ocorrência de fenômenos que se materializam no espaço  
+geográfico, auxiliar também na geração de modelos da ocorrência destes fenômenos,  
+incorporando, por exemplo, fatores determinantes, a estrutura de distribuição espacial  
+ou a identificação de padrões (Santos, 2007). 
+Sistema de Informação Geográfica (SIG) – é um ambiente integrado que permite  
+armazenar, organizar, manipular, analisar e representar dados espaciais. Um SIG envolve 
+não apenas softwares, mas também hardware, banco de dados, metodologias e  
+profissionais capacitados (Aranoff, 1995; Câmara, 2001). Trata-se, portanto, da  
+infraestrutura tecnológica e metodológica que viabiliza o trabalho com informações  
+geográficas.
+O SIG se destaca, dentre as técnicas de Geoprocessamento porque é ele que integra,  
+organiza, analisa e apresenta dados espaciais de forma estruturada e inteligente.  
+Enquanto outras técnicas (como as citadas anteriormente) coletam ou produzem dados, o 
+SIG é o sistema que transforma esses dados em informação útil para tomada de decisão. 
+Sua capacidade em reunir uma grande quantidade de dados convencionais, de expressão 
+espacial, estruturando-os adequadamente, tornou o SIG uma ferramenta essencial para a 
+manipulação de informações geográficas (Carvalho et.al., 2000). 
+Fonte: Elaborado por IA - Copilot
+É possível realizar operações gráficas entre as camadas, e não apenas  
+combiná-las visualmente.
+ATENÇÃO
+Integração das componentes
+A integração entre as duas componentes dos dados espaciais é uma característica básica dos 
+SIG e se dá através de códigos comuns que identifiquem univocamente a entidade nas duas 
+bases, chamados geocódigo.
+
+===== PAGE 3 =====
+Figura 6: Esquema didático da representação de geocódigo - ligação entre a componente 
+gráfica e não gráfica.
+Apesar dessa estrutura complexa, tais distinções permanecem completamente imperceptíveis 
+para o usuário comum.
+Estrutura dos dados gráficos
+As duas principais formas de representação de dados gráficos em meio digital são o modelo 
+matricial e o modelo vetorial. Cada uma delas apresenta vantagens e limitações específicas 
+conforme a finalidade analítica ou operacional a que se destinam.
+Não há um formato melhor que outro. A maior parte dos Sistemas de Informação  
+Geográfica (SIG) é capaz de operar simultaneamente com essas duas estruturas, permitindo 
+ao usuário realizar conversões entre elas de acordo com as demandas do processamento  
+espacial (Pina, 2000).
+SAIBA MAIS!
+Quando a análise é realizada em nível municipal — ou em unidades territoriais 
+derivadas dos municípios — utiliza‑se, na maioria das vezes, o código de  
+município do IBGE, que identifica cada município de forma única.  
+Esse mesmo código também está presente nas bases gráficas disponibilizadas 
+pelo DATASUS.
+SAIBA MAIS!
+Fonte: Elaborado pelas autoras
+Fonte: Elaborado pelas autoras com auxílio de IA - ChatGPT
+Figura 8: Esquema didático da representação de do modelo matricial
+Modelo
+Descrição
+Representação
+Exemplos em Saúde
+Vetorial
+Representa o espaço 
+através de entidades 
+geométricas discretas: 
+pontos, linhas e  
+polígonos. É ideal  
+para representar  
+objetos com limites 
+bem definidos.
+Ponto: Um par de  
+coordenadas (X,Y).
+Linha: Uma sequência 
+de pontos conectados.
+Polígono: Uma  
+sequência de linhas  
+que forma uma área  
+fechada.
+Pontos: Residência  
+de um caso, localização 
+de um hospital, um  
+poste com foco de  
+Aedes aegypti.
+Linhas: Ruas, rios,  
+rotas de ambulâncias.
+Polígonos: Municípios, 
+bairros, setores  
+censitários, áreas  
+de abrangência de  
+uma UBS.
+Matricial (Raster)
+Representa o espaço 
+como uma grade  
+contínua de células ou 
+pixels, onde cada célula 
+possui um valor.  
+É ideal para representar 
+fenômenos que  
+variam continuamente 
+no espaço.
+Uma matriz de células, 
+onde cada célula tem 
+um valor numérico.
+Imagens de satélite, 
+modelos de elevação 
+do terreno, mapas de 
+temperatura, superfícies 
+de densidade de casos 
+(mapas de calor).
+Figura 7: Esquema didático da representação de do modelo vetorial
+Funções e objetivos do SIG
+Os Sistemas de Informações Geográficas permitem a realização de análises espaciais comple-
+xas por meio da rápida construção e modificação de cenários, oferecendo aos gestores subsí-
+dios essenciais para o planejamento e a tomada de decisões. Seu uso tem se ampliado signifi-
+cativamente em razão de diversos benefícios (Burrough, 1998):
+	
+maior eficiência no armazenamento e na atualização das bases de dados;
+	
+recuperação de informações de maneira mais ágil e organizada;
+	
+produção de resultados com maior precisão;
+	
+rapidez na comparação de alternativas e simulações;
+	
+possibilidade de decisões mais rápidas e fundamentadas.
+Os SIG disponibilizam um amplo conjunto de funcionalidades que, dependendo do projeto, 
+podem atender a finalidades distintas. Entre seus principais objetivos, destacam‑se (Scholten 
+& Stillwell, 1990):
+	
+a organização e o georreferenciamento dos dados;
+	
+a integração de informações provenientes de múltiplas fontes;
+	
+a visualização estruturada das informações;
+	
+análises espaciais em diferentes níveis de complexidade;
+	
+a predição ou modelagem de ocorrências.
+Vamos conhecer um pouco mais de cada um deles.
+Confira
+Integração de dados 
+provenientes de  
+diversas fontes 
+Confira
+Organização e  
+georreferenciamento 
+dos dados
+Organização e  
+georreferenciamento 
+dos dados 
+O SIG constitui um instrumento robusto para a  
+organização e o gerenciamento de informações  
+espacialmente referenciadas. No ambiente do SIG, 
+é possível integrar diferentes tipos de dados, como 
+limites de bairros, localização pontual de unidades 
+de saúde, fluxos de pacientes e diversos outros  
+temas permitindo sua visualização conjunta e de 
+forma coerente no espaço geográfico.
+Integração de dados 
+provenientes de  
+diversas fontes  
+O SIG é capaz de integrar informações oriundas  
+de múltiplas fontes, em diferentes formatos,  
+escalas e sistemas de projeção. Os mapas  
+armazenados no sistema podem ser  
+continuamente associados a novos conjuntos  
+de dados, permitindo agregar informações  
+produzidas por diferentes órgãos e instituições e 
+ampliando a consistência das análises espaciais.
+Fonte: Elaborado pelas autoras com auxílio de IA - ChatGPT
+É possível realizar operações gráficas entre as camadas, e não apenas combiná-las visualmente.
+
+===== PAGE 4 =====
+REFERÊNCIA:
+ARONOFF, Stan. Geographic Information Systems: a Management Perspective. WDL  
+Publications, Ottawa, Canada, 1995. 13 p.BAILEY, T. C.; GATRELL, A. C. Interactive Spatial 
+Data Analysis. Harlow: Longman Scientific & Technical, 1995. 413 p.
+BURROUGH, P. A.; McDONNELL, R. Principles of Geographical Information Systems. Oxford: 
+Oxford University Press, 1998.
+CÂMARA, Gilberto; DAVIS, Clodoveu; MONTEIRO, Antônio Miguel Vieira (org.). Introdução à 
+ciência da geoinformação. São José dos Campos: INPE, 2001.
+CARVALHO, Marilia Sá; PINA, Maria de Fátima de; SANTOS, Simone Maria dos (org.).  
+Conceitos básicos de sistemas de informação geográfica e cartografia aplicados à saúde.  
+Brasília: Organização Pan-Americana da Saúde, 2000.
+DAVIS JR., C. A.; ALVES, L. L. Infraestruturas de dados espaciais: potencial para uso local.  
+Informática Pública, Belo Horizonte, v. 8, n. 1, p. 65–80, 2006.
+DRUCK, S.; CARVALHO, M. S.; CÂMARA, G.; MONTEIRO, A. V. M. (eds.). Análise Espacial de 
+Dados Geográficos. Brasília: EMBRAPA, 2004. (ISBN: 85-7383-260-6).
+FITZ, P. R. Cartografia básica. São Paulo: Oficina de Textos, 2008. 143 p.
+LONGLEY, Paul A. et al. Geographic information systems and science. 4. ed. Hoboken: Wiley, 
+2015.
+MAGALHÃES, M. A. F. M.; MATOS, V. P.; MEDRONHO, R. A. Avaliação do dado sobre  
+endereço no Sistema de Informação de Agravos de Notificação utilizando  
+georreferenciamento em nível local de casos de tuberculose por dois métodos no município 
+do Rio de Janeiro. Cadernos Saúde Coletiva, Rio de Janeiro, v. 22, p. 192–199, 2014.
+PINA, M. F. Armazenamento dos dados em SIG. In: CARVALHO, Marilia Sá; PINA, Maria de 
+Fátima de; SANTOS, Simone Maria dos (org.). Conceitos básicos de sistemas de informação 
+geográfica e cartografia aplicados à saúde. Brasília: Organização Pan-Americana da Saúde, 
+2000.
+SCHOLTEN, H. J.; STILLWELL, J. C. H. Geographical information systems: the emerging  
+requirements. In: SCHOLTEN, H. J.; STILLWELL, J. C. H. (org.). Geographical information  
+systems for urban and regional planning. Dordrecht: Kluwer Academic Publishers, 1990.  
+p. 3–14.
+SILVA, José Rafael Marques da; BAESSO, Murilo Mesquita. Sistema de navegação global  
+por satélite (GNSS): fundamentos e aplicações práticas. Curitiba: CRV, 2014. Acesso em:  
+28 fev. 2026.
+TOBLER, W. R. A computer movie simulating urban growth in the Detroit region. Economic 
+Geography, Worcester, v. 46, n. 2, p. 234–240, 1970.
+Figura 9: Mapa de rendimento médio domiciliar no Brasil - 2010
+Confira
+Visualização  
+das informações  
+Visualização  
+das informações   
+ O SIG oferece ao usuário múltiplas  
+possibilidades de apresentação dos dados,  
+por meio da combinação de diferentes  
+simbologias e técnicas de representação  
+cartográfica, o que facilita a interpretação  
+espacial. Nas figuras x e x podemos ver  
+diferentes tipos de representações cartográficas. 
+Predição de ocorrências: A partir da análise de séries históricas, o mapeamento dos eventos 
+ao longo de diferentes períodos permite identificar em quais áreas ocorreram modificações, 
+bem como a natureza dessas alterações. Em estudos conduzidos ao longo de extensos  
+períodos de acompanhamento, torna‑se possível reconhecer tendências espaciais e antecipar 
+como determinadas áreas podem se configurar nos anos subsequentes.
+Fonte: IBGE, Censo Demográfico 2000/2010. Disponível em:  
+https://biblioteca.ibge.gov.br/visualizacao/livros/liv64529_cap3.pdf
+Notas: 1) A taxa média geométrica de crescimento demográfico anual corresponde ao  
+incremento médio anual da população entre 2000 e 2010. 2.) Dados organizados  
+por microrregião
+Análise de dados: trata‑se da principal função de um SIG, pois permite realizar operações,  
+extrair informações e gerar novos conhecimentos sobre o espaço geográfico a partir de  
+critérios definidos pelo próprio usuário. Essa capacidade torna o SIG extremamente útil  
+para o gerenciamento, o planejamento e a execução de projetos, independentemente do  
+campo de aplicação.
+Nas análises relacionadas especificamente aos componentes geográficos dos dados,  
+destacam‑se as seguintes operações:
+Tipo de análise
+Descrição
+Exemplo de aplicação
+Pontos no polígono
+Identifica a interseção entre 
+pontos e a área (polígono)  
+em que eles se localizam
+Identificar e quantificar casos  
+de determinada doença nos 
+bairros de um município
+Linhas no polígono
+Identifica a interseção entre  
+linhas e a áreas (polígono)  
+em que elas se cruzam
+Identificar trechos de rio  
+que cruzam determinados  
+municípios
+Áreas de Influência (buffer)
+Construção de zonas de largura 
+específica ao redor de pontos, 
+linhas ou áreas. Utilizado para 
+análise de proximidade
+Definir áreas de exposição  
+em torno de uma fonte de  
+exposição, por exemplo uma  
+indústria poluidora
+Interpolação
+Estimação de valores em locais 
+não amostrados. Usado muito 
+também para analisar  
+concentração e densidade de 
+pontos. Usualmente chamados 
+de mapas de calor
+Estimar áreas favoráveis à  
+proliferação de vetores com 
+base em armadilhas ou  
+pontos de coleta.
+Sobreposição (overlay)
+Ela consiste em combinar duas 
+ou mais camadas espaciais  
+para gerar uma nova camada 
+contendo a integração das  
+informações. Pode auxiliar em 
+um diagnóstico mais fiel em  
+relação ao fenômeno estudado
+Identificar áreas com baixa  
+cobertura assistencial com a 
+combinação de camadas  
+contendo: distribuição da  
+população, localização de  
+unidades de saúde e  
+rede viária.
+Este mapa temático  
+apresenta a variável  
+“renda média domiciliar”, 
+representada por meio  
+de diferentes classes  
+de cor. Cada município  
+é categorizado conforme 
+a faixa de renda  
+a que pertence.
+Este mapa temático  
+utiliza múltiplas  
+simbologias para  
+representar diferentes  
+informações: (1) a taxa  
+média geométrica de  
+crescimento demográfico  
+anual, apresentada por  
+meio de classes de cor; (2)  
+o percentual de  
+urbanização, representado 
+por círculos em tons  
+de azul; e (3) o tamanho  
+populacional, indicado por  
+círculos pretos de  
+diferentes dimensões.
+Fonte: IBGE, Censo Demográfico 2000/2010. Disponível em:  
+https://biblioteca.ibge.gov.br/visualizacao/livros/liv64529_cap8_pt1.pdf
+Figura 10: Mapa de crescimento populacional do Brasil 2000 - 2010

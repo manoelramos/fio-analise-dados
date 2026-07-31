@@ -353,7 +353,7 @@ def build_page(num: int, content: str) -> str:
 					<div class="container-fluid">
 						<div class="row justify-content-center align-items-center linha-de-marcas">
 							<div class="col-12 text-center py-3">
-								<img class="img-fluid regua-logos" src="{ASSETS}media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
+								<img class="img-fluid regua-logos" src="{ASSETS}media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
 							</div>
 						</div>
 					</div>

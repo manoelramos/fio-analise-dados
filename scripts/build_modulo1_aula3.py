@@ -357,7 +357,7 @@ def build_page(num: int, content: str) -> str:
 					<div class="container-fluid">
 						<div class="row justify-content-center align-items-center linha-de-marcas">
 							<div class="col-12 text-center py-3">
-								<img class="img-fluid regua-logos" src="{ASSETS}media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" />
+								<img class="img-fluid regua-logos" src="{ASSETS}media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" />
 							</div>
 						</div>
 					</div>
@@ -551,7 +551,7 @@ def content_intervalo() -> str:
         + formula("formula-ic-definicao.png", "Fórmula do intervalo de confiança", wide=True)
         + saiba_mais_toggle(
             "saiba-mais-ic",
-            "SABIA MAIS!",
+            "SAIBA MAIS!",
             "Para mais informações sobre o cálculo do intervalo de confiança consultar, "
             "por exemplo, o livro do Barbetta (2002) ou qualquer outro livro de Estatística "
             "que contemple esse conteúdo",
@@ -658,13 +658,16 @@ def content_regressao() -> str:
             )
             + p("<strong>Artigos:</strong>")
             + '<div class="list"><ul class="list-group">'
-            + '<li class="list-group-item">Fatores associados ao uso de preservativo masculino e ao '
+            + '<li class="list-group-item"><a href="https://doi.org/10.1590/S0102-311X2006000200009" '
+            'target="_blank" rel="noopener noreferrer">Fatores associados ao uso de preservativo masculino e ao '
             "conhecimento sobre DST/AIDS em adolescentes de escolas públicas e privadas do Município de "
-            "São Paulo, Brasil</li>"
-            + '<li class="list-group-item">Estudo de validação das informações de peso e estatura em '
-            "gestantes atendidas em maternidades municipais no Rio de Janeiro, Brasil</li>"
-            + '<li class="list-group-item">Vitalidade do recém-nascido por tipo de parto no Estado de '
-            "São Paulo, Brasil</li>"
+            "São Paulo, Brasil</a></li>"
+            + '<li class="list-group-item"><a href="https://doi.org/10.1590/S0102-311X2004000700010" '
+            'target="_blank" rel="noopener noreferrer">Estudo de validação das informações de peso e estatura em '
+            "gestantes atendidas em maternidades municipais no Rio de Janeiro, Brasil</a></li>"
+            + '<li class="list-group-item"><a href="https://doi.org/10.1590/S0102-311X2007000800015" '
+            'target="_blank" rel="noopener noreferrer">Vitalidade do recém-nascido por tipo de parto no Estado de '
+            "São Paulo, Brasil</a></li>"
             + "</ul></div>"
         )
     )

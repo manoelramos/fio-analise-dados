@@ -239,7 +239,7 @@ def build_page() -> str:
 				</div></section>
 			</div>
 			<section><div class="container"><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8"><div class="page-nav d-flex justify-content-evenly flex-wrap gap-3"><a class="fio-button fio-button-primary" href="aula2/topico9.html" rel="prev"><span class="material-symbols-rounded" aria-hidden="true">west</span> Referências (Aula 4.2)</a></div></div></div></div></section>
-			<footer><div class="container-fluid"><div class="row justify-content-center align-items-center linha-de-marcas"><div class="col-12 text-center py-3"><img class="img-fluid regua-logos" src="../media/logos/regua-de-logos.png" alt="Régua de logos: Campus Virtual Fiocruz, Fiocruz, SUS Digital, SUS 35 Anos, Ministério da Saúde e Governo do Brasil" /></div></div></div></footer>
+			<footer><div class="container-fluid"><div class="row justify-content-center align-items-center linha-de-marcas"><div class="col-12 text-center py-3"><img class="img-fluid regua-logos" src="../media/logos/regua-de-logos.png" alt="Régua de logos: ICICT, Campus Virtual Fiocruz e Fiocruz" /></div></div></div></footer>
 		</div>
 	</div>
 	<script src="../source/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
